@@ -50,6 +50,7 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'fio' => 'ФИО',
             'username' => 'Логин',
             'auth_key' => 'Auth Key',
             'password_hash' => 'Пароль',
@@ -60,4 +61,10 @@ class User extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
         ];
     }
+
+  /*  public function getUserstatusList()
+    {
+        return Yii::$app->db->createCommand('SELECT * FROM userstatus')->execute() ;
+    }*/
 }
+

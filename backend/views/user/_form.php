@@ -22,7 +22,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+    <?= $form->field($model, 'status')->dropDownList(['1'=>'Супер администратор']) ?>
 
     <?= $form->field($model, 'created_at')->textInput(['value'=>time()])->hiddenInput()->label(false) ?>
 

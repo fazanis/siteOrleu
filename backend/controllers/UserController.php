@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use app\models\Userstatus;
 use Yii;
 use app\models\User;
 use backend\models\SearchUser;
@@ -65,10 +66,11 @@ class UserController extends Controller
     public function actionCreate()
     {
         $model = new User();
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
+
+        //$model->getUserstatusList();
 
         return $this->render('create', [
             'model' => $model,
