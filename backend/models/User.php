@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "user".
@@ -62,9 +63,10 @@ class User extends \yii\db\ActiveRecord
         ];
     }
 
-  /*  public function getUserstatusList()
+    public function getUserstatusList()
     {
-        return Yii::$app->db->createCommand('SELECT * FROM userstatus')->execute() ;
-    }*/
+        $result = Yii::$app->db->createCommand('SELECT * FROM userstatus')->queryAll();
+        return ArrayHelper::map($result,'id','name');
+    }
 }
 
