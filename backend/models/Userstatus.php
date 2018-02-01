@@ -1,0 +1,46 @@
+<?php
+
+namespace app\models;
+
+use Yii;
+use app\models\Userstatus;
+
+/**
+ * This is the model class for table "userstatus".
+ *
+ * @property int $id
+ * @property string $name
+ */
+class Userstatus extends \yii\db\ActiveRecord
+{
+    /**
+     * @inheritdoc
+     */
+    public static function tableName()
+    {
+        return 'userstatus';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function rules()
+    {
+        return [
+            [['name'], 'required'],
+            [['name'], 'string', 'max' => 255],
+            [['name'], 'unique'],
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'name' => 'Name',
+        ];
+    }
+}
