@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 <header class="main-header">
 
-    <?= Html::a('<span class="logo-mini">APP</span><span class="logo-lg">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
+    <?= Html::a('<span class="logo-mini">ИПК</span><span class="logo-lg">АО НЦПК Орлеу</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
 
     <nav class="navbar navbar-static-top" role="navigation">
 
@@ -240,7 +240,7 @@ use yii\helpers\Html;
 
                             <p>
                                 <?=Yii::$app->user->identity->username?> - Web Developer
-                                <small><?=Yii::$app->user->identity->updated_at?></small>
+                                <small><?=date('Y-m-d',Yii::$app->user->identity->updated_at)?></small>
                             </p>
                         </li>
                         <!-- Menu Footer-->
