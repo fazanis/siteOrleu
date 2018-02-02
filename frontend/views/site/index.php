@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'АО НЦПК Орлеу павлодар';
 ?>
 <div class="site-index">
 
@@ -15,6 +15,7 @@ $this->title = 'My Yii Application';
     </div>
 
     <div class="body-content">
+
 
         <div class="row">
             <div class="col-lg-4">
