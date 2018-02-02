@@ -39,13 +39,9 @@ class ContentController extends Controller
         $searchModel = new SearchContent();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        $cat = Catnews::find()->one();
-
-
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'cat'=>$cat,
         ]);
     }
 

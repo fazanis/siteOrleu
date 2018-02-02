@@ -19,7 +19,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?=$cat->name_ru?>
         <?= Html::a('Добавить новосоть', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
@@ -30,7 +29,13 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             //'id',
-            'cat',
+           // 'cat',
+            [
+                'attribute'=>'cat',
+                'value' => function($data){
+                    return \backend\models\Catnews::getOneCat($data->cat);
+                }
+            ],
             'name_ru',
             //'content_ru:ntext',
             'name_kz',

@@ -45,8 +45,8 @@ class Catnews extends \yii\db\ActiveRecord
     }
     public static function getOneCat($id)
     {
-        $catnews = Yii::$app->db->createCommand('SELECT * FROM catnews WHERE id=$id')->queryOne() ;
-        echo $catnews['name_ru'];
+        $catnews = Yii::$app->db->createCommand('SELECT * FROM catnews WHERE id="'.$id.'"')->queryOne() ;
+        return $catnews['name_ru'];
 
     }
 
