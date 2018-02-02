@@ -32,11 +32,19 @@
                 'items' => [
                     ['label' => 'МЕНЮ', 'options' => ['class' => 'header']],
                     ['label' => 'Пользователи', 'icon' => 'file-code-o', 'url' => ['/user']],
+                    ['label' => 'Новости',
+                        'icon' => 'share',
+                        'url' => '#',
+                        'items' => [
+                            ['label' => 'Категории новостей', 'icon' => 'file-code-o', 'url' => ['/cat-news'],],
+                            ['label' => 'Новости', 'icon' => 'dashboard', 'url' => ['/content'],],
+                        ],
+                    ],
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
-                    [
-                        'label' => 'Some tools',
+
+                    ['label' => 'Some tools',
                         'icon' => 'share',
                         'url' => '#',
                         'items' => [

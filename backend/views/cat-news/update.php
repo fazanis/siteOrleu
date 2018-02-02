@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\User */
+/* @var $model backend\models\catnews */
 
-$this->title = 'Обновить пользователя - '.$model->fio;
-$this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
+$this->title = 'Обновить '.$model->name_ru;
+$this->params['breadcrumbs'][] = ['label' => 'Catnews', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="user-update">
+<div class="catnews-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

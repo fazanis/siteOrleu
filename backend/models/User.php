@@ -31,10 +31,10 @@ class User extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function rules()
+    /*public function rules()
     {
         return [
-            [['username', 'auth_key', 'password_hash', 'email', 'created_at', 'updated_at'], 'required'],
+            [['username','fio', 'auth_key', 'password_hash', 'email', 'created_at','role', 'updated_at'], 'required'],
             [['status', 'created_at', 'updated_at'], 'integer'],
             [['username', 'password_hash', 'password_reset_token', 'email'], 'string', 'max' => 255],
             [['auth_key'], 'string', 'max' => 32],
@@ -42,7 +42,7 @@ class User extends \yii\db\ActiveRecord
             [['email'], 'unique'],
             [['password_reset_token'], 'unique'],
         ];
-    }
+    }*/
 
     /**
      * @inheritdoc
@@ -57,11 +57,14 @@ class User extends \yii\db\ActiveRecord
             'password_hash' => 'Пароль',
             'password_reset_token' => 'Password Reset Token',
             'email' => 'Email',
-            'status' => 'Права доступа',
+            'status' => 'status',
+            'role' => 'Права доступа',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+
     }
+
 
     public function getUserstatusList()
     {
