@@ -74,10 +74,12 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-        $news = new Content();
+        $news = Content::find();
+        $news->where(['cat' => 1]);
+        $newslist = $news->all();
         return $this->render('index',
             [
-                'news' => $news
+                'newslist' => $newslist,
             ]);
     }
 

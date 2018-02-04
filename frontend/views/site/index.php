@@ -15,7 +15,10 @@ $this->title = 'АО НЦПК Орлеу павлодар';
     </div>
 
     <div class="body-content">
-
+    <?foreach($newslist as $item):?>
+        <h1><?=$item->name_ru?></h1>
+        <p><?=$item->content_ru?></p>
+    <?endforeach;?>
 
         <div class="row">
             <div class="col-lg-4">
