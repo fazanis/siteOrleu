@@ -13,7 +13,7 @@ $this->title = 'АО НЦПК Орлеу павлодар';
 
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
-
+    <?echo Yii::$app->getRequest()->getUrl();?>
     <div class="body-content">
     <?foreach($newslist as $item):?>
         <h1><?=$item->name_ru?></h1>

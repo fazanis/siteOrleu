@@ -73,7 +73,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        echo $_SERVER['REQUEST_URI'];die();
+
         $newslist = Content::find()->where(['cat' => 1])->all();
         return $this->render('index',
             [
