@@ -43,12 +43,12 @@ class AddUserForm extends Model
         ];
     }
 
-    public function save()
+    public function saveUser()
     {
         if($this->validate()){
             $user = new User;
-            echo $user->fio = $this->fio;die;
-            $user->username = $this->username;
+            //echo $this->fio;
+            /*$user->username = $this->username;
             $user->email = $this->email;
             $user->password = $this->password;
             $user->repassword = $this->repassword;
@@ -56,7 +56,7 @@ class AddUserForm extends Model
             $user->updated_at = time();
             $user->auth_key = Yii::$app->security->generateRandomString($this->auth_key);
             $user->password_hash = Yii::$app->security->generatePasswordHash($this->password);
-
+*/
            // return $user->save();
 
 

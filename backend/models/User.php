@@ -31,7 +31,7 @@ class User extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    /*public function rules()
+    public function rules()
     {
         return [
             [['username','fio', 'auth_key', 'password_hash', 'email', 'created_at','role', 'updated_at'], 'required'],
@@ -42,7 +42,7 @@ class User extends \yii\db\ActiveRecord
             [['email'], 'unique'],
             [['password_reset_token'], 'unique'],
         ];
-    }*/
+    }
 
     /**
      * @inheritdoc
