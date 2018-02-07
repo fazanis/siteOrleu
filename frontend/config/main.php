@@ -47,6 +47,15 @@ return [
                 '<controller:\w+>/<action:\w+>/*'=>'<controller>/<action>',
             ],
         ],
+        'i18n' => [
+            'translations' => [
+                'app' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'forceTranslation' => true,
+                    'basePath' => '@common/messages',
+                ],
+            ],
+        ],
 
     ],
     'params' => $params,

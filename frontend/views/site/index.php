@@ -8,6 +8,7 @@ $this->title = 'АО НЦПК Орлеу павлодар';
 
     <div class="jumbotron">
         <h1>Congratulations!</h1>
+        <?=Yii::t('app', 'Блог')?>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
