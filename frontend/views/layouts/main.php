@@ -41,7 +41,7 @@ AppAsset::register($this);
     echo WLang::widget();
     $menuItems = [
         ['label' => Yii::t('app', 'Главная'), 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
+        ['label' => Yii::t('app', 'О нас'), 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
