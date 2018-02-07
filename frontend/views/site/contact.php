@@ -7,10 +7,12 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
+use frontend\widgets\WLang;
 
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?echo WLang::getLang();?>
 <div class="site-contact">
     <h1><?= Html::encode($this->title) ?></h1>
 

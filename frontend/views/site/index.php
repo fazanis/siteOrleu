@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-
+use frontend\widgets\WLang;
 $this->title = 'АО НЦПК Орлеу павлодар';
 ?>
 <div class="site-index">
@@ -13,11 +13,12 @@ $this->title = 'АО НЦПК Орлеу павлодар';
 
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
-
     <div class="body-content">
+        <?$name = name.'_'.WLang::getLang();?>
+        <?$content = content.'_'.WLang::getLang();?>
     <?foreach($newslist as $item):?>
-        <h1><?=$item->name_ru?></h1>
-        <p><?=$item->content_ru?></p>
+        <h1><?=$item->$name?></h1>
+        <p><?=$item->$content?></p>
     <?endforeach;?>
 
         <div class="row">

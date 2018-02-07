@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use frontend\widgets\WLang;
 
 AppAsset::register($this);
 ?>
@@ -27,22 +28,26 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
+
+
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
+        'brandUrl' => Yii::$app->homeUrl.''.WLang::getLang(),
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
+    echo WLang::widget();
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
+        ['label' => Yii::t('app', 'Главная'), 'url' => ['/site/index']],
+        ['label' => Yii::t('app', 'О нас'), 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
@@ -65,6 +70,7 @@ AppAsset::register($this);
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
+
         <?= $content ?>
     </div>
 </div>
@@ -72,7 +78,6 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
