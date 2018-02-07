@@ -9,6 +9,7 @@ use backend\models\SearchContent;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\models\form\AddUserForm;
 
 /**
  * ContentController implements the CRUD actions for Content model.

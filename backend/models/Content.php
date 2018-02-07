@@ -5,6 +5,7 @@ namespace backend\models;
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\db\ActiveQuery;
+use backend\models\Translit;
 
 /**
  * This is the model class for table "content".
