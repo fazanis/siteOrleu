@@ -66,11 +66,6 @@ class User extends \yii\db\ActiveRecord
     }
 
 
-    public function save()
-    {
-        
-    }
-
     public function getUserstatusList()
     {
         $result = Yii::$app->db->createCommand('SELECT * FROM userstatus')->queryAll();
