@@ -6,7 +6,7 @@ namespace backend\controllers;
 use Yii;
 use backend\models\form\AddUserForm;
 use yii\db\ActiveRecord;
-use app\models\User;
+use backend\models\User;
 use backend\models\SearchUser;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -82,11 +82,11 @@ class UserController extends Controller
         }
 
         $model = new User();
-        /*if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->session->setFlash('success', 'Пользователь добавлен');
             return $this->redirect(['view', 'id' => $model->id]);
-        }*/
-        if ($model->load(Yii::$app->request->post()) && $model->save();
+        }
+        /*if ($model->load(Yii::$app->request->post()) && $model->save();
         $model->fio = "Аяшев";
         $model->username = "ayashev";
         $model->auth_key = "vdEReOcp5Akn-4wCQxdlvq3g9J0SvUJF";
@@ -95,7 +95,7 @@ class UserController extends Controller
         $model->role = "1";
         $model->status = "10";
         $model->created_at = "1517473972";
-        $model->updated_at = "1517473972";
+        $model->updated_at = "1517473972";*/
 
 
         return $this->render('create', [
