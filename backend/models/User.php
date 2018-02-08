@@ -76,7 +76,8 @@ class User extends ActiveRecord
 
     public function getOneUser($id)
     {
-        $result = Yii::$app->db->createCommand('SELECT * FROM userstatus WHERE id')->queryOne();
+        $result = Yii::$app->db->createCommand('SELECT * FROM userstatus WHERE id="'.$id.'"')->queryOne();
+        return $result['name'];
     }
 }
 

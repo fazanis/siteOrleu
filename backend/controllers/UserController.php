@@ -80,7 +80,7 @@ class UserController extends Controller
             return $this->goHome();
         }
 
-        $model = new User();
+        $model = new AddUserForm();
         if ($model->load(Yii::$app->request->post()) && $model->saveUser()) {
             Yii::$app->session->setFlash('success', 'Пользователь добавлен');
         }
