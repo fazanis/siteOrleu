@@ -68,10 +68,15 @@ class User extends ActiveRecord
     }
 
 
-    public function getUserstatusList()
+    public static function getUserstatusList()
     {
         $result = Yii::$app->db->createCommand('SELECT * FROM userstatus')->queryAll();
         return ArrayHelper::map($result,'id','name');
+    }
+
+    public function getOneUser($id)
+    {
+        $result = Yii::$app->db->createCommand('SELECT * FROM userstatus WHERE id')->queryOne();
     }
 }
 

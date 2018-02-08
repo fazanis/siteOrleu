@@ -32,7 +32,13 @@ $this->params['breadcrumbs'][] = $this->title;
             /*'password_hash',*/
            // 'password_reset_token',
             'email',
-            'status',
+            //'status',
+            [
+                'attribute'=>'role',
+                'value' => function($data){
+                    return \backend\models\User::getOneUser($data->role);
+                }
+            ],
             //'created_at',
             //'updated_at',
 

@@ -19,7 +19,7 @@ class SearchUser extends User
     {
         return [
             [['id', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['fio','username', 'auth_key', 'password_hash', 'password_reset_token', 'email'], 'safe'],
+            [['fio','username', 'auth_key', 'password_hash','role', 'password_reset_token', 'email'], 'safe'],
         ];
     }
 
@@ -62,6 +62,7 @@ class SearchUser extends User
             'id' => $this->id,
             'fio' => $this->fio,
             'status' => $this->status,
+            'role' => $this->role,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);
