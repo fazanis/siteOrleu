@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'role')->dropDownList($model->getUserstatusList()) ?>
+    <?= $form->field($model, 'role')->dropDownList(\backend\models\User::getUserstatusList()) ?>
 
 
     <div class="form-group">

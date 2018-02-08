@@ -80,10 +80,9 @@ class UserController extends Controller
             return $this->goHome();
         }
 
-        $model = new User();
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $model = new AddUserForm();
+        if ($model->load(Yii::$app->request->post()) && $model->saveUser()) {
             Yii::$app->session->setFlash('success', 'Пользователь добавлен');
-            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
