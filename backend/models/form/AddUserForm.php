@@ -1,19 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: User
- * Date: 02.02.2018
- * Time: 11:54
- */
-
 namespace backend\models\form;
 
 use Yii;
-use yii\base\Model;
 use backend\models\User;
 
-
-class AddUserForm extends Model
+class AddUserForm extends \yii\base\Model
 {
     public $fio;
     public $username;
@@ -22,43 +13,38 @@ class AddUserForm extends Model
 
     public function rules()
     {
-       return [
-           ['fio', 'trim'],
-           ['fio', 'required'],
-           ['fio', 'string', 'min' => 2, 'max' => 255],
 
-            ['username', 'trim'],
-            ['username', 'required'],
-            ['username', 'string', 'min' => 2, 'max' => 255],
+        return[
+            ['username','trim'],
+            ['username','required'],
+            ['username', 'string','min'=>2,'max'=>255],
 
-            ['email', 'trim'],
-            ['email', 'required'],
-            ['email', 'email'],
-            ['email', 'string', 'max'=>255],
+            ['email','trim'],
+            ['email','required'],
+            ['email','email'],
+            ['email', 'string','max'=>255],
 
-            ['password', 'required'],
-            ['password', 'string', 'min' => 6],
+            ['password','required'],
+            ['password', 'string','min'=>6],
 
-
+            ['fio','required'],
+            ['fio', 'string','min'=>6],
         ];
     }
 
-    public function save()
-    {
-        if($this->validate()){
-            $user = new User;
+    public function saveUser(){
+        if ($this->validate()) {
+            $user = new User();
             $user->fio = $this->fio;
-            $user->username = $this->username;
             $user->email = $this->email;
-            $user->password = $this->password;
-            $user->repassword = $this->repassword;
-            $user->created_at = time();
-            $user->updated_at = time();
-            $user->auth_key = Yii::$app->security->generateRandomString($this->auth_key);
+            $user->username = $this->username;
+            $user->created_at = $time = time();
+            $user->updated_at = $time;
+            $user->role = '12';
+            $user->auth_key = Yii::$app->security->generateRandomString();
             $user->password_hash = Yii::$app->security->generatePasswordHash($this->password);
 
-           return $user->save();
-
+            return $user->save();
 
         }
         return false;
