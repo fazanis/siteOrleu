@@ -80,7 +80,7 @@ class UserController extends Controller
             return $this->goHome();
         }
 
-        $model = new AddUserForm();
+        $model = new User();
         if ($model->load(Yii::$app->request->post()) && $model->saveUser()) {
             Yii::$app->session->setFlash('success', 'Пользователь добавлен');
         }
@@ -102,10 +102,9 @@ class UserController extends Controller
         if (!Yii::$app->user->id){
             return $this->goHome();
         }
+      $model = $this->findModel($id);
 
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->saveUser()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -139,6 +138,7 @@ class UserController extends Controller
      * @return User the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
+
     protected function findModel($id)
     {
         if (!Yii::$app->user->id){
