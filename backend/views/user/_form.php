@@ -16,21 +16,12 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'auth_key')->textInput(['maxlength' => true,'value'=> Yii::$app->security->generateRandomString()]) ?>
-
     <?= $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'password_reset_token')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'role')->dropDownList($model->getUserstatusList()) ?>
 
-    <?= $form->field($model, 'created_at')->textInput(['value'=>time()]) ?>
-
-    <?= $form->field($model, 'updated_at')->textInput(['value'=>time()]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>

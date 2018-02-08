@@ -3,6 +3,8 @@ namespace backend\models\form;
 
 use Yii;
 use backend\models\User;
+use yii\helpers\ArrayHelper;
+
 
 class AddUserForm extends \yii\base\Model
 {
@@ -13,7 +15,6 @@ class AddUserForm extends \yii\base\Model
 
     public function rules()
     {
-
         return[
             ['username','trim'],
             ['username','required'],
@@ -35,7 +36,7 @@ class AddUserForm extends \yii\base\Model
     public function saveUser(){
         if ($this->validate()) {
             $user = new User();
-            $user->fio = $this->fio;
+           echo $user->fio = $this->fio;die();
             $user->email = $this->email;
             $user->username = $this->username;
             $user->created_at = $time = time();
@@ -44,7 +45,7 @@ class AddUserForm extends \yii\base\Model
             $user->auth_key = Yii::$app->security->generateRandomString();
             $user->password_hash = Yii::$app->security->generatePasswordHash($this->password);
 
-            return $user->save();
+           // return $user->save();
 
         }
         return false;

@@ -5,7 +5,6 @@ namespace backend\controllers;
 
 use Yii;
 use backend\models\form\AddUserForm;
-use yii\db\ActiveRecord;
 use backend\models\User;
 use backend\models\SearchUser;
 use yii\web\Controller;
@@ -86,17 +85,6 @@ class UserController extends Controller
             Yii::$app->session->setFlash('success', 'Пользователь добавлен');
             return $this->redirect(['view', 'id' => $model->id]);
         }
-        /*if ($model->load(Yii::$app->request->post()) && $model->save();
-        $model->fio = "Аяшев";
-        $model->username = "ayashev";
-        $model->auth_key = "vdEReOcp5Akn-4wCQxdlvq3g9J0SvUJF";
-        $model->password_hash = "$2y$13$FT8ZGvVpS49dnQcJJK5QgOb/HmUckgWTks54MyjUggYtqzcqwIuF6";
-        $model->email = "faza@mail.ru";
-        $model->role = "1";
-        $model->status = "10";
-        $model->created_at = "1517473972";
-        $model->updated_at = "1517473972";*/
-
 
         return $this->render('create', [
             'model' => $model,
