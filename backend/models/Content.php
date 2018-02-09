@@ -6,7 +6,6 @@ use Yii;
 use yii\helpers\ArrayHelper;
 use yii\db\ActiveQuery;
 use backend\models\Translit;
-
 /**
  * This is the model class for table "content".
  *
@@ -23,6 +22,7 @@ class Content extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
     public static function tableName()
     {
         return 'content';
@@ -37,7 +37,7 @@ class Content extends \yii\db\ActiveRecord
             [['cat'], 'required'],
             [['cat'], 'integer'],
             [['content_ru', 'content_kz'], 'string'],
-            [['name_ru', 'name_kz', 'foto'], 'string', 'max' => 255],
+            [['name_ru', 'name_kz', 'foto' ,'url'], 'string', 'max' => 255],
         ];
     }
 
@@ -62,5 +62,22 @@ class Content extends \yii\db\ActiveRecord
         $result = Yii::$app->db->createCommand('SELECT * FROM catnews')->queryAll();
         return ArrayHelper::map($result,'id','name_ru');
     }
+    
 
+    public function addContent()
+    {
+        if ($this->validators) {
+            $stat = new Content();
+            $stat->name_ru = $this->name_ru;
+            $stat->name_kz = $this->name_kz;
+            $stat->content_ru = $this->content_ru;
+            $stat->content_kz = $this->content_kz;
+            $stat->cat = $this->cat;
+            $stat->url = Translit::t($this->name_ru);
+            return $stat->save();
+
+        }
+
+        return false;
+    }
 }

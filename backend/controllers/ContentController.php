@@ -78,9 +78,8 @@ class ContentController extends Controller
             return $this->goHome();
         }
         $model = new Content();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if($model->load(Yii::$app->request->post()) && $model->addContent()){
+            return $this->redirect(['/content']);
         }
 
         return $this->render('create', [
@@ -104,7 +103,7 @@ class ContentController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['/content']);
         }
 
         return $this->render('update', [
