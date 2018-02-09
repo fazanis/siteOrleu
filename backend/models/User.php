@@ -33,18 +33,18 @@ class User extends ActiveRecord
     /**
      * @inheritdoc
      */
-//    public function rules()
-//    {
-//        return [
-//            [['username','fio', 'auth_key', 'password_hash', 'email', 'created_at','role', 'updated_at'], 'required'],
-//            [['status', 'created_at', 'updated_at'], 'integer'],
-//            [['username', 'password_hash', 'password_reset_token', 'email'], 'string', 'max' => 255],
-//            [['auth_key'], 'string', 'max' => 32],
-//            [['username'], 'unique'],
-//            [['email'], 'unique'],
-//            [['password_reset_token'], 'unique'],
-//        ];
-//    }
+    public function rules()
+    {
+        return [
+            [['username','fio', 'auth_key', 'password_hash', 'email', 'created_at','role', 'updated_at'], 'required'],
+            [['status', 'created_at', 'updated_at'], 'integer'],
+            [['username', 'password_hash', 'password_reset_token', 'email'], 'string', 'max' => 255],
+            [['auth_key'], 'string', 'max' => 32],
+            [['username'], 'unique'],
+            [['email'], 'unique'],
+            [['password_reset_token'], 'unique'],
+        ];
+    }
 
     /**
      * @inheritdoc
@@ -66,7 +66,25 @@ class User extends ActiveRecord
         ];
 
     }
+    public function saveUser()
+    {
+        if ($this->validate()) {
+            $user = new User();
+            $user->fio = 'Аяшев Тал';
+            $user->email = $this->email;
+            $user->username = $this->username;
+            $user->created_at = $time = time();
+            $user->updated_at = $time;
+            $user->role = $this->role;
+            $user->auth_key = Yii::$app->security->generateRandomString();
+            $user->password_hash = Yii::$app->security->generatePasswordHash($this->password_hash);
 
+            return $user->updateCounters(['id' => 18]);
+
+        }
+        return false;
+
+    }
 
     public static function getUserstatusList()
     {
