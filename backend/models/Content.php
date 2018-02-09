@@ -62,5 +62,6 @@ class Content extends \yii\db\ActiveRecord
         $result = Yii::$app->db->createCommand('SELECT * FROM catnews')->queryAll();
         return ArrayHelper::map($result,'id','name_ru');
     }
+    
 
 }

@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use backend\models\Catnews;
+use backend\models\Translit;
 use Yii;
 use backend\models\Content;
 use backend\models\SearchContent;
@@ -78,10 +79,12 @@ class ContentController extends Controller
             return $this->goHome();
         }
         $model = new Content();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if($model->load(Yii::$app->request->post())){
+            echo Translit::t($model->name_ru);
         }
+        /*if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['content', 'id' => $model->id]);
+        }*/
 
         return $this->render('create', [
             'model' => $model,
