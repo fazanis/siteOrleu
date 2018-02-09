@@ -20,7 +20,7 @@ class m180202_090634_create_content_table extends Migration
             'name_kz' => $this->string(255),
             'content_kz'=>$this->text(),
             'foto'=>$this->string(255),
-            'url'=>$this->string(255),
+            'url'=>$this->string(255)->unique(),
 
 
         ]);
