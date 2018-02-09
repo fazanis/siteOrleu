@@ -5,6 +5,7 @@ namespace backend\controllers;
 
 use Yii;
 use backend\models\form\AddUserForm;
+use backend\models\form\UpdateUserForm;
 use backend\models\User;
 use backend\models\SearchUser;
 use yii\web\Controller;
@@ -102,11 +103,11 @@ class UserController extends Controller
         if (!Yii::$app->user->id){
             return $this->goHome();
         }
-      $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->saveUser()) {
+        $model = $this->findModel($id);
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
-        }
+       }
 
         return $this->render('update', [
             'model' => $model,
@@ -138,7 +139,6 @@ class UserController extends Controller
      * @return User the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-
     protected function findModel($id)
     {
         if (!Yii::$app->user->id){
