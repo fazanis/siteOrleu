@@ -9,6 +9,7 @@
 namespace frontend\controllers;
 
 
+use backend\models\Content;
 use yii\web\Controller;
 
 class NewsController extends Controller
@@ -16,8 +17,12 @@ class NewsController extends Controller
 
     public function actionFull($url)
     {
+
+        $model = Content::findOne(['url'=>$url]);
         return $this->render('full',[
-            'url'=>$url,
+            'model'=>$model,
         ]);
     }
+
+
 }

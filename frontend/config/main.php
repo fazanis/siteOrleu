@@ -45,6 +45,7 @@ return [
             'rules' => [
                 '/' => 'site/index',
                 '<controller:\w+>/<action:\w+>/*'=>'<controller>/<action>',
+                '<controller:(news)>/<url:[-_0-9-a-z]+>' => '<controller>/full',
             ],
         ],
         'i18n' => [
