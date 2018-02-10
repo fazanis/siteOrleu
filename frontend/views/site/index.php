@@ -18,7 +18,7 @@ $this->title = 'АО НЦПК Орлеу павлодар';
         <?$content = content.'_'.WLang::getLang();?>
 
     <?foreach($newslist as $item):?>
-        <h1><a href="/news/<?=WLang::getLang()?>/<?=$item->url?>"><?=$item->$name?></a></h1>
+        <h1><a href="/<?=WLang::getLang()?>/news/<?=$item->url?>"><?=$item->$name?></a></h1>
         <p><?=$item->$content?></p>
 
     <?endforeach;?>
