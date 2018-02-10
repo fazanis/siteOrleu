@@ -2,6 +2,7 @@
 
 namespace frontend\models;
 
+use frontend\widgets\WLang;
 use Yii;
 
 /**
@@ -34,7 +35,7 @@ class Content extends \yii\db\ActiveRecord
             [['cat'], 'required'],
             [['cat'], 'integer'],
             [['content_ru', 'content_kz'], 'string'],
-            [['name_ru', 'name_kz', 'foto'], 'string', 'max' => 255],
+            [['name_ru', 'name_kz', 'foto','url'], 'string', 'max' => 255],
         ];
     }
 
@@ -53,6 +54,5 @@ class Content extends \yii\db\ActiveRecord
             'foto' => 'Foto',
         ];
     }
-
 
 }
