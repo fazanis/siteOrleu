@@ -2,12 +2,15 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use mihaildev\ckeditor\CKEditor;
+use mihaildev\elfinder\ElFinder;
+use mihaildev\elfinder\InputFile;
+use dosamigos\ckeditor\CKEditorInline;
+use yii\web\JsExpression;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Content */
 /* @var $form yii\widgets\ActiveForm */
 ?>
-
 <div class="content-form">
 
     <?php $form = ActiveForm::begin(); ?>
@@ -16,11 +19,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'content_ru')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'content_ru')->widget(CKEditor::className(), [
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
+    ]);?>
 
     <?= $form->field($model, 'name_kz')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'content_kz')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'content_kz')->widget(CKEditor::className(), [
+        'editorOptions' => [
+            'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
+            'inline' => false, //по умолчанию false
+            'clientOptions'=>ElFinder::ckeditorOptions('elfinder',[]),
+        ],
+    ]); ?>
 
     <?= $form->field($model, 'foto')->textInput(['maxlength' => true]) ?>
 
