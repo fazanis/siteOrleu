@@ -109,6 +109,7 @@ AppAsset::register($this);
                     ]);
                     $menuItems = [
                         ['label' => Yii::t('app', 'Главная'), 'url' => ['/site/index']],
+                        ['label' => Yii::t('app', 'Новости'), 'url' => ['/news']],
                         ['label' => Yii::t('app', 'О нас'), 'url' => ['/site/about']],
                         ['label' => 'Contact', 'url' => ['/site/contact']],
                     ];

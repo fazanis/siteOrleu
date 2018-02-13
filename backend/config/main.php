@@ -50,9 +50,8 @@ return [
             'class' => 'mihaildev\elfinder\PathController',
             'access' => ['@'],
             'root' => [
-                'baseUrl' => '@frontend/web',
-                'basePath' => '@frontend/web',
-                'path' => 'upload/content',
+                'baseUrl' => '/upload',
+                'basePath' => '@frontend/web/upload',
                 'name' => 'Files'
             ],
 //            'watermark' => [
