@@ -55,4 +55,31 @@ class Content extends \yii\db\ActiveRecord
         ];
     }
 
+    public static function shortImgMain($text)
+    {
+        preg_match('/<img(.*)src(.*)=(.*)"(.*)"/U', $text, $imgresult);
+        $firstImgScr = array_pop($imgresult);
+        return $firstImgScr;
+
+    }
+    public static function shortImgNews($text)
+    {
+        preg_match('/<img(.*)src(.*)=(.*)"(.*)"/U', $text, $imgresult);
+        $firstImgScr = array_pop($imgresult);
+        return '<img src='.$firstImgScr.' width=350px;>';
+
+    }
+
+    public static function shortContent($text)
+    {
+        $text= preg_replace('/<img[^>]+\>/', '', $text, 1);
+        return substr($text,0,200);
+    }
+
+    public static function dateFomat($date)
+    {
+        $masdate = getdate($date);
+        return $masdate['mday'].'.'.$masdate['mon'].'.'.$masdate['year'];
+    }
+
 }

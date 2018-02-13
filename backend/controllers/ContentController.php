@@ -10,6 +10,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use backend\models\form\AddUserForm;
+use yii\web\UploadedFile;
 
 /**
  * ContentController implements the CRUD actions for Content model.
@@ -30,7 +31,13 @@ class ContentController extends Controller
             ],
         ];
     }
-
+    public function actions() {
+        return array(
+            'fileManager'=>array(
+                'class'=>'application.extensions.elfinder.ElFinderAction',
+            ),
+        );
+    }
     /**
      * Lists all Content models.
      * @return mixed

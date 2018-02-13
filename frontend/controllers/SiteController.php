@@ -74,7 +74,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-        $newslist = Content::find()->where(['cat' => 1])->orderBy('id DESC')->all();
+        $newslist = Content::find()->where(['cat' => 1,'status' => 1])->orderBy('id DESC')->all();
         return $this->render('index',
             [
                 'newslist' => $newslist,
