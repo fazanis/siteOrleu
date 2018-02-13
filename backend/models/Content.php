@@ -35,7 +35,7 @@ class Content extends \yii\db\ActiveRecord
     {
         return [
             [['cat'], 'required'],
-            [['cat'], 'integer'],
+            [['cat','status'], 'integer'],
             [['content_ru', 'content_kz'], 'string'],
             [['name_ru', 'name_kz', 'foto' ,'url'], 'string', 'max' => 255],
         ];
@@ -54,6 +54,7 @@ class Content extends \yii\db\ActiveRecord
             'name_kz' => 'Название на казахском',
             'content_kz' => 'Текст на казахском',
             'foto' => 'Главное фото',
+            'status' => 'Статус',
         ];
     }
 
@@ -74,6 +75,9 @@ class Content extends \yii\db\ActiveRecord
             $stat->content_kz = $this->content_kz;
             $stat->cat = $this->cat;
             $stat->url = Translit::t($this->name_ru);
+            $stat->date_create = time();
+            $stat->date_update = time();
+            $stat->status = 1;
             return $stat->save();
 
         }

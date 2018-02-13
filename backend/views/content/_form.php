@@ -17,6 +17,8 @@ use yii\web\JsExpression;
 
     <?= $form->field($model, 'cat')->dropDownList($model->getCatList()) ?>
 
+    <?= $form->field($model, 'status')->checkbox() ?>
+
     <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'content_ru')->widget(CKEditor::className(), [
@@ -26,12 +28,8 @@ use yii\web\JsExpression;
     <?= $form->field($model, 'name_kz')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'content_kz')->widget(CKEditor::className(), [
-        'editorOptions' => [
-            'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
-            'inline' => false, //по умолчанию false
-            'clientOptions'=>ElFinder::ckeditorOptions('elfinder',[]),
-        ],
-    ]); ?>
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
+    ]);?>
 
     <?= $form->field($model, 'foto')->textInput(['maxlength' => true]) ?>
 

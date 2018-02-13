@@ -50,7 +50,7 @@ return [
             'class' => 'mihaildev\elfinder\PathController',
             'access' => ['@'],
             'root' => [
-                'baseUrl' => 'http://siteorleu/',
+                'baseUrl' => '@frontend/web',
                 'basePath' => '@frontend/web',
                 'path' => 'upload/content',
                 'name' => 'Files'
