@@ -50,10 +50,16 @@ return [
             'class' => 'mihaildev\elfinder\PathController',
             'access' => ['@'],
             'root' => [
-                'baseUrl' => '@webroot',
-                'basePath' => '@frontend/web/upload',
-                'name' => 'Files'
+                'baseUrl'=>'@web',
+                'basePath'=>'@webroot',
+                'path' => 'upload/content',
+                'name' => 'Global'
+//                'baseUrl'=>'@static',
+//                'basePath'=>'@staticRoot',
+//                'path' => 'files',
+//                'name' => 'Global'
             ],
+
 //            'watermark' => [
 //                'source'         => __DIR__.'/logo.png', // Path to Water mark image
 //                'marginRight'    => 5,          // Margin right pixel
@@ -65,5 +71,6 @@ return [
 //            ]
         ]
     ],
+
     'params' => $params,
 ];

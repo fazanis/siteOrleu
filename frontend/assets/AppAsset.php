@@ -24,6 +24,9 @@ class AppAsset extends AssetBundle
         'js/bootstrap.js',
         'js/plugins.js',
         'js/jquery.flexslider.js',
+        'js/metisMenu.min.js',
+        'js/raphael.js',
+        'js/raphael.min.js',
     ];
 
     public $depends = [
