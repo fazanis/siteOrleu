@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\module\admin\models\Content */
 
-$this->title = 'Update Content: {nameAttribute}';
+$this->title = 'Обновление материала: {'.$model->name_ru.'}';
 $this->params['breadcrumbs'][] = ['label' => 'Contents', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';

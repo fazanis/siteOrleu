@@ -126,6 +126,7 @@ AppAsset::register($this);
                             )
                             . Html::endForm()
                             . '</li>';
+                        //$menuItems [] = [ 'label' => 'Logout' , 'url' => [ '/site /logout' ], 'linkOptions' => [ 'data' => [ 'method' => 'post' ] ]];
                     }
                     echo Nav::widget([
                         'options' => ['class' => 'nav navbar-nav'],
@@ -138,8 +139,7 @@ AppAsset::register($this);
                         </ul>
                     <?NavBar::end();
                     ?>
-
-                </div>
+                    </div>
 
 
                     <!--/.nav-collapse -->

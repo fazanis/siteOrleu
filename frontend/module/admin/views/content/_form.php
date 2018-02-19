@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use backend\models\Catnews;
+use mihaildev\ckeditor\CKEditor;
+use mihaildev\elfinder\ElFinder;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\module\admin\models\Content */
@@ -20,11 +22,15 @@ use backend\models\Catnews;
 
     <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'content_ru')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'content_ru')->widget(CKEditor::className(), [
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
+    ]);?>
 
     <?= $form->field($model, 'name_kz')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'content_kz')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'content_kz')->widget(CKEditor::className(), [
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
+    ]);?>
 
     <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
 

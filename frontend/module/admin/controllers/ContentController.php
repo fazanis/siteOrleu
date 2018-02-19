@@ -12,19 +12,19 @@ use yii\filters\VerbFilter;
 /**
  * ContentController implements the CRUD actions for Content model.
  */
-class ContentController extends Controller
+class ContentController extends AdminController
 {
     /**
      * @inheritdoc
      */
-    public $layout = "main";
+
     public function behaviors()
     {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['POST','get'],
                 ],
             ],
         ];
@@ -36,6 +36,11 @@ class ContentController extends Controller
      */
     public function actionIndex()
     {
+
+//        if(Yii::$app->user->isGuest) {
+//            return $this->redirect('login');
+//        }
+
         $searchModel = new ContentSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -106,8 +111,7 @@ class ContentController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
+        return $this->redirect(['admin/content']);
     }
 
     /**

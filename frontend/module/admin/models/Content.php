@@ -42,9 +42,13 @@ class Content extends \yii\db\ActiveRecord
                 'attributes' => [
                     ActiveRecord::EVENT_BEFORE_INSERT => ['date_create', 'date_update'],
                     ActiveRecord::EVENT_BEFORE_UPDATE => ['date_update'],
-                   // ActiveRecord::EVENT_BEFORE_INSERT => ['url'],
                 ],
             ],
+        [
+            'class' => SluggableBehavior::className(),
+            'attribute' => 'name_ru',
+            'slugAttribute' => 'url',
+        ],
         ];
     }
 
@@ -54,10 +58,10 @@ class Content extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['cat', 'url', 'status', 'date_create', 'date_update'], 'integer'],
             [['cat', 'status', 'date_create', 'date_update'], 'integer'],
-            [['content_ru', 'content_kz','url'], 'string'],
-            [['name_ru', 'name_kz', 'url', 'foto'], 'string', 'max' => 255],
+            [['cat', 'status', 'date_create', 'date_update'], 'integer'],
+            [['content_ru', 'content_kz'], 'string'],
+            [['name_ru', 'name_kz', 'foto'], 'string', 'max' => 255],
 //            [['url'], 'unique'],
         ];
     }
