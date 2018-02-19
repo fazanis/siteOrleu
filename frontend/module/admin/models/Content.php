@@ -2,7 +2,6 @@
 
 namespace frontend\module\admin\models;
 
-use backend\models\Translit;
 use Yii;
 use yii\behaviors\SluggableBehavior;
 use yii\behaviors\TimestampBehavior;

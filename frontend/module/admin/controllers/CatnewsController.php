@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * CatnewsController implements the CRUD actions for Catnews model.
  */
-class CatnewsController extends AdminController
+class CatnewsController extends Controller
 {
     /**
      * @inheritdoc

@@ -3,6 +3,7 @@
 namespace frontend\module\admin\models;
 
 use Yii;
+use yii\behaviors\SluggableBehavior;
 
 /**
  * This is the model class for table "catnews".
@@ -17,6 +18,19 @@ class Catnews extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
+    public function behaviors()
+    {
+        return [
+
+            [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'name_ru',
+                'slugAttribute' => 'url',
+            ],
+        ];
+    }
+
     public static function tableName()
     {
         return 'catnews';
@@ -40,8 +54,8 @@ class Catnews extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name_ru' => 'Name Ru',
-            'name_kz' => 'Name Kz',
+            'name_ru' => 'Название на русском',
+            'name_kz' => 'Назавание на казахском',
             'url' => 'Url',
         ];
     }

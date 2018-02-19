@@ -4,12 +4,8 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use frontend\assets\AdminAsset;
-use common\widgets\Alert;
-use frontend\widgets\WLang;
+use yii\helpers\Url;
 
 AdminAsset::register($this);
 ?>
@@ -86,9 +82,9 @@ AdminAsset::register($this);
                             </li>
                             <li><a><i class="fa fa-edit"></i> Новости <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: none">
-                                    <li><a href="form.html">Катигории</a>
+                                    <li><a href="<?=Url::to('/admin/catnews')?>">Катигории</a>
                                     </li>
-                                    <li><a href="admin/content">Новости</a>
+                                    <li><a href="<?=Url::to('/admin/content')?>">Новости</a>
                                     </li>
                                     <li><a href="form_validation.html">Form Validation</a>
                                     </li>
