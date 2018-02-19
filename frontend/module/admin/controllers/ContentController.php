@@ -5,7 +5,6 @@ namespace frontend\module\admin\controllers;
 use Yii;
 use frontend\module\admin\models\Content;
 use frontend\module\admin\models\ContentSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -17,14 +16,13 @@ class ContentController extends AdminController
     /**
      * @inheritdoc
      */
-
     public function behaviors()
     {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST','get'],
+                    'delete' => ['POST'],
                 ],
             ],
         ];
@@ -37,9 +35,9 @@ class ContentController extends AdminController
     public function actionIndex()
     {
 
-//        if(Yii::$app->user->isGuest) {
-//            return $this->redirect('login');
-//        }
+        if(Yii::$app->user->isGuest) {
+            return $this->redirect('login');
+        }
 
         $searchModel = new ContentSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -111,7 +109,7 @@ class ContentController extends AdminController
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-        return $this->redirect(['admin/content']);
+        return $this->redirect(['index']);
     }
 
     /**

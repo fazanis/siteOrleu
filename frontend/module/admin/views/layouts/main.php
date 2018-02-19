@@ -13,6 +13,7 @@ use frontend\widgets\WLang;
 
 AdminAsset::register($this);
 ?>
+<?= Html::csrfMetaTags() ?>
 <?php $this->beginPage() ?>
 
 <!DOCTYPE html>
