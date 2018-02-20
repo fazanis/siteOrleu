@@ -17,6 +17,9 @@ return [
             'layout' => 'main',
 //            'loginUrl' => 'admin',
         ],
+        'comment' => [
+            'class' => 'yii2mod\comments\Module',
+        ],
     ],
     'components' => [
         'request' => [
@@ -48,10 +51,10 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'class'=>'frontend\components\LangUrlManager',
+            'class' => 'frontend\components\LangUrlManager',
             'rules' => [
                 '/' => 'site/index',
-                '<controller:\w+>/<action:\w+>/*'=>'<controller>/<action>',
+                '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
                 '<controller:(news)>/<url:[-_0-9-a-z]+>' => '<controller>/full',
             ],
         ],
@@ -62,6 +65,18 @@ return [
                     //'forceTranslation' => true,
                     'basePath' => '@common/messages',
                 ],
+                'comment' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'forceTranslation' => true,
+                    'basePath' => '@common/messages',
+                ],
+                'comments' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@yii2mod/comments/messages',
+                    'fileMap' => [
+                        //'main' => 'main.php',
+                    ],
+                ],
             ],
         ],
     ],
@@ -70,8 +85,8 @@ return [
             'class' => 'mihaildev\elfinder\PathController',
             'access' => ['@'],
             'root' => [
-                'baseUrl'=>'@web',
-                'basePath'=>'@webroot',
+                'baseUrl' => '@web',
+                'basePath' => '@webroot',
                 'path' => 'upload/content',
                 'name' => 'Global'
 //                'baseUrl'=>'@static',

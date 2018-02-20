@@ -34,8 +34,22 @@ class Content extends \yii\db\ActiveRecord
 
     public function behaviors()
     {
+//        return [
+//
+//            [
+//                'class' => TimestampBehavior::className(),
+//                'attributes' => [
+//                    ActiveRecord::EVENT_BEFORE_INSERT => ['date_create', 'date_update'],
+//                    ActiveRecord::EVENT_BEFORE_UPDATE => ['date_update'],
+//                ],
+//            ],
+//        [
+//            'class' => SluggableBehavior::className(),
+//            'attribute' => 'name_ru',
+//            'slugAttribute' => 'url',
+//        ],
+//        ];
         return [
-
             [
                 'class' => TimestampBehavior::className(),
                 'attributes' => [
@@ -43,11 +57,18 @@ class Content extends \yii\db\ActiveRecord
                     ActiveRecord::EVENT_BEFORE_UPDATE => ['date_update'],
                 ],
             ],
-        [
-            'class' => SluggableBehavior::className(),
-            'attribute' => 'name_ru',
-            'slugAttribute' => 'url',
-        ],
+            'slug' => [
+                'class' => 'Zelenin\yii\behaviors\Slug',
+                'slugAttribute' => 'url',
+                'attribute' => 'name_ru',
+                // optional params
+                'ensureUnique' => true,
+                'replacement' => '-',
+                'lowercase' => true,
+                'immutable' => false,
+                // If intl extension is enabled, see http://userguide.icu-project.org/transforms/general.
+                'transliterateOptions' => 'Russian-Latin/BGN; Any-Latin; Latin-ASCII; NFD; [:Nonspacing Mark:] Remove; NFC;'
+            ]
         ];
     }
 
