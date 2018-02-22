@@ -75,6 +75,17 @@ class CatnewsController extends Controller
         ]);
     }
 
+
+    public function actionCattree()
+    {
+        $parentcats = Catnews::find()->where(['parent_id' => 0])->all();
+
+
+
+        return $this->render('cattree',[
+            'parentcats' => $parentcats,
+        ]);
+    }
     /**
      * Updates an existing Catnews model.
      * If update is successful, the browser will be redirected to the 'view' page.
