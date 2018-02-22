@@ -1,5 +1,8 @@
 <?
 use frontend\widgets\WLang;
+use yii\widgets\ActiveForm;
+use yii\helpers\Html;
+use frontend\components\CommentWidgets;
 ?>
 <section class="section bgg">
     <div class="container">
@@ -35,6 +38,11 @@ use frontend\widgets\WLang;
         </div><!-- end col -->
     </div><!-- end row -->
 
+<?=CommentWidgets::widget(['id'=>$model->id])?>
 
+<!--    --><?php //$form = ActiveForm::begin(); ?>
+<!--    --><?//= $form->field($comments, 'text')->textarea() ?>
+<!--    --><?//= Html::submitButton('Добавить') ?>
+<!--    --><?php //ActiveForm::end(); ?>
 
 </div><!-- end container -->
