@@ -17,9 +17,6 @@ return [
             'layout' => 'main',
 //            'loginUrl' => 'admin',
         ],
-        'comment' => [
-            'class' => 'yii2mod\comments\Module',
-        ],
     ],
     'components' => [
         'request' => [
@@ -65,18 +62,6 @@ return [
                     'class' => 'yii\i18n\PhpMessageSource',
                     //'forceTranslation' => true,
                     'basePath' => '@common/messages',
-                ],
-                'comment' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    //'forceTranslation' => true,
-                    'basePath' => '@common/messages',
-                ],
-                'comments' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@yii2mod/comments/messages',
-                    'fileMap' => [
-                        //'main' => 'main.php',
-                    ],
                 ],
             ],
         ],
