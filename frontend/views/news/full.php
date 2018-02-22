@@ -38,11 +38,3 @@ use frontend\components\CommentWidgets;
         </div><!-- end col -->
     </div><!-- end row -->
 
-<?=CommentWidgets::widget(['id'=>$model->id])?>
-
-<!--    --><?php //$form = ActiveForm::begin(); ?>
-<!--    --><?//= $form->field($comments, 'text')->textarea() ?>
-<!--    --><?//= Html::submitButton('Добавить') ?>
-<!--    --><?php //ActiveForm::end(); ?>
-
-</div><!-- end container -->

@@ -28,11 +28,11 @@ class NewsController extends Controller
 
     public function actionFull($url)
     {
-        $model = Content::findOne(['url'=>$url]);
+        $model = Content::findOne(['url' => $url]);
         $model->updateCounters(['views' => 1]);
 
-        return $this->render('full',[
-            'model'=>$model,
+        return $this->render('full', [
+            'model' => $model,
         ]);
     }
 
