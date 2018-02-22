@@ -80,11 +80,11 @@ AdminAsset::register($this);
                                     </li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-edit"></i> Новости <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-edit"></i> Работа с материалами <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: none">
                                     <li><a href="<?=Url::to('/admin/catnews')?>">Катигории</a>
                                     </li>
-                                    <li><a href="<?=Url::to('/admin/content')?>">Новости</a>
+                                    <li><a href="<?=Url::to('/admin/content')?>">Материалы</a>
                                     </li>
                                     <li><a href="form_validation.html">Form Validation</a>
                                     </li>
