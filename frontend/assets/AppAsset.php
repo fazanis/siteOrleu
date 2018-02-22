@@ -17,23 +17,18 @@ class AppAsset extends AssetBundle
         'css/flexslider.css',
         'css/style.css',
         'css/custom.css',
-
-//        'css/bbpress.css',
-
-//        'css/bootstrap.min.css',
-//        'css/bootstrap-theme.css',
-//        'css/bootstrap-theme.min.css',
-
-
-
-
     ];
+
     public $js = [
         'js/jquery.min.js',
         'js/bootstrap.js',
         'js/plugins.js',
         'js/jquery.flexslider.js',
+        'js/metisMenu.min.js',
+        'js/raphael.js',
+        'js/raphael.min.js',
     ];
+
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',

@@ -14,7 +14,6 @@ use yii\web\JsExpression;
 <div class="content-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
     <?= $form->field($model, 'cat')->dropDownList($model->getCatList()) ?>
 
     <?= $form->field($model, 'status')->checkbox() ?>

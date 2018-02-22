@@ -11,6 +11,13 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'modules' => [
+        'admin' => [
+            'class' => 'frontend\module\admin\Module',
+            'layout' => 'main',
+//            'loginUrl' => 'admin',
+        ],
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -24,6 +31,7 @@ return [
         'session' => [
             // this is the name of the session cookie used for login on the frontend
             'name' => 'advanced-frontend',
+
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -41,10 +49,10 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'class'=>'frontend\components\LangUrlManager',
+            'class' => 'frontend\components\LangUrlManager',
             'rules' => [
                 '/' => 'site/index',
-                '<controller:\w+>/<action:\w+>/*'=>'<controller>/<action>',
+                '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
                 '<controller:(news)>/<url:[-_0-9-a-z]+>' => '<controller>/full',
             ],
         ],
@@ -57,6 +65,32 @@ return [
                 ],
             ],
         ],
+    ],
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\PathController',
+            'access' => ['@'],
+            'root' => [
+                'baseUrl' => '@web',
+                'basePath' => '@webroot',
+                'path' => 'upload/content',
+                'name' => 'Global'
+//                'baseUrl'=>'@static',
+//                'basePath'=>'@staticRoot',
+//                'path' => 'files',
+//                'name' => 'Global'
+            ],
+
+//            'watermark' => [
+//                'source'         => __DIR__.'/logo.png', // Path to Water mark image
+//                'marginRight'    => 5,          // Margin right pixel
+//                'marginBottom'   => 5,          // Margin bottom pixel
+//                'quality'        => 95,         // JPEG image save quality
+//                'transparency'   => 70,         // Water mark image transparency ( other than PNG )
+//                'targetType'     => IMG_GIF|IMG_JPG|IMG_PNG|IMG_WBMP, // Target image formats ( bit-field )
+//                'targetMinPixel' => 200         // Target image minimum pixel size
+//            ]
+        ]
     ],
     'params' => $params,
 ];

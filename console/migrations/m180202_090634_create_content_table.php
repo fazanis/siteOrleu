@@ -21,8 +21,10 @@ class m180202_090634_create_content_table extends Migration
             'content_kz'=>$this->text(),
             'foto'=>$this->string(255),
             'url'=>$this->string(255)->unique(),
-
-
+            'status'=>$this->integer(11),
+            'date_create'=>$this->integer(11),
+            'date_update'=>$this->integer(11),
+            'views'=>$this->integer(11),
         ]);
     }
 
