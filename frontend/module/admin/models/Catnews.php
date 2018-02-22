@@ -23,10 +23,17 @@ class Catnews extends \yii\db\ActiveRecord
     {
         return [
 
-            [
-                'class' => SluggableBehavior::className(),
-                'attribute' => 'name_ru',
+            'slug' => [
+                'class' => 'Zelenin\yii\behaviors\Slug',
                 'slugAttribute' => 'url',
+                'attribute' => 'name_ru',
+                // optional params
+                'ensureUnique' => true,
+                'replacement' => '-',
+                'lowercase' => true,
+                'immutable' => false,
+                // If intl extension is enabled, see http://userguide.icu-project.org/transforms/general.
+                'transliterateOptions' => 'Russian-Latin/BGN; Any-Latin; Latin-ASCII; NFD; [:Nonspacing Mark:] Remove; NFC;'
             ],
         ];
     }
@@ -42,7 +49,7 @@ class Catnews extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['url'], 'required'],
+            [['name_ru'], 'required'],
             [['name_ru', 'name_kz', 'url'], 'string', 'max' => 255],
         ];
     }

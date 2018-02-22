@@ -3,6 +3,7 @@
 namespace frontend\module\admin\models;
 
 use Yii;
+use yii\behaviors\AttributeBehavior;
 use yii\behaviors\SluggableBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
@@ -68,7 +69,14 @@ class Content extends \yii\db\ActiveRecord
                 'immutable' => false,
                 // If intl extension is enabled, see http://userguide.icu-project.org/transforms/general.
                 'transliterateOptions' => 'Russian-Latin/BGN; Any-Latin; Latin-ASCII; NFD; [:Nonspacing Mark:] Remove; NFC;'
-            ]
+            ],
+            [
+                'class' => AttributeBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => 'views',
+                ],
+                'value' => '0',
+            ],
         ];
     }
 
