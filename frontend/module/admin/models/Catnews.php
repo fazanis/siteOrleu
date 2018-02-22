@@ -2,6 +2,7 @@
 
 namespace frontend\module\admin\models;
 
+use function React\Promise\all;
 use Yii;
 use yii\behaviors\SluggableBehavior;
 
@@ -67,5 +68,10 @@ class Catnews extends \yii\db\ActiveRecord
             'url' => 'Url',
             'parent_id' => 'Родительская категория',
         ];
+    }
+
+    public function ChildCat($id)
+    {
+        return $model = Catnews::find()->where(['parent_id'=>$id])->all();
     }
 }
