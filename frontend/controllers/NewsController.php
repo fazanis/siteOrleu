@@ -9,9 +9,10 @@
 namespace frontend\controllers;
 
 
-//use backend\models\Content;
+use Yii;
 use frontend\models\Content;
 use yii\web\Controller;
+use frontend\models\Comments;
 
 class NewsController extends Controller
 {
@@ -27,10 +28,11 @@ class NewsController extends Controller
 
     public function actionFull($url)
     {
-        $model = Content::findOne(['url'=>$url]);
+        $model = Content::findOne(['url' => $url]);
         $model->updateCounters(['views' => 1]);
-        return $this->render('full',[
-            'model'=>$model,
+
+        return $this->render('full', [
+            'model' => $model,
         ]);
     }
 

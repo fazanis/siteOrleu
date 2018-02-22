@@ -1,5 +1,8 @@
 <?
 use frontend\widgets\WLang;
+use yii\widgets\ActiveForm;
+use yii\helpers\Html;
+use frontend\components\CommentWidgets;
 ?>
 <section class="section bgg">
     <div class="container">
@@ -35,6 +38,3 @@ use frontend\widgets\WLang;
         </div><!-- end col -->
     </div><!-- end row -->
 
-
-
-</div><!-- end container -->

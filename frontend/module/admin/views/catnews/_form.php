@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use frontend\module\admin\models\Catnews;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\module\admin\models\Catnews */
@@ -15,6 +17,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'name_kz')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'parent_id')->dropDownList(['0'=>'Без родителя'],ArrayHelper::map(Catnews::find()->all(), 'id','name_ru'))?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
