@@ -70,8 +70,15 @@ class Catnews extends \yii\db\ActiveRecord
         ];
     }
 
-    public function ChildCat($id)
+    public function getTree()
     {
-        return $model = Catnews::find()->where(['parent_id'=>$id])->all();
+        return $this->hasOne(Catnews::className(), ['id' => 'parent_id']);
     }
+    public function getTrees()
+    {
+        return $this->hasMany(Catnews::className(), ['tree_id' => 'id']);
+    }
+
+
+
 }

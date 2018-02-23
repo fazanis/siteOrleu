@@ -9,7 +9,6 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
-
 /**
  * CatnewsController implements the CRUD actions for Catnews model.
  */
@@ -34,6 +33,7 @@ class CatnewsController extends Controller
      * Lists all Catnews models.
      * @return mixed
      */
+
     public function actionIndex()
     {
         $searchModel = new CatnewsSearch();
