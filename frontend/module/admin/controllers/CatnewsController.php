@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+
 /**
  * CatnewsController implements the CRUD actions for Catnews model.
  */
@@ -75,9 +76,6 @@ class CatnewsController extends Controller
         ]);
     }
 
-<<<<<<< Updated upstream
-=======
-
     public function actionCattree()
     {
         $parentcats = Catnews::find()->all();
@@ -88,7 +86,7 @@ class CatnewsController extends Controller
             'parentcats' => $parentcats,
         ]);
     }
->>>>>>> Stashed changes
+
     /**
      * Updates an existing Catnews model.
      * If update is successful, the browser will be redirected to the 'view' page.

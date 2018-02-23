@@ -2,6 +2,7 @@
 
 namespace frontend\module\admin\models;
 
+use function React\Promise\all;
 use Yii;
 use yii\behaviors\SluggableBehavior;
 
