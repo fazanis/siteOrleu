@@ -17,7 +17,7 @@ class m180202_085337_create_catnews_table extends Migration
             'name_ru' => $this->string(255),
             'name_kz' => $this->string(255),
             'url' => $this->string(255),
-            'parent_id' => $this->integer(),
+            'parent_id' => $this->integer(11),
         ]);
     }
 

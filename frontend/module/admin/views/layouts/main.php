@@ -86,7 +86,7 @@ AdminAsset::register($this);
                                     </li>
                                     <li><a href="<?=Url::to('/admin/content')?>">Материалы</a>
                                     </li>
-                                    <li><a href="form_validation.html">Form Validation</a>
+                                    <li><a href="<?=Url::to('/admin/catnews/cattree')?>">Дерево категорий</a>
                                     </li>
                                     <li><a href="form_wizards.html">Form Wizard</a>
                                     </li>
