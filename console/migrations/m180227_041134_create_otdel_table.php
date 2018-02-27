@@ -18,7 +18,24 @@ class m180227_041134_create_otdel_table extends Migration
             'name_kz' => $this->string(255),
             'url' => $this->string(255),
             'parent_id' => $this->integer(11),
-            'status' => $this->integer(11)
+            'status' => $this->integer(11),
+            'sort' => $this->integer(11),
+            'text' => $this->text()
+        ]);
+
+        $this->insert('otdel',[
+            'name_ru' => 'Отделы',
+            'name_kz' => 'Бөлімдер',
+            'url' => 'otdely',
+            'parent_id' => '0',
+            'status' => '1'
+        ]);
+        $this->insert('otdel',[
+            'name_ru' => 'Кафедры',
+            'name_kz' => 'Кафедралар',
+            'url' => 'kafedry',
+            'parent_id' => '0',
+            'status' => '1'
         ]);
     }
 
