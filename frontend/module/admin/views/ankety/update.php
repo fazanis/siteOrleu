@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\module\admin\models\Otdel */
+/* @var $model frontend\module\admin\models\Ankety */
 
-$this->title = 'Обновление отделов';
-$this->params['breadcrumbs'][] = ['label' => 'Otdels', 'url' => ['index']];
+$this->title = 'Update Ankety: {nameAttribute}';
+$this->params['breadcrumbs'][] = ['label' => 'Anketies', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="otdel-update">
+<div class="ankety-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

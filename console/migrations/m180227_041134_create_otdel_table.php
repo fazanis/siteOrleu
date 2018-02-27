@@ -20,7 +20,8 @@ class m180227_041134_create_otdel_table extends Migration
             'parent_id' => $this->integer(11),
             'status' => $this->integer(11),
             'sort' => $this->integer(11),
-            'text' => $this->text()
+            'text_ru' => $this->text(),
+            'text_kz' => $this->text()
         ]);
 
         $this->insert('otdel',[

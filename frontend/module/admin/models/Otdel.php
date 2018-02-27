@@ -19,6 +19,26 @@ class Otdel extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
+    public function behaviors()
+    {
+        return [
+
+            'slug' => [
+                'class' => 'Zelenin\yii\behaviors\Slug',
+                'slugAttribute' => 'url',
+                'attribute' => 'name_ru',
+                // optional params
+                'ensureUnique' => true,
+                'replacement' => '-',
+                'lowercase' => true,
+                'immutable' => false,
+                // If intl extension is enabled, see http://userguide.icu-project.org/transforms/general.
+                'transliterateOptions' => 'Russian-Latin/BGN; Any-Latin; Latin-ASCII; NFD; [:Nonspacing Mark:] Remove; NFC;'
+            ],
+        ];
+    }
+
     public static function tableName()
     {
         return 'otdel';
@@ -32,6 +52,7 @@ class Otdel extends \yii\db\ActiveRecord
         return [
             [['parent_id', 'status'], 'integer'],
             [['name_ru', 'name_kz', 'url'], 'string', 'max' => 255],
+            [['text_ru','text_kz'],'string'],
         ];
     }
 
@@ -42,11 +63,16 @@ class Otdel extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name_ru' => 'Name Ru',
-            'name_kz' => 'Name Kz',
+            'name_ru' => 'Название на русском',
+            'name_kz' => 'Название на казахском',
             'url' => 'Url',
-            'parent_id' => 'Parent ID',
-            'status' => 'Status',
+            'parent_id' => 'Родитель',
+            'status' => 'Статус',
         ];
+    }
+
+    public function getOtdel()
+    {
+        return $this->hasOne(Otdel::className(),['id' => 'parent_id']);
     }
 }
