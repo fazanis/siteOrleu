@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'kabinet',
             [
                 'attribute' => 'image',
-                'valeu' => "<img src = '{$img->getUrl()}'>",
+                'value' => "<img src='{$img->getUrl()}'>",
                 'format' => 'html',
             ],
         ],
