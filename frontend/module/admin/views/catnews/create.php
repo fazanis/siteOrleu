@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\module\admin\models\Catnews */
 
-$this->title = 'Create Catnews';
+$this->title = 'Добавление категории ';
 $this->params['breadcrumbs'][] = ['label' => 'Catnews', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
