@@ -80,5 +80,9 @@ class Catnews extends \yii\db\ActiveRecord
     }
 
 
+    public function ChildCat($id)
+    {
+        return Catnews::find()->where(['parent_id'=>$id])->all();
+    }
 
 }
