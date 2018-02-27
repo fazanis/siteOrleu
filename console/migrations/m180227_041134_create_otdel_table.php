@@ -24,6 +24,13 @@ class m180227_041134_create_otdel_table extends Migration
         ]);
 
         $this->insert('otdel',[
+            'name_ru' => 'Руководство',
+            'name_kz' => 'Басшылық',
+            'url' => 'rukovodstvo',
+            'parent_id' => '0',
+            'status' => '1'
+        ]);
+        $this->insert('otdel',[
             'name_ru' => 'Отделы',
             'name_kz' => 'Бөлімдер',
             'url' => 'otdely',
