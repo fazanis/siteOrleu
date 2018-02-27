@@ -43,18 +43,28 @@ $this->params['breadcrumbs'][] = $this->title;
         'parentColumnName' => 'parent_id',
         'columns' => [
 
-            'name_ru',
-            'parent_id',
+//            'name_ru',
+            [
+                'attribute' =>'name_ru',
+                'value' => function($data){
+                    return $data->parent_id == 0 ? $data->name_ru : ' -- '.$data->name_ru;
+                }
+            ],
+//            'parent_id',
+            [
+                'attribute'=>'parent_id',
+                'value' => function($data){
+
+                    return $data->category->name_ru ? $data->category->name_ru :
+                        ' ';
+
+
+                }
+            ],
             'url',
             ['class' => 'yii\grid\ActionColumn',
-                'template' => '{view} {update} {delete} {add}',
-                'buttons' => [
-                    'add' => function ($url, $model, $key)
-                    {
-                        return Html::a('<span class="glyphicon glyphicon-plus"></span>', $url);
-                    },
+                'template' => '{view} {update} {delete}',
                 ]
-            ]
         ]
     ]);
     ?>

@@ -84,5 +84,11 @@ class Catnews extends \yii\db\ActiveRecord
     {
         return Catnews::find()->where(['parent_id'=>$id])->all();
     }
+    public function getCategory()
+    {
+        return $this->hasOne(Catnews::className(), ['id'=>'parent_id']);
+        //return Catnews::findOne(['parent_id'=>$id]);
+    }
+
 
 }

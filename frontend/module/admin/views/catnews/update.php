@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\module\admin\models\Catnews */
 
-$this->title = 'Update Catnews: {nameAttribute}';
+$this->title = 'Обновление категории';
 $this->params['breadcrumbs'][] = ['label' => 'Catnews', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
