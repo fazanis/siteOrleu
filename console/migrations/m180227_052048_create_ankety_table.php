@@ -14,6 +14,7 @@ class m180227_052048_create_ankety_table extends Migration
     {
         $this->createTable('ankety', [
             'id' => $this->primaryKey(),
+            'otdel_id' => $this->integer(11),
             'dolzhnost_ru' => $this->string(255),
             'dolzhnost_kz' => $this->string(255),
             'fio_ru' => $this->string(255),
