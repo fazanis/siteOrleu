@@ -8,6 +8,7 @@ use frontend\module\admin\models\AnketySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * AnketyController implements the CRUD actions for Ankety model.
@@ -87,6 +88,12 @@ class AnketyController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            $model->image = UploadedFile::getInstance($model, 'image');
+            if($model->upload()){
+
+            }
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

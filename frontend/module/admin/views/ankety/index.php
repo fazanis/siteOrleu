@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel frontend\module\admin\models\AnketySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Anketies';
+$this->title = 'Анкеты коллектива';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ankety-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Ankety', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить Анкету', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -24,12 +24,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'otdel_id',
-            'dolzhnost_ru',
-            'dolzhnost_kz',
             'fio_ru',
+        [
+                'attribute' => 'otdel_id',
+                'value' => function($data){
+                    return $data->otdel->name_ru;
+                }
+        ],
+            //'otdel_id',
+//            'dolzhnost_ru',
+//            'dolzhnost_kz',
+
             //'fio_kz',
             //'nagradi_ru:ntext',
             //'nagradi_kz:ntext',

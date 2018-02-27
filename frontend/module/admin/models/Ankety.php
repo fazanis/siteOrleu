@@ -3,7 +3,7 @@
 namespace frontend\module\admin\models;
 
 use Yii;
-
+use yii\web\UploadedFile;
 /**
  * This is the model class for table "ankety".
  *
@@ -23,6 +23,17 @@ use Yii;
  */
 class Ankety extends \yii\db\ActiveRecord
 {
+    public $image;
+
+
+    public function behaviors()
+    {
+        return [
+            'image' => [
+                'class' => 'rico\yii2images\behaviors\ImageBehave',
+            ]
+        ];
+    }
     /**
      * @inheritdoc
      */
@@ -40,6 +51,8 @@ class Ankety extends \yii\db\ActiveRecord
             [['otdel_id'], 'integer'],
             [['nagradi_ru', 'nagradi_kz', 'publikacii_ru', 'publikacii_kz'], 'string'],
             [['dolzhnost_ru', 'dolzhnost_kz', 'fio_ru', 'fio_kz', 'email', 'phone', 'kabinet'], 'string', 'max' => 255],
+
+            [['image'], 'file', 'extensions' => 'png, jpg'],
         ];
     }
 
@@ -50,18 +63,37 @@ class Ankety extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'otdel_id' => 'Otdel ID',
-            'dolzhnost_ru' => 'Dolzhnost Ru',
-            'dolzhnost_kz' => 'Dolzhnost Kz',
-            'fio_ru' => 'Fio Ru',
-            'fio_kz' => 'Fio Kz',
-            'nagradi_ru' => 'Nagradi Ru',
-            'nagradi_kz' => 'Nagradi Kz',
-            'publikacii_ru' => 'Publikacii Ru',
-            'publikacii_kz' => 'Publikacii Kz',
-            'email' => 'Email',
-            'phone' => 'Phone',
-            'kabinet' => 'Kabinet',
+            'image' => 'Фото',
+            'otdel_id' => 'Отдел',
+            'dolzhnost_ru' => 'Должность на русском',
+            'dolzhnost_kz' => 'Должность на казахском',
+            'fio_ru' => 'ФИО сотрудника на русском',
+            'fio_kz' => 'ФИО сотрудника на казахском',
+            'nagradi_ru' => 'Награды на русском',
+            'nagradi_kz' => 'Награды на казахском',
+            'publikacii_ru' => 'Публикации на русском',
+            'publikacii_kz' => 'Публикации на казахском',
+            'email' => 'Почта',
+            'phone' => 'Телефон',
+            'kabinet' => 'Кабинет',
         ];
+    }
+
+    public function getOtdel()
+    {
+        return $this->hasOne(Otdel::className(),['id' => 'otdel_id']);
+    }
+
+    public function upload()
+    {
+        if($this->validate()){
+            $path = 'upload/photocollectiva/'. $this->image->baseName . '.' . $this->image->extension;
+            $this->image->saveAs($path);
+            $this->attachImage($path);
+
+            return true;
+        }else{
+            return false;
+        }
     }
 }

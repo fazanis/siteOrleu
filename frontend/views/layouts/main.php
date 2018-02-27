@@ -109,8 +109,20 @@ AppAsset::register($this);
                     ]);
                     $menuItems = [
                         ['label' => Yii::t('app', 'Главная'), 'url' => ['/site/index']],
+                        ['label' => Yii::t('app', 'Структура'),
+                            'url' => ['services/index'],
+                            'options'=>['class'=>'dropdown hasmenu open'],
+                            'template' => '<a href="{url}" class="url-class">{label}</a>',
+                            'items' => [
+                                ['label' => Yii::t('app', 'Руководство'), 'url' => ['struktura/rukovodstvo']],
+                                ['label' => Yii::t('app', 'Отделы'), 'url' => ['struktura/otdeli']],
+                                ['label' => Yii::t('app', 'Кафедры'), 'url' => ['struktura/kafedri/']
+                                ],
+                            ]
+                        ],
                         ['label' => Yii::t('app', 'Новости'), 'url' => ['/news']],
-                        ['label' => Yii::t('app', 'О нас'), 'url' => ['/site/about']],
+//                        ['label' => Yii::t('app', 'О нас'), 'url' => ['/site/about']],
+
                         ['label' => 'Contact', 'url' => ['/site/contact']],
                     ];
                     if (Yii::$app->user->isGuest) {
