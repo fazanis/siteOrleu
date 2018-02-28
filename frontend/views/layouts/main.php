@@ -23,7 +23,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- SITE META -->
-    <title>Филиал АО НЦПК Орлеу Павлодарской области</title>
+    <title><?=$this->title = 'Филиал АО НЦПК Орлеу Павлодарской области';?></title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
