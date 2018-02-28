@@ -88,19 +88,13 @@ AdminAsset::register($this);
                                     </li>
                                     <li><a href="<?=Url::to('/admin/catnews/cattree')?>">Меню сайта</a>
                                     </li>
-                                    <li><a href="form_wizards.html">Отделы</a>
-                                    </li>
-                                    <li><a href="form_upload.html">Form Upload</a>
-                                    </li>
-                                    <li><a href="form_buttons.html">Form Buttons</a>
-                                    </li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-table"></i> Анкеты коллектива <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: none">
-                                    <li><a href="tables.html">Отделы</a>
+                                    <li><a href="<?=Url::to('/admin/otdel/')?>">Отделы</a>
                                     </li>
-                                    <li><a href="tables_dynamic.html">Анкеты</a>
+                                    <li><a href="<?=Url::to('/admin/ankety/')?>">Анкеты</a>
                                     </li>
                                 </ul>
                             </li>
