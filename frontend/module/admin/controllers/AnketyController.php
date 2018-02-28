@@ -90,11 +90,29 @@ class AnketyController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
             $model->image = UploadedFile::getInstance($model, 'image');
-            if($model->upload()){
+            if($model->image){
+              $image = $model->getImage();
+                if($image) {
+                    //get path to resized image
+                    $image->getPath('400x300');
+
+                    //path to original image
+                    $image->getPathToOrigin();
+
+                    //will remove this image and all cache files
+                    $model->removeImage($image);
+                }
+
+                 $model->upload();
+//                echo '<pre>';
+//                print_r($image->id);
+//                echo '</pre>';
+//                die();
 
             }
 
-            return $this->redirect(['view', 'id' => $model->id]);
+
+           return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [

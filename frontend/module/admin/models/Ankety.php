@@ -90,7 +90,7 @@ class Ankety extends \yii\db\ActiveRecord
             $path = 'upload/photocollectiva/'. $this->image->baseName . '.' . $this->image->extension;
             $this->image->saveAs($path);
             $this->attachImage($path);
-
+            @unlink($path);
             return true;
         }else{
             return false;

@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\module\admin\models\Ankety */
 
-$this->title = 'Update Ankety: {nameAttribute}';
+$this->title = 'Обновление анкеты: '.$model->fio_ru;
 $this->params['breadcrumbs'][] = ['label' => 'Anketies', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
