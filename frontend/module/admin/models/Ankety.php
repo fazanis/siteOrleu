@@ -3,6 +3,7 @@
 namespace frontend\module\admin\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\web\UploadedFile;
 /**
  * This is the model class for table "ankety".
@@ -82,6 +83,11 @@ class Ankety extends \yii\db\ActiveRecord
     public function getOtdel()
     {
         return $this->hasOne(Otdel::className(),['id' => 'otdel_id']);
+    }
+
+    public static function getOtdeli()
+    {
+        return ArrayHelper::map(Otdel::find()->all(),'id','name_ru');
     }
 
     public function upload()
