@@ -104,10 +104,6 @@ class AnketyController extends Controller
                 }
 
                  $model->upload();
-//                echo '<pre>';
-//                print_r($image->id);
-//                echo '</pre>';
-//                die();
 
             }
 
