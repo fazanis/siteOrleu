@@ -94,7 +94,7 @@ class AnketyController extends Controller
               $image = $model->getImage();
                 if($image) {
                     //get path to resized image
-                    $image->getPath('400x300');
+                    $image->getPath('300х400');
 
                     //path to original image
                     $image->getPathToOrigin();
