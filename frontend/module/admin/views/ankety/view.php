@@ -26,11 +26,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
     <? $img = $model->getImage();?>
-    <?
-        $path = substr($img->getUrl('300x400'), 7, strlen($img->getUrl('300x400')));
-        $path = '/yii2images/' . $path;
-
-    ?>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
@@ -49,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'kabinet',
             [
                 'attribute' => 'image',
-                'value' => "<img src='{$path}'>",
+                'value' => "<img src='{$img->getUrl('300x400')}'>",
                 'format' => 'html',
 
             ],

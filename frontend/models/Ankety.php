@@ -3,7 +3,7 @@
 namespace frontend\models;
 
 use Yii;
-
+use yii\web\UploadedFile;
 /**
  * This is the model class for table "ankety".
  *
@@ -23,6 +23,15 @@ use Yii;
  */
 class Ankety extends \yii\db\ActiveRecord
 {
+
+    public function behaviors()
+    {
+        return [
+            'image' => [
+                'class' => 'rico\yii2images\behaviors\ImageBehave',
+            ]
+        ];
+    }
     /**
      * @inheritdoc
      */
@@ -63,5 +72,9 @@ class Ankety extends \yii\db\ActiveRecord
             'phone' => 'Phone',
             'kabinet' => 'Kabinet',
         ];
+    }
+
+    public static function shortOtdel($text){
+        return mb_substr($text, 0, 400);
     }
 }

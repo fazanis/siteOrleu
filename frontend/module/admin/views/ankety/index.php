@@ -25,11 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'fio_ru',
+
         [
                 'attribute' => 'otdel_id',
                 'value' => function($data){
                     return $data->otdel->name_ru;
-                }
+                },
+            'filter' => \frontend\module\admin\models\Ankety::getOtdeli()
         ],
             //'otdel_id',
 //            'dolzhnost_ru',

@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\module\admin\models\Otdel */
 
-$this->title = $model->id;
+$this->title = $model->name_ru;
 $this->params['breadcrumbs'][] = ['label' => 'Otdels', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -15,8 +15,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('В отделы', ['/admin/otdel/'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Обновить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -24,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
-
+    <? $img = $model->getImage();?>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
@@ -34,6 +35,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'url:url',
             'parent_id',
             'status',
+            [
+                'attribute' => 'image',
+                'value' => "<img src='{$img->getUrl('300x400')}'>",
+                'format' => 'html',
+
+            ],
         ],
     ]) ?>
 

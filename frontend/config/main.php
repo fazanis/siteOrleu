@@ -12,6 +12,9 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module'
+        ],
         'admin' => [
             'class' => 'frontend\module\admin\Module',
             'layout' => 'main',
@@ -65,6 +68,9 @@ return [
                 '<module:admin>/<controller:\w+>' => '<module>/<controller>',
                 '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
                 '<controller:(news)>/<url:[-_0-9-a-z]+>' => '<controller>/full',
+                '<controller:(struktura)>/otdeli/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
+                '<controller:(struktura)>/kafedri/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
+                '<id:([0-9])+>/images/image-by-item-and-alias' => 'yii2images/images/image-by-item-and-alias',
             ],
         ],
         'i18n' => [

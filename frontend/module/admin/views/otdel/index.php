@@ -27,6 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'showOnEmpty' => FALSE,
         'parentColumnName' => 'parent_id',
         'columns' => [
+                'id',
 
 //            'name_ru',
             [
@@ -46,9 +47,19 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             'url',
-            ['class' => 'yii\grid\ActionColumn',
-                'template' => '{view} {update} {delete}',
-            ]
+            [
+                'attribute'=>'Редактирование',
+                'format' => 'html',
+                'value' => function($data){
+
+                    return Html::a('<span class="glyphicon glyphicon-eye-open"></span>', 'view?id='.$data->id).' '.
+                        Html::a('<span class="glyphicon glyphicon-pencil"></span>', 'update?id='.$data->id).' '.
+                        Html::a('<span class="glyphicon glyphicon-trash"></span>', 'delete?id='.$data->id);
+
+
+                }
+            ],
+
         ]
     ]);
     ?>

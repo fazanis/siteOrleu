@@ -13,7 +13,7 @@ use yii\web\UploadedFile;
 /**
  * AnketyController implements the CRUD actions for Ankety model.
  */
-class AnketyController extends Controller
+class AnketyController extends AdminController
 {
     /**
      * @inheritdoc
@@ -68,6 +68,9 @@ class AnketyController extends Controller
         $model = new Ankety();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            Yii::$app->session->setFlash('success', "Анкета работника успешно добавлена");
+            $model->image = UploadedFile::getInstance($model, 'image');
+            $model->upload();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -88,7 +91,7 @@ class AnketyController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-
+            Yii::$app->session->setFlash('success','Работник успешно обновлен');
             $model->image = UploadedFile::getInstance($model, 'image');
             if($model->image){
               $image = $model->getImage();
@@ -104,10 +107,6 @@ class AnketyController extends Controller
                 }
 
                  $model->upload();
-//                echo '<pre>';
-//                print_r($image->id);
-//                echo '</pre>';
-//                die();
 
             }
 

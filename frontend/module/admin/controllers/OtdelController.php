@@ -8,11 +8,12 @@ use frontend\module\admin\models\OtdelSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * OtdelController implements the CRUD actions for Otdel model.
  */
-class OtdelController extends Controller
+class OtdelController extends AdminController
 {
     /**
      * @inheritdoc
@@ -67,6 +68,8 @@ class OtdelController extends Controller
         $model = new Otdel();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+            $model->upload();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -87,6 +90,23 @@ class OtdelController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+            if($model->image){
+                $image = $model->getImage('300х400');
+                if($image) {
+                    //get path to resized image
+                    $image->getPath('300х400');
+
+                    //path to original image
+                    $image->getPathToOrigin();
+
+                    //will remove this image and all cache files
+                    $model->removeImage($image);
+                }
+
+                $model->upload();
+
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
