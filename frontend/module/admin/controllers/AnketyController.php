@@ -13,7 +13,7 @@ use yii\web\UploadedFile;
 /**
  * AnketyController implements the CRUD actions for Ankety model.
  */
-class AnketyController extends Controller
+class AnketyController extends AdminController
 {
     /**
      * @inheritdoc

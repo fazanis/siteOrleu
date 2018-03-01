@@ -73,4 +73,8 @@ class Ankety extends \yii\db\ActiveRecord
             'kabinet' => 'Kabinet',
         ];
     }
+
+    public static function shortOtdel($text){
+        return mb_substr($text, 0, 400);
+    }
 }

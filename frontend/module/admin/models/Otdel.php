@@ -3,7 +3,7 @@
 namespace frontend\module\admin\models;
 
 use Yii;
-
+use yii\web\UploadedFile;
 /**
  * This is the model class for table "otdel".
  *
@@ -16,14 +16,17 @@ use Yii;
  */
 class Otdel extends \yii\db\ActiveRecord
 {
+    public $image;
     /**
      * @inheritdoc
      */
-
     public function behaviors()
     {
         return [
 
+            'image' => [
+                'class' => 'rico\yii2images\behaviors\ImageBehave',
+            ],
             'slug' => [
                 'class' => 'Zelenin\yii\behaviors\Slug',
                 'slugAttribute' => 'url',
@@ -35,7 +38,7 @@ class Otdel extends \yii\db\ActiveRecord
                 'immutable' => false,
                 // If intl extension is enabled, see http://userguide.icu-project.org/transforms/general.
                 'transliterateOptions' => 'Russian-Latin/BGN; Any-Latin; Latin-ASCII; NFD; [:Nonspacing Mark:] Remove; NFC;'
-            ],
+            ]
         ];
     }
 
@@ -74,5 +77,18 @@ class Otdel extends \yii\db\ActiveRecord
     public function getOtdel()
     {
         return $this->hasOne(Otdel::className(),['id' => 'parent_id']);
+    }
+
+    public function upload()
+    {
+        if($this->validate()){
+            $path = 'upload/photocollectiva/'. $this->image->baseName . '.' . $this->image->extension;
+            $this->image->saveAs($path);
+            $this->attachImage($path);
+            @unlink($path);
+            return true;
+        }else{
+            return false;
+        }
     }
 }

@@ -68,6 +68,8 @@ return [
                 '<module:admin>/<controller:\w+>' => '<module>/<controller>',
                 '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
                 '<controller:(news)>/<url:[-_0-9-a-z]+>' => '<controller>/full',
+                '<controller:(struktura)>/otdeli/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
+                '<controller:(struktura)>/kafedri/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
                 '<id:([0-9])+>/images/image-by-item-and-alias' => 'yii2images/images/image-by-item-and-alias',
             ],
         ],

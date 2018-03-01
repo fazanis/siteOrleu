@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use frontend\module\admin\models\Otdel;
 use yii\helpers\ArrayHelper;
+use mihaildev\ckeditor\CKEditor;
+use mihaildev\elfinder\ElFinder;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\module\admin\models\Otdel */
@@ -12,7 +14,9 @@ use yii\helpers\ArrayHelper;
 
 <div class="otdel-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+
+    <?= $form->field($model, 'image')->fileInput() ?>
 
     <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true]) ?>
 
@@ -22,8 +26,12 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'status')->checkbox() ?>
 
-    <?= $form->field($model, 'text_ru')->textarea() ?>
-    <?= $form->field($model, 'text_kz')->textarea() ?>
+    <?= $form->field($model, 'text_ru')->widget(CKEditor::className(), [
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
+    ]);?>
+    <?= $form->field($model, 'text_kz')->widget(CKEditor::className(), [
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
+    ]);?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
