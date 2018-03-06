@@ -59,7 +59,6 @@ AppAsset::register($this);
 </div>
 
 <!-- START SITE -->
-
 <div id="wrapper">
     <div class="logo-wrapper">
         <div class="container">
@@ -69,7 +68,7 @@ AppAsset::register($this);
                 </div>
                 <!-- end col -->
                 <div class="col-md-9 col-sm-12">
-                    <div class="ads-widget clearfix" style="font-size: 21px;">
+                    <div style="font-size: 21px;">
                         <?if(WLang::getLang() == 'kz'):?>
                         «ӨРЛЕУ» БІЛІКТІЛІКТІ АРТТЫРУ ҰЛТТЫҚ ОРТАЛЫҒЫ» АКЦИОНЕРЛІК ҚОҒАМЫНЫҢ ФИЛИАЛЫ «ПАВЛОДАР ОБЛЫСЫ БОЙЫНША ПЕДАГОГИКАЛЫҚ ҚЫЗМЕТКЕРЛЕРДІҢ БІЛІКТІЛІГІН АРТТЫРУ ИНСТИТУТЫ»
                         <?endif;?>
