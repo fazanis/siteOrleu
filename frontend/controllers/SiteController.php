@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use frontend\models\Content;
+use frontend\module\admin\models\Banner;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -75,6 +76,7 @@ class SiteController extends Controller
     {
 
         $newslist = Content::find()->where(['cat' => 1,'status' => 1])->orderBy('id DESC')->all();
+        $banners = Banner::find()->all();
         return $this->render('index',
             [
                 'newslist' => $newslist,

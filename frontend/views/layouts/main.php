@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use yii\helpers\Html;
@@ -10,6 +11,7 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
 use frontend\widgets\WLang;
+use frontend\widgets\banners\Banners;
 
 AppAsset::register($this);
 ?>
@@ -23,7 +25,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- SITE META -->
-    <title><?=$this->title = 'Филиал АО НЦПК Орлеу Павлодарской области';?></title>
+    <title><?= $this->title = 'Филиал АО НЦПК Орлеу Павлодарской области'; ?></title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
@@ -46,12 +48,18 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <div class="left-menu hidden-sm hidden-md hidden-xs">
     <ul class="dm-social">
-        <li class="facebookbg"><a href="#" class="fa fa-facebook" data-toggle="tooltip" data-placement="right" title="Facebook">Facebook</a></li>
-        <li class="googlebg"><a href="#" class="fa fa-google-plus" data-toggle="tooltip" data-placement="right" title="Google+">Google+</a></li>
-        <li class="twitterbg"><a href="#" class="fa fa-twitter" data-toggle="tooltip" data-placement="right" title="Twitter">Twitter</a></li>
-        <li class="pinterestbg"><a href="#" class="fa fa-pinterest" data-toggle="tooltip" data-placement="right" title="Pinterest">Pinterest</a></li>
-        <li class="linkedinbg"><a href="#" class="fa fa-linkedin" data-toggle="tooltip" data-placement="right" title="Linkedin">Linkedin</a></li>
-        <li class="rssbg"><a href="#" class="fa fa-rss" data-toggle="tooltip" data-placement="right" title="RSS">RSS</a></li>
+        <li class="facebookbg"><a href="#" class="fa fa-facebook" data-toggle="tooltip" data-placement="right"
+                                  title="Facebook">Facebook</a></li>
+        <li class="googlebg"><a href="#" class="fa fa-google-plus" data-toggle="tooltip" data-placement="right"
+                                title="Google+">Google+</a></li>
+        <li class="twitterbg"><a href="#" class="fa fa-twitter" data-toggle="tooltip" data-placement="right"
+                                 title="Twitter">Twitter</a></li>
+        <li class="pinterestbg"><a href="#" class="fa fa-pinterest" data-toggle="tooltip" data-placement="right"
+                                   title="Pinterest">Pinterest</a></li>
+        <li class="linkedinbg"><a href="#" class="fa fa-linkedin" data-toggle="tooltip" data-placement="right"
+                                  title="Linkedin">Linkedin</a></li>
+        <li class="rssbg"><a href="#" class="fa fa-rss" data-toggle="tooltip" data-placement="right" title="RSS">RSS</a>
+        </li>
         <li class="share">
             <a href="#" class="fa fa-share-alt" data-toggle="tooltip" data-placement="right" title="91k Share"></a>
         </li>
@@ -64,17 +72,19 @@ AppAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-sm-12">
-                        <a class="navbar-brand" href="/<?=WLang::getLang()?>"><img width="100px" src="<?=Yii::getAlias('@mysite') ?>/images/logoorleu.png" alt=""></a>
+                    <a class="navbar-brand" href="/<?= WLang::getLang() ?>"><img width="100px"
+                                                                                 src="<?= Yii::getAlias('@mysite') ?>/images/logoorleu.png"
+                                                                                 alt=""></a>
                 </div>
                 <!-- end col -->
                 <div class="col-md-9 col-sm-12">
                     <div style="font-size: 21px;">
-                        <?if(WLang::getLang() == 'kz'):?>
-                        «ӨРЛЕУ» БІЛІКТІЛІКТІ АРТТЫРУ ҰЛТТЫҚ ОРТАЛЫҒЫ» АКЦИОНЕРЛІК ҚОҒАМЫНЫҢ ФИЛИАЛЫ «ПАВЛОДАР ОБЛЫСЫ БОЙЫНША ПЕДАГОГИКАЛЫҚ ҚЫЗМЕТКЕРЛЕРДІҢ БІЛІКТІЛІГІН АРТТЫРУ ИНСТИТУТЫ»
-                        <?endif;?>
-                        <?if(WLang::getLang() == 'ru'):?>
-                        ФИЛИАЛ АКЦИОНЕРНОГО ОБЩЕСТВА «НАЦИОНАЛЬНЫЙ ЦЕНТР ПОВЫШЕНИЯ КВАЛИФИКАЦИИ «ӨРЛЕУ» «ИНСТИТУТ ПОВЫШЕНИЯ КВАЛИФИКАЦИИ ПЕДАГОГИЧЕСКИХ РАБОТНИКОВ ПО ПАВЛОДАРСКОЙ ОБЛАСТИ»
-                        <?endif;?>
+                        <? if (WLang::getLang() == 'kz'): ?>
+                            «ӨРЛЕУ» БІЛІКТІЛІКТІ АРТТЫРУ ҰЛТТЫҚ ОРТАЛЫҒЫ» АКЦИОНЕРЛІК ҚОҒАМЫНЫҢ ФИЛИАЛЫ «ПАВЛОДАР ОБЛЫСЫ БОЙЫНША ПЕДАГОГИКАЛЫҚ ҚЫЗМЕТКЕРЛЕРДІҢ БІЛІКТІЛІГІН АРТТЫРУ ИНСТИТУТЫ»
+                        <? endif; ?>
+                        <? if (WLang::getLang() == 'ru'): ?>
+                            ФИЛИАЛ АКЦИОНЕРНОГО ОБЩЕСТВА «НАЦИОНАЛЬНЫЙ ЦЕНТР ПОВЫШЕНИЯ КВАЛИФИКАЦИИ «ӨРЛЕУ» «ИНСТИТУТ ПОВЫШЕНИЯ КВАЛИФИКАЦИИ ПЕДАГОГИЧЕСКИХ РАБОТНИКОВ ПО ПАВЛОДАРСКОЙ ОБЛАСТИ»
+                        <? endif; ?>
                     </div>
                     <!-- end ads-widget -->
                 </div>
@@ -91,7 +101,8 @@ AppAsset::register($this);
             <nav class="navbar navbar-default yamm">
                 <div class="container-full">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -99,48 +110,48 @@ AppAsset::register($this);
                         </button>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
-                    <?php
-                    NavBar::begin([
+                        <?php
+                        NavBar::begin([
 //                        'brandLabel' => Yii::$app->name,
-                        'brandUrl' => Yii::$app->homeUrl.''.WLang::getLang(),
-                        'options' => [
-                            'class' => 'nav navbar-nav',
-                        ],
-                    ]);
-                    $menuItems = [
-                        ['label' => Yii::t('app', 'Главная'), 'url' => ['/site/index']],
-                        ['label' => Yii::t('app', 'Структура'),
-                            'url' => ['services/index'],
-                            'options'=>['class'=>'dropdown hasmenu open'],
-                            'template' => '<a href="{url}" class="url-class">{label}</a>',
-                            'items' => [
-                                ['label' => Yii::t('app', 'Руководство'), 'url' => ['struktura/rukovodstvo']],
-                                ['label' => Yii::t('app', 'Отделы'), 'url' => ['struktura/otdeli']],
-                                ['label' => Yii::t('app', 'Кафедры'), 'url' => ['struktura/kafedri/']
-                                ],
-                            ]
-                        ],
-                        ['label' => Yii::t('app', 'Новости'), 'url' => ['/news']],
+                            'brandUrl' => Yii::$app->homeUrl . '' . WLang::getLang(),
+                            'options' => [
+                                'class' => 'nav navbar-nav',
+                            ],
+                        ]);
+                        $menuItems = [
+                            ['label' => Yii::t('app', 'Главная'), 'url' => ['/site/index']],
+                            ['label' => Yii::t('app', 'Структура'),
+                                'url' => ['services/index'],
+                                'options' => ['class' => 'dropdown hasmenu open'],
+                                'template' => '<a href="{url}" class="url-class">{label}</a>',
+                                'items' => [
+                                    ['label' => Yii::t('app', 'Руководство'), 'url' => ['struktura/rukovodstvo']],
+                                    ['label' => Yii::t('app', 'Отделы'), 'url' => ['struktura/otdeli']],
+                                    ['label' => Yii::t('app', 'Кафедры'), 'url' => ['struktura/kafedri/']
+                                    ],
+                                ]
+                            ],
+                            ['label' => Yii::t('app', 'Новости'), 'url' => ['/news']],
 //                        ['label' => Yii::t('app', 'О нас'), 'url' => ['/site/about']],
 
-                        ['label' => 'Contact', 'url' => ['/site/contact']],
-                    ];
-                    if (Yii::$app->user->isGuest) {
-                        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-                        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+                            ['label' => 'Contact', 'url' => ['/site/contact']],
+                        ];
+                        if (Yii::$app->user->isGuest) {
+                            $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+                            $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
 
-                    }
-                    echo Nav::widget([
-                        'options' => ['class' => 'nav navbar-nav'],
-                        'items' => $menuItems,
-                    ]);?>
+                        }
+                        echo Nav::widget([
+                            'options' => ['class' => 'nav navbar-nav'],
+                            'items' => $menuItems,
+                        ]); ?>
                         <ul class="nav navbar-nav navbar-right searchandbag">
                             <li class="dropdown searchdropdown hasmenu">
-                                <?=WLang::widget()?>
+                                <?= WLang::widget() ?>
                             </li>
                         </ul>
-                    <?NavBar::end();
-                    ?>
+                        <? NavBar::end();
+                        ?>
                     </div>
 
 
@@ -158,7 +169,7 @@ AppAsset::register($this);
             <div class="col-md-9 col-sm-12">
 
                 <!-- end property-slider -->
-                <?=$content?>
+                <?= $content ?>
 
                 <div class="row">
                     <div class="col-md-12">
@@ -187,7 +198,9 @@ AppAsset::register($this);
 
                     <div class="social-media-widget m30">
                         <ul class="list-social clearfix">
-                            <li class="facebook"><a target="_blank" href="https://www.facebook.com/orleu.pavlodar/?ref=bookmarks"><i class="fa fa-facebook"></i></a></li>
+                            <li class="facebook"><a target="_blank"
+                                                    href="https://www.facebook.com/orleu.pavlodar/?ref=bookmarks"><i
+                                            class="fa fa-facebook"></i></a></li>
                             <li class="googleplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             <li class="youtube"><a href="#"><i class="fa fa-youtube"></i></a></li>
                             <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -197,8 +210,9 @@ AppAsset::register($this);
                 </div>
 
                 <div class="widget hidden-xs">
+                    <?=Banners::widget()?>
                     <div class="widget-title">
-                        <h4><?=Yii::t('app','blog_directora')?></h4>
+                        <h4><?= Yii::t('app', 'blog_directora') ?></h4>
                         <hr>
                     </div>
                     <!-- end widget-title -->
@@ -309,7 +323,8 @@ AppAsset::register($this);
                             </div>
                             <!-- end media -->
                             <div class="post-title">
-                                <h3><a href="single-review.html">Mondo, the U.K. banking startup, opens public Beta</a></h3>
+                                <h3><a href="single-review.html">Mondo, the U.K. banking startup, opens public Beta</a>
+                                </h3>
                             </div>
                             <!-- end post-title -->
                         </div>
@@ -501,9 +516,10 @@ AppAsset::register($this);
                             <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
                             <form class="form-inline" method="post" role="form">
                                 <div class="input-group form-group">
-                                    <input type="text" name="email" placeholder="Add your email here.." required class="form-control" />
+                                    <input type="text" name="email" placeholder="Add your email here.." required
+                                           class="form-control"/>
                                 </div>
-                                <input type="submit" value="Subscribe" class="btn btn-primary" />
+                                <input type="submit" value="Subscribe" class="btn btn-primary"/>
                             </form>
 
                             <hr>
@@ -529,8 +545,12 @@ AppAsset::register($this);
         <div id="sitefooter" class="container">
             <div id="copyright" class="row">
                 <div class="col-md-6 col-sm-12 text-left">
-                    <p class="copyright-notice"><span class="fa fa-copyright"></span> 2016 Techmag. All Rights Reserved. A <a href="#" title="TemplateVisual" target="_blank">TemplateVisual</a> INC.</p>
-                    <p class="footer-links"><a href="#" title="Privacy Policy" rel="nofollow">Privacy Policy</a><span>|</span><a href="#" title="Site Disclosure" rel="nofollow">Site Terms &amp; Disclosures</a><span>|</span><a href="#" title="" rel="nofollow" target="_blank">Powered by Bootstrap</a></p>
+                    <p class="copyright-notice"><span class="fa fa-copyright"></span> 2016 Techmag. All Rights Reserved.
+                        A <a href="#" title="TemplateVisual" target="_blank">TemplateVisual</a> INC.</p>
+                    <p class="footer-links"><a href="#" title="Privacy Policy" rel="nofollow">Privacy
+                            Policy</a><span>|</span><a href="#" title="Site Disclosure" rel="nofollow">Site Terms &amp;
+                            Disclosures</a><span>|</span><a href="#" title="" rel="nofollow" target="_blank">Powered by
+                            Bootstrap</a></p>
                 </div>
 
                 <div class="col-md-6 col-sm-12">
@@ -556,7 +576,7 @@ AppAsset::register($this);
 ================================================== -->
 <?php $this->endBody() ?>
 <script>
-    $(window).load(function() {
+    $(window).load(function () {
         $('#property-slider .flexslider').flexslider({
             animation: "fade",
             slideshowSpeed: 6000,
