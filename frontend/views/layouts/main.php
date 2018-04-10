@@ -198,7 +198,7 @@ AppAsset::register($this);
 
                 <div class="widget hidden-xs">
                     <div class="widget-title">
-                        <h4>Advertising</h4>
+                        <h4><?=Yii::t('app','blog_directora')?></h4>
                         <hr>
                     </div>
                     <!-- end widget-title -->

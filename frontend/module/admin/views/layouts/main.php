@@ -98,9 +98,9 @@ AdminAsset::register($this);
                                     </li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-desktop"></i> Блоки <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: none">
-                                    <li><a href="general_elements.html">General Elements</a>
+                                    <li><a href="<?=Url::to('/admin/bloki/blog_direktoda')?>">Блог Директора</a>
                                     </li>
                                     <li><a href="media_gallery.html">Media Gallery</a>
                                     </li>
