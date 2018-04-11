@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use frontend\models\Blogdirectora;
 use frontend\models\Content;
 use frontend\module\admin\models\Banner;
 use Yii;
@@ -216,6 +217,27 @@ class SiteController extends Controller
 
         return $this->render('resetPassword', [
             'model' => $model,
+        ]);
+    }
+
+    public function actionBlogdirectora(){
+        $question = Blogdirectora::find()->where(['public'=>'1'])->all();
+        return $this->render('blogdirectora',[
+            'question'=>$question,
+        ]);
+    }
+
+    public function actionZadatvopros(){
+        $model = new Blogdirectora();
+        if($model->load(Yii::$app->request->post()) && $model->validate() && $model->save()){
+            Yii::$app->session->setFlash('success', 'Вопрос отправлен.');
+            $model->name = '';
+            $model->email = '';
+            $model->subject = '';
+            $model->question = '';
+        }
+        return $this->render('zadatvopros',[
+            'model'=>$model,
         ]);
     }
 }

@@ -376,7 +376,7 @@ use frontend\models\Content;
                 <div class="col-md-5">
                     <div class="post-media">
                         <a href="single.html">
-                            <img alt="" src="upload/big_news_04.jpg" class="img-responsive">
+<!--                            <img alt="" src="upload/big_news_04.jpg" class="img-responsive">-->
                         </a>
                     </div>
                 </div>
@@ -412,7 +412,7 @@ use frontend\models\Content;
                 <div class="col-md-5">
                     <div class="post-media">
                         <a href="single.html">
-                            <img alt="" src="upload/big_news_05.jpg" class="img-responsive">
+<!--                            <img alt="" src="upload/big_news_05.jpg" class="img-responsive">-->
                         </a>
                     </div>
                 </div>
@@ -425,7 +425,7 @@ use frontend\models\Content;
                         <h3>WordPress App for showcase galleries and Instagram users</h3>
 
                         <div class="large-post-meta">
-                            <span class="avatar"><a href="author.html"><img src="upload/avatar_01.png" alt="" class="img-circle"> Kubra Karahasan</a></span>
+<!--                            <span class="avatar"><a href="author.html"><img src="upload/avatar_01.png" alt="" class="img-circle"> Kubra Karahasan</a></span>-->
                             <small>&#124;</small>
                             <span><a href="category.html"><i class="fa fa-clock-o"></i> 21 March 2016</a></span>
                             <small class="hidden-xs">&#124;</small>

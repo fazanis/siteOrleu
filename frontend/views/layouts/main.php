@@ -175,7 +175,7 @@ AppAsset::register($this);
                     <div class="col-md-12">
                         <div class="widget">
                             <div class="ads-widget">
-                                <a href="#"><img src="upload/banner_02.jpg" alt="" class="img-responsive"></a>
+
                             </div>
                             <!-- end ads-widget -->
                         </div>
@@ -211,14 +211,10 @@ AppAsset::register($this);
 
                 <div class="widget hidden-xs">
                     <?=Banners::widget()?>
-                    <div class="widget-title">
-                        <h4><?= Yii::t('app', 'blog_directora') ?></h4>
-                        <hr>
-                    </div>
                     <!-- end widget-title -->
 
                     <div class="ads-widget m30">
-                        <a href="#"><img src="upload/banner_01.jpg" alt="" class="img-responsive"></a>
+
                     </div>
                     <!-- end ads-widget -->
                 </div>
@@ -235,7 +231,7 @@ AppAsset::register($this);
                         <div class="post-review">
                             <div class="post-media entry">
                                 <a href="single-review.html" title="">
-                                    <img src="upload/review_01.jpg" alt="" class="img-responsive">
+
                                     <div class="magnifier">
                                         <div class="review-stat">
                                             <div class="rating">
@@ -268,7 +264,7 @@ AppAsset::register($this);
                         <div class="post-review">
                             <div class="post-media entry">
                                 <a href="single-review.html" title="">
-                                    <img src="upload/review_02.jpg" alt="" class="img-responsive">
+<!--                                    <img src="upload/review_02.jpg" alt="" class="img-responsive">-->
                                     <div class="magnifier">
                                         <div class="review-stat">
                                             <div class="rating">
@@ -301,7 +297,7 @@ AppAsset::register($this);
                         <div class="post-review">
                             <div class="post-media entry">
                                 <a href="single-review.html" title="">
-                                    <img src="upload/review_03.jpg" alt="" class="img-responsive">
+<!--                                    <img src="upload/review_03.jpg" alt="" class="img-responsive">-->
                                     <div class="magnifier">
                                         <div class="review-stat">
                                             <div class="rating">
@@ -345,7 +341,7 @@ AppAsset::register($this);
                         <div class="post clearfix">
                             <div class="mini-widget-thumb">
                                 <a href="single.html">
-                                    <img alt="" src="upload/mini_widget_01.jpg" class="img-responsive">
+
                                 </a>
                             </div>
                             <div class="mini-widget-title">
@@ -357,7 +353,7 @@ AppAsset::register($this);
                         <div class="post clearfix">
                             <div class="mini-widget-thumb">
                                 <a href="single.html">
-                                    <img alt="" src="upload/mini_widget_02.jpg" class="img-responsive">
+
                                 </a>
                             </div>
                             <div class="mini-widget-title">
@@ -369,7 +365,7 @@ AppAsset::register($this);
                         <div class="post clearfix">
                             <div class="mini-widget-thumb">
                                 <a href="single.html">
-                                    <img alt="" src="upload/mini_widget_03.jpg" class="img-responsive">
+
                                 </a>
                             </div>
                             <div class="mini-widget-title">
@@ -381,7 +377,7 @@ AppAsset::register($this);
                         <div class="post clearfix">
                             <div class="mini-widget-thumb">
                                 <a href="single.html">
-                                    <img alt="" src="upload/mini_widget_04.jpg" class="img-responsive">
+
                                 </a>
                             </div>
                             <div class="mini-widget-title">
@@ -393,7 +389,7 @@ AppAsset::register($this);
                         <div class="post clearfix">
                             <div class="mini-widget-thumb">
                                 <a href="single.html">
-                                    <img alt="" src="upload/mini_widget_05.jpg" class="img-responsive">
+
                                 </a>
                             </div>
                             <div class="mini-widget-title">
@@ -405,7 +401,7 @@ AppAsset::register($this);
                         <div class="post clearfix">
                             <div class="mini-widget-thumb">
                                 <a href="single.html">
-                                    <img alt="" src="upload/mini_widget_06.jpg" class="img-responsive">
+
                                 </a>
                             </div>
                             <div class="mini-widget-title">

@@ -20,6 +20,10 @@ return [
             'layout' => 'main',
 //            'loginUrl' => 'admin',
         ],
+        'cabinet' => [
+            'class' => 'frontend\module\cabinet\Module',
+            'layout' => 'main',
+        ],
         'yii2images' => [
             'class' => 'rico\yii2images\Module',
             //be sure, that permissions ok

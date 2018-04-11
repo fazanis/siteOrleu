@@ -13,7 +13,7 @@ class Banners extends Widget
 {
     public function run()
     {
-        $banners = Banner::find()->all();
+        $banners = Banner::find()->where(['activate'=>'1'])->all();
         return $this->render('index',
             [
                 'banners'=>$banners,
