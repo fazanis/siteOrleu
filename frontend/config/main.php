@@ -40,6 +40,10 @@ return [
             'csrfParam' => '_csrf-frontend',
             'class' => 'frontend\components\LangRequest',
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\PhpManager',
+            'defaultRoles' => ['admin', 'author'],
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
