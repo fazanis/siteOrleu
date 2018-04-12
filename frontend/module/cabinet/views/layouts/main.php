@@ -71,7 +71,7 @@ AdminAsset::register($this);
                         <h3>General</h3>
                         <ul class="nav side-menu">
                             <li><a href="<?=Url::to('/cabinet/')?>"> <i class="fa fa-home"></i>Главная </a></li>
-                            <li><a href="<?=Url::to('/cabinet/')?>"> <i class="fa fa-edit"></i>Вопросы </a></li>
+                            <li><a href="<?=Url::to('/cabinet/blogdirectora')?>"> <i class="fa fa-edit"></i>Вопросы </a></li>
 
 
 

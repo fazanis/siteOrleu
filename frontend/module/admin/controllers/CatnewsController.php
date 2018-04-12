@@ -8,6 +8,7 @@ use frontend\module\admin\models\CatnewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use frontend\module\admin\controllers\behaviors\AdminBehavators;
 
 /**
  * CatnewsController implements the CRUD actions for Catnews model.
@@ -26,6 +27,7 @@ class CatnewsController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            AdminBehavators::className(),
         ];
     }
 

@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+use frontend\module\admin\controllers\behaviors\AdminBehavators;
 
 /**
  * BannerController implements the CRUD actions for Banner model.
@@ -27,6 +28,7 @@ class BannerController extends AdminController
                     'delete' => ['POST'],
                 ],
             ],
+            AdminBehavators::className(),
         ];
     }
 

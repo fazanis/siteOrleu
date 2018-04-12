@@ -9,7 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
-
+use frontend\module\admin\controllers\behaviors\AdminBehavators;
 /**
  * OtdelController implements the CRUD actions for Otdel model.
  */
@@ -27,6 +27,7 @@ class OtdelController extends AdminController
                     'delete' => ['POST'],
                 ],
             ],
+            AdminBehavators::className(),
         ];
     }
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace frontend\module\cabinet;
+use Yii;
 use yii\filters\AccessControl;
 /**
  * cabinet module definition class
@@ -36,4 +37,6 @@ class Module extends \yii\base\Module
 
         // custom initialization code goes here
     }
+
+
 }

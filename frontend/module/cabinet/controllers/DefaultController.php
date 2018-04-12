@@ -2,6 +2,8 @@
 
 namespace frontend\module\cabinet\controllers;
 
+use common\models\User;
+use frontend\module\cabinet\Module;
 use Yii;
 use yii\web\Controller;
 use yii\filters\AccessControl;
@@ -11,6 +13,8 @@ use yii\filters\AccessControl;
  */
 class DefaultController extends Controller
 {
+    const USER_ADMIN = 1;
+    const USER_MANAGER = 3;
 
     /**
      * Renders the index view for the module
@@ -18,9 +22,12 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-//        var_dump(Yii::$app->user->can('createPost'));die;
-        var_dump('sdfsdf');die;
-        return $this->render('index');
+
+
+            return $this->render('index');
+
     }
+
+
 
 }

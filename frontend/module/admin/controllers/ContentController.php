@@ -7,6 +7,7 @@ use frontend\module\admin\models\Content;
 use frontend\module\admin\models\ContentSearch;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use frontend\module\admin\controllers\behaviors\AdminBehavators;
 
 /**
  * ContentController implements the CRUD actions for Content model.
@@ -25,6 +26,7 @@ class ContentController extends AdminController
                     'delete' => ['POST'],
                 ],
             ],
+            AdminBehavators::className(),
         ];
     }
 

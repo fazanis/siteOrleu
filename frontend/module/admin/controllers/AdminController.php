@@ -8,10 +8,9 @@
 
 namespace frontend\module\admin\controllers;
 
+use yii\filters\VerbFilter;
 use yii\web\Controller;
-
 class AdminController extends Controller
 {
-
 
 }
