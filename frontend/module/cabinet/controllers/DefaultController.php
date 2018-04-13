@@ -7,6 +7,7 @@ use frontend\module\cabinet\Module;
 use Yii;
 use yii\web\Controller;
 use yii\filters\AccessControl;
+use frontend\module\cabinet\models\BlogdirectoraSearch;
 
 /**
  * Default controller for the `cabinet` module
@@ -23,8 +24,14 @@ class DefaultController extends Controller
     public function actionIndex()
     {
 
+        $searchModel = new BlogdirectoraSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-            return $this->render('index');
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+
 
     }
 

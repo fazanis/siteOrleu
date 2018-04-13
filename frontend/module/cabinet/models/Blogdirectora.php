@@ -55,4 +55,23 @@ class Blogdirectora extends \yii\db\ActiveRecord
             'read' => 'Read',
         ];
     }
+
+    public static function getAllQuestionCount()
+    {
+        return Blogdirectora::find()->count();
+    }
+    public static function getAnswerQuestionCount()
+    {
+        return Blogdirectora::find()->where(['answer'=>'']) ->count();
+    }
+
+    public static function getNotAnswerQuestionCount()
+    {
+        return self::getAllQuestionCount()-self::getAnswerQuestionCount();
+    }
+
+    public function getLinkFromQuestion()
+    {
+        return $this->id;
+    }
 }
