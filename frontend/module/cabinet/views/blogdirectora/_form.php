@@ -22,9 +22,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'answer')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'public')->textInput() ?>
+    <?= $form->field($model, 'public')->dropDownList(['1'=>'Показывать','0'=>'Не показывать']) ?>
 
-    <?= $form->field($model, 'read')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

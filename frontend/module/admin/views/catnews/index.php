@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'parentColumnName' => 'parent_id',
         'columns' => [
 
-//            'name_ru',
+            'id',
             [
                 'attribute' =>'name_ru',
                 'value' => function($data){

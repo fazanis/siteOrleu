@@ -1,5 +1,7 @@
 <?use yii\widgets\ActiveForm;
-use yii\helpers\Html;?>
+use yii\helpers\Html;
+use yii\captcha\Captcha;
+?>
 <div class="row">
     <div class="col-md-7 col-sm-12">
         <div class="row">
@@ -33,8 +35,6 @@ use yii\helpers\Html;?>
                         <div class="col-md-12 col-sm-12">
                         <?= $form->field($model, 'question')->textarea(  ['maxlength' => true]) ?>
                         </div>
-
-
 
                         <div class="col-md-6 col-sm-12">
                             <?= Html::submitButton('Сохранить', ['class' => 'btn btn-primary']) ?>

@@ -32,6 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function($data){
                     return \backend\models\Catnews::getOneCat($data->cat);
                 }
+
+
             ],
             'name_ru',
 //            'content_ru:ntext',

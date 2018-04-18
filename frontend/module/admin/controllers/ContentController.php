@@ -2,6 +2,7 @@
 
 namespace frontend\module\admin\controllers;
 
+use frontend\module\admin\models\Catnews;
 use Yii;
 use frontend\module\admin\models\Content;
 use frontend\module\admin\models\ContentSearch;

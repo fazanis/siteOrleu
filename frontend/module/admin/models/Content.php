@@ -101,7 +101,7 @@ class Content extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'cat' => 'Сатегория',
+            'cat' => 'Категория',
             'name_ru' => 'Название на руссском',
             'content_ru' => 'Материал на русском',
             'name_kz' => 'Название на казахском',

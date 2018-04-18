@@ -3,6 +3,7 @@
 namespace frontend\models;
 
 use Yii;
+use himiklab\yii2\recaptcha\ReCaptchaValidator;
 
 /**
  * This is the model class for table "blogdirectora".
@@ -18,6 +19,7 @@ use Yii;
  */
 class Blogdirectora extends \yii\db\ActiveRecord
 {
+    const ADMIN_EMAIL = 'web.master.88@mail.ru';
     /**
      * @inheritdoc
      */
@@ -54,6 +56,21 @@ class Blogdirectora extends \yii\db\ActiveRecord
             'answer' => 'Answer',
             'public' => 'Public',
             'read' => 'Read',
+
         ];
+    }
+    public function sendEmail()
+    {
+
+        return Yii::$app
+            ->mailer
+            ->compose(
+                ['html' => 'passwordResetToken-html', 'text' => 'passwordResetToken-text'],
+                ['user' => 'web.master.88@mail.ru']
+            )
+            ->setFrom([Yii::$app->params['supportEmail'] => Yii::$app->name . ' robot'])
+            ->setTo(self::ADMIN_EMAIL)
+            ->setSubject('Password reset for ' . Yii::$app->name)
+            ->send();
     }
 }

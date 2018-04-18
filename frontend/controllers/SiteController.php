@@ -61,10 +61,6 @@ class SiteController extends Controller
             'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
         ];
     }
 
@@ -77,10 +73,13 @@ class SiteController extends Controller
     {
 
         $newslist = Content::find()->where(['cat' => 1,'status' => 1])->orderBy('id DESC')->all();
-        $banners = Banner::find()->all();
+        $nakursah = Content::find()->where(['cat' => 10])->orderBy('id DESC')->all();
+        $obavlenia = Content::find()->where(['cat' => 11,'status' => 1])->orderBy('id DESC')->all();
         return $this->render('index',
             [
                 'newslist' => $newslist,
+                'nakursah' => $nakursah,
+                'obavlenia' => $obavlenia,
             ]);
     }
 
@@ -221,7 +220,7 @@ class SiteController extends Controller
     }
 
     public function actionBlogdirectora(){
-        $question = Blogdirectora::find()->where(['public'=>'1'])->all();
+        $question = Blogdirectora::find()->where(['public'=>'1'])->orderBy(['id' => SORT_DESC])->all();
         return $this->render('blogdirectora',[
             'question'=>$question,
         ]);
@@ -229,8 +228,13 @@ class SiteController extends Controller
 
     public function actionZadatvopros(){
         $model = new Blogdirectora();
+
         if($model->load(Yii::$app->request->post()) && $model->validate() && $model->save()){
-            Yii::$app->session->setFlash('success', 'Вопрос отправлен.');
+            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
+                Yii::$app->session->setFlash('success', 'Спасибо за вопрос ожидате ответа администратора!');
+            } else {
+                Yii::$app->session->setFlash('error', 'Ошибка отправки вопроса.');
+            }
             $model->name = '';
             $model->email = '';
             $model->subject = '';
