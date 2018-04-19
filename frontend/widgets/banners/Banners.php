@@ -13,7 +13,7 @@ class Banners extends Widget
 {
     public function run()
     {
-        $banners = Banner::find()->where(['activate'=>'1'])->all();
+        $banners = Banner::find()->where(['activate'=>'1'])->orderBy('sort ASC') ->all();
         return $this->render('index',
             [
                 'banners'=>$banners,

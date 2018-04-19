@@ -91,7 +91,7 @@ use frontend\widgets\WLang;
 
             </ul>
         </li>
-        <li class="dropdown active yamm-fw">
+        <li class="dropdown yamm-fw">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=Yii::t('app', 'Деятельность')?> <span class="fa fa-angle-down"></span></a>
             <ul class="dropdown-menu">
                 <li>

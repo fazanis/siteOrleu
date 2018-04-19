@@ -70,6 +70,23 @@ class BannerController extends AdminController
         $model = new Banner();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+            if($model->image){
+                $image = $model->getImage();
+                if($image) {
+                    //get path to resized image
+                    $image->getPath('300х400');
+
+                    //path to original image
+                    $image->getPathToOrigin();
+
+                    //will remove this image and all cache files
+                    $model->removeImage($image);
+                }
+
+                $model->upload();
+
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

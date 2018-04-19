@@ -187,199 +187,9 @@ AppAsset::register($this);
                 </div>
                 <!-- end widget -->
 
-                <div class="widget">
-                    <div class="widget-title">
-                        <h4>Latest Reviews</h4>
-                        <hr>
-                    </div>
-                    <!-- end widget-title -->
 
-                    <div class="review-posts m30">
-                        <div class="post-review">
-                            <div class="post-media entry">
-                                <a href="single-review.html" title="">
 
-                                    <div class="magnifier">
-                                        <div class="review-stat">
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-o"></i>
-                                            </div>
-                                        </div>
-                                        <!-- end review-stat -->
-                                        <div class="hover-title">
-                                            <span>Tech Reviews</span>
-                                        </div>
-                                        <!-- end title -->
-                                    </div>
-                                    <!-- end magnifier -->
-                                </a>
-                            </div>
-                            <!-- end media -->
-                            <div class="post-title">
-                                <h3><a href="single-review.html">MyWatch Review - Its work perfect on mobile?</a></h3>
-                            </div>
-                            <!-- end post-title -->
-                        </div>
-                        <!-- end post-review -->
 
-                        <hr>
-
-                        <div class="post-review">
-                            <div class="post-media entry">
-                                <a href="single-review.html" title="">
-<!--                                    <img src="upload/review_02.jpg" alt="" class="img-responsive">-->
-                                    <div class="magnifier">
-                                        <div class="review-stat">
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-o"></i>
-                                            </div>
-                                        </div>
-                                        <!-- end review-stat -->
-                                        <div class="hover-title">
-                                            <span>Tech Reviews</span>
-                                        </div>
-                                        <!-- end title -->
-                                    </div>
-                                    <!-- end magnifier -->
-                                </a>
-                            </div>
-                            <!-- end media -->
-                            <div class="post-title">
-                                <h3><a href="single-review.html">Google Street View Coming to Bhutan</a></h3>
-                            </div>
-                            <!-- end post-title -->
-                        </div>
-                        <!-- end post-review -->
-
-                        <hr>
-
-                        <div class="post-review">
-                            <div class="post-media entry">
-                                <a href="single-review.html" title="">
-<!--                                    <img src="upload/review_03.jpg" alt="" class="img-responsive">-->
-                                    <div class="magnifier">
-                                        <div class="review-stat">
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-o"></i>
-                                                <i class="fa fa-star-o"></i>
-                                            </div>
-                                        </div>
-                                        <!-- end review-stat -->
-                                        <div class="hover-title">
-                                            <span>Tech Reviews</span>
-                                        </div>
-                                        <!-- end title -->
-                                    </div>
-                                    <!-- end magnifier -->
-                                </a>
-                            </div>
-                            <!-- end media -->
-                            <div class="post-title">
-                                <h3><a href="single-review.html">Mondo, the U.K. banking startup, opens public Beta</a>
-                                </h3>
-                            </div>
-                            <!-- end post-title -->
-                        </div>
-                        <!-- end post-review -->
-                    </div>
-                    <!-- end review-posts -->
-                </div>
-                <!-- end widget -->
-
-                <div class="widget">
-                    <div class="widget-title">
-                        <h4>The Interviews</h4>
-                        <hr>
-                    </div>
-                    <!-- end widget-title -->
-
-                    <div class="mini-widget m30">
-                        <div class="post clearfix">
-                            <div class="mini-widget-thumb">
-                                <a href="single.html">
-
-                                </a>
-                            </div>
-                            <div class="mini-widget-title">
-                                <a href="single.html"> Jessica and Martin talking about...</a>
-                                <div class="mini-widget-hr"></div>
-                            </div>
-                        </div>
-
-                        <div class="post clearfix">
-                            <div class="mini-widget-thumb">
-                                <a href="single.html">
-
-                                </a>
-                            </div>
-                            <div class="mini-widget-title">
-                                <a href="single.html"> ShowWP team moved to a new office </a>
-                                <div class="mini-widget-hr"></div>
-                            </div>
-                        </div>
-
-                        <div class="post clearfix">
-                            <div class="mini-widget-thumb">
-                                <a href="single.html">
-
-                                </a>
-                            </div>
-                            <div class="mini-widget-title">
-                                <a href="single.html"> How do web design? If no information</a>
-                                <div class="mini-widget-hr"></div>
-                            </div>
-                        </div>
-
-                        <div class="post clearfix">
-                            <div class="mini-widget-thumb">
-                                <a href="single.html">
-
-                                </a>
-                            </div>
-                            <div class="mini-widget-title">
-                                <a href="single.html"> A good strategy is to create 5 rule </a>
-                                <div class="mini-widget-hr"></div>
-                            </div>
-                        </div>
-
-                        <div class="post clearfix">
-                            <div class="mini-widget-thumb">
-                                <a href="single.html">
-
-                                </a>
-                            </div>
-                            <div class="mini-widget-title">
-                                <a href="single.html"> Google material design, colors</a>
-                                <div class="mini-widget-hr"></div>
-                            </div>
-                        </div>
-
-                        <div class="post clearfix">
-                            <div class="mini-widget-thumb">
-                                <a href="single.html">
-
-                                </a>
-                            </div>
-                            <div class="mini-widget-title">
-                                <a href="#"> The best desk and office designs for ever!</a>
-                                <div class="mini-widget-hr"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end mini-widget -->
-                </div>
-                <!-- end widget -->
 
             </div>
             <!-- end col -->
@@ -508,12 +318,13 @@ AppAsset::register($this);
         <div id="sitefooter" class="container">
             <div id="copyright" class="row">
                 <div class="col-md-6 col-sm-12 text-left">
-                    <p class="copyright-notice"><span class="fa fa-copyright"></span> 2016 Techmag. All Rights Reserved.
-                        A <a href="#" title="TemplateVisual" target="_blank">TemplateVisual</a> INC.</p>
-                    <p class="footer-links"><a href="#" title="Privacy Policy" rel="nofollow">Privacy
-                            Policy</a><span>|</span><a href="#" title="Site Disclosure" rel="nofollow">Site Terms &amp;
-                            Disclosures</a><span>|</span><a href="#" title="" rel="nofollow" target="_blank">Powered by
-                            Bootstrap</a></p>
+                    <p class="copyright-notice"><span class="fa fa-copyright"></span> 2013 - <?=date('Y')?> <? if (WLang::getLang() == 'kz'): ?>
+                            «ӨРЛЕУ» БІЛІКТІЛІКТІ АРТТЫРУ ҰЛТТЫҚ ОРТАЛЫҒЫ» АКЦИОНЕРЛІК ҚОҒАМЫНЫҢ ФИЛИАЛЫ «ПАВЛОДАР ОБЛЫСЫ БОЙЫНША ПЕДАГОГИКАЛЫҚ ҚЫЗМЕТКЕРЛЕРДІҢ БІЛІКТІЛІГІН АРТТЫРУ ИНСТИТУТЫ»
+                        <? endif; ?>
+                        <? if (WLang::getLang() == 'ru'): ?>
+                            ФИЛИАЛ АКЦИОНЕРНОГО ОБЩЕСТВА «НАЦИОНАЛЬНЫЙ ЦЕНТР ПОВЫШЕНИЯ КВАЛИФИКАЦИИ «ӨРЛЕУ» «ИНСТИТУТ ПОВЫШЕНИЯ КВАЛИФИКАЦИИ ПЕДАГОГИЧЕСКИХ РАБОТНИКОВ ПО ПАВЛОДАРСКОЙ ОБЛАСТИ»
+                        <? endif; ?></p>
+
                 </div>
 
                 <div class="col-md-6 col-sm-12">

@@ -56,7 +56,8 @@ use yii\grid\GridView;
             [
                 'attribute'=>'',
                 'content'=>  function($data){
-                    return Html::a('Ответить',['/cabinet/blogdirectora/update', 'id' => $data->getLinkFromQuestion()]);
+                $data->answer==''? $but='<span style="color:red">Ответить</span>' : $but='<span style="color:blue">Отвечен</span>';
+                    return Html::a($but,['/cabinet/blogdirectora/update', 'id' => $data->getLinkFromQuestion()]);
                 }
             ],
             ['class' => 'yii\grid\ActionColumn',
