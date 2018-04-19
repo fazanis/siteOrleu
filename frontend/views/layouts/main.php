@@ -46,6 +46,12 @@ AppAsset::register($this);
 
 <body>
 <?php $this->beginBody() ?>
+<?if (!Yii::$app->user->isGuest):?>
+    <div style="background: green; padding: 2px 2px 2px 550px;">
+        <a href="/admin/" target="_blank" style="color: rebeccapurple; border: 1px solid white; padding: 2px; background: gainsboro;">Админ панель</a>
+        <a href="/cabinet/" target="_blank" style="color: rebeccapurple; border: 1px solid white; padding: 2px; background: gainsboro;">Кабинет</a>
+    </div>
+<?endif;?>
 <div class="left-menu hidden-sm hidden-md hidden-xs">
     <ul class="dm-social">
         <li class="facebookbg"><a href="#" class="fa fa-facebook" data-toggle="tooltip" data-placement="right"
@@ -110,48 +116,9 @@ AppAsset::register($this);
                         </button>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
-                        <?php
-                        NavBar::begin([
-//                        'brandLabel' => Yii::$app->name,
-                            'brandUrl' => Yii::$app->homeUrl . '' . WLang::getLang(),
-                            'options' => [
-                                'class' => 'nav navbar-nav',
-                            ],
-                        ]);
-                        $menuItems = [
-                            ['label' => Yii::t('app', 'Главная'), 'url' => ['/site/index']],
-                            ['label' => Yii::t('app', 'Структура'),
-                                'url' => ['services/index'],
-                                'options' => ['class' => 'dropdown hasmenu open'],
-                                'template' => '<a href="{url}" class="url-class">{label}</a>',
-                                'items' => [
-                                    ['label' => Yii::t('app', 'Руководство'), 'url' => ['struktura/rukovodstvo']],
-                                    ['label' => Yii::t('app', 'Отделы'), 'url' => ['struktura/otdeli']],
-                                    ['label' => Yii::t('app', 'Кафедры'), 'url' => ['struktura/kafedri/']
-                                    ],
-                                ]
-                            ],
-                            ['label' => Yii::t('app', 'Новости'), 'url' => ['/news']],
-//                        ['label' => Yii::t('app', 'О нас'), 'url' => ['/site/about']],
 
-                            ['label' => 'Contact', 'url' => ['/site/contact']],
-                        ];
-                        if (Yii::$app->user->isGuest) {
-                            $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-                            $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+                        <?=$this->render('menu')?>
 
-                        }
-                        echo Nav::widget([
-                            'options' => ['class' => 'nav navbar-nav'],
-                            'items' => $menuItems,
-                        ]); ?>
-                        <ul class="nav navbar-nav navbar-right searchandbag">
-                            <li class="dropdown searchdropdown hasmenu">
-                                <?= WLang::widget() ?>
-                            </li>
-                        </ul>
-                        <? NavBar::end();
-                        ?>
                     </div>
 
 
