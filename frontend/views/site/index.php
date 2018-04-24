@@ -7,23 +7,23 @@ use frontend\models\Content;
         <ul class="slides">
             <li>
                 <div class="psdesc hidden-xs">
-                    <div class="ps-desc">
-                        <h3><a href="#">How to use Bootstrap Framework?</a></h3>
-                        <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
-                        <span class="type">Technology</span>
-                        <a href="#" class="status"><i class="fa fa-comment-o"></i> 33</a>
-                    </div>
+<!--                    <div class="ps-desc">-->
+<!--                        <h3><a href="#">How to use Bootstrap Framework?</a></h3>-->
+<!--                        <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>-->
+<!--                        <span class="type">Technology</span>-->
+<!--                        <a href="#" class="status"><i class="fa fa-comment-o"></i> 33</a>-->
+<!--                    </div>-->
                 </div>
                 <a href="#"><img src="<?=Yii::getAlias('@mysite')?>/upload/content/slider/1.jpg" alt="" class="img-responsive"></a>
             </li>
             <li>
                 <div class="psdesc hidden-xs">
-                    <div class="ps-desc">
-                        <h3><a href="#">Can You Make a Responsive Design?</a></h3>
-                        <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
-                        <span class="type">Web Design</span>
-                        <a href="#" class="status"><i class="fa fa-comment-o"></i> 12</a>
-                    </div>
+<!--                    <div class="ps-desc">-->
+<!--                        <h3><a href="#">Can You Make a Responsive Design?</a></h3>-->
+<!--                        <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>-->
+<!--                        <span class="type">Web Design</span>-->
+<!--                        <a href="#" class="status"><i class="fa fa-comment-o"></i> 12</a>-->
+<!--                    </div>-->
                 </div>
                 <a href="#"><img src="<?=Yii::getAlias('@mysite')?>/upload/content/slider/2.jpg" alt="" class="img-responsive"></a>
             </li>
