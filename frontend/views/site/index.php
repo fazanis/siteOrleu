@@ -75,38 +75,37 @@ use frontend\models\Content;
         <!-- end widget-title -->
 
         <div class="reviewlist review-posts row m30">
-            <?foreach ($nakursah as $item):?>
-            <div class="post-review col-md-4 col-sm-12 first">
-                <div class="post-media entry">
-                    <a href="<?=WLang::getLang()?>/news/<?=$item->url?>" title="">
-                        <?=Content::shortImgNews($item->content_ru)?>
-                        <div class="magnifier">
-                            <div class="review-stat">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
+            <?foreach ($nakursah as $news):?>
+                <div class="large-widget m30">
+                    <div class="post row clearfix">
+                        <div class="col-md-4">
+                            <div class="post-media">
+                                <a href="<?=WLang::getLang()?>/news/<?=$news->url?>">
+                                    <?=Content::shortImgNews($news->content_ru)?>
+                                </a>
                             </div>
-                            <!-- end review-stat -->
-                            <div class="hover-title">
-                                <span>Tech Reviews</span>
-                            </div>
-                            <!-- end title -->
                         </div>
-                        <!-- end magnifier -->
-                    </a>
-                </div>
 
-                <!-- end media -->
-                <div class="post-title">
-                    <h3><a href="<?=WLang::getLang()?>/news/<?=$item->url?>"><?=$item->{name_.WLang::getLang()}?></a></h3>
+                        <div class="col-md-7">
+                            <div class="title-area">
+
+                                <h3><?=$news->{'name_'.WLang::getLang()}?></h3>
+
+                                <div class="large-post-meta">
+
+                                    <span><a href="category.html"><i class="fa fa-clock-o"></i> <?=Yii::$app->formatter->asDate($news->date_create, 'php:d-m-Y'); ?></a></span>
+                                    <small class="hidden-xs">&#124;</small>
+                                    <span class="hidden-xs"><a href="single.html#comments"><i class="fa fa-comments-o"></i> 92</a></span>
+                                    <small class="hidden-xs">&#124;</small>
+                                    <span class="hidden-xs"><i class="fa fa-eye"></i> <?=$news->views?></span>
+                                </div>
+                                <!-- end meta -->
+                            </div>
+                            <!-- /.pull-right -->
+                        </div>
+                    </div>
+                    <!-- end post -->
                 </div>
-                <!-- end post-title -->
-            </div>
-            <!-- end post-review -->
             <?endforeach;?>
 
         </div>

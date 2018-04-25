@@ -3,6 +3,7 @@ namespace frontend\controllers;
 
 use frontend\models\Blogdirectora;
 use frontend\models\Content;
+use frontend\models\Menu;
 use frontend\module\admin\models\Banner;
 use Yii;
 use yii\base\InvalidParamException;
@@ -75,11 +76,19 @@ class SiteController extends Controller
         $newslist = Content::find()->where(['cat' => 1,'status' => 1])->orderBy('id DESC')->limit('6')->all();
         $nakursah = Content::find()->where(['cat' => 10])->orderBy('id DESC')->all();
         $obavlenia = Content::find()->where(['cat' => 11,'status' => 1])->orderBy('id DESC')->all();
+
+        $menu = new Menu();
+        $menutree = $menu->menuTree();
+//        echo '<pre>';
+//        print_r($menutree);
+//        echo '</pre>';
+
         return $this->render('index',
             [
                 'newslist' => $newslist,
                 'nakursah' => $nakursah,
                 'obavlenia' => $obavlenia,
+                'menutree' => $menutree,
             ]);
     }
 
