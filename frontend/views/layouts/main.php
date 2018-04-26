@@ -117,8 +117,7 @@ AppAsset::register($this);
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
 
-                        <?=$this->render('menu')?>
-
+                    <?=frontend\widgets\menu\Menu::widget()?>
                     </div>
 
 

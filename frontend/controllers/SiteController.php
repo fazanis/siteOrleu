@@ -77,18 +77,12 @@ class SiteController extends Controller
         $nakursah = Content::find()->where(['cat' => 10])->orderBy('id DESC')->all();
         $obavlenia = Content::find()->where(['cat' => 11,'status' => 1])->orderBy('id DESC')->all();
 
-        $menu = new Menu();
-        $menutree = $menu->menuTree();
-//        echo '<pre>';
-//        print_r($menutree);
-//        echo '</pre>';
-
         return $this->render('index',
             [
                 'newslist' => $newslist,
                 'nakursah' => $nakursah,
                 'obavlenia' => $obavlenia,
-                'menutree' => $menutree,
+
             ]);
     }
 
