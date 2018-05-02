@@ -23,7 +23,6 @@ class Catnews extends \yii\db\ActiveRecord
     public function behaviors()
     {
         return [
-
             'slug' => [
                 'class' => 'Zelenin\yii\behaviors\Slug',
                 'slugAttribute' => 'url',

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use leandrogehlen\treegrid\TreeGrid;
 use frontend\module\admin\models\Catnews;
-
+use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\module\admin\models\CatnewsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -21,20 +21,20 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Добавить категорию', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-<!--    --><?//= GridView::widget([
-//        'dataProvider' => $dataProvider,
-//        'filterModel' => $searchModel,
-//        'columns' => [
-//            ['class' => 'yii\grid\SerialColumn'],
-//
-////            'id',
-//            'name_ru',
-//            'parent_id',
-////            'url:url',
-//
-//            ['class' => 'yii\grid\ActionColumn'],
-//        ],
-//    ]); ?>
+    <!--    --><? //= GridView::widget([
+    //        'dataProvider' => $dataProvider,
+    //        'filterModel' => $searchModel,
+    //        'columns' => [
+    //            ['class' => 'yii\grid\SerialColumn'],
+    //
+    ////            'id',
+    //            'name_ru',
+    //            'parent_id',
+    ////            'url:url',
+    //
+    //            ['class' => 'yii\grid\ActionColumn'],
+    //        ],
+    //    ]); ?>
     <?=
     TreeGrid::widget([
         'dataProvider' => $dataProvider,
@@ -45,15 +45,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             [
-                'attribute' =>'name_ru',
-                'value' => function($data){
-                    return $data->parent_id == 0 ? $data->name_ru : ' -- '.$data->name_ru;
+                'attribute' => 'name_ru',
+                'value' => function ($data) {
+                    return $data->parent_id == 0 ? $data->name_ru : ' -- ' . $data->name_ru;
                 }
             ],
 //            'parent_id',
             [
-                'attribute'=>'parent_id',
-                'value' => function($data){
+                'attribute' => 'parent_id',
+                'value' => function ($data) {
 
                     return $data->category->name_ru ? $data->category->name_ru :
                         ' ';
@@ -62,9 +62,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             'url',
-            ['class' => 'yii\grid\ActionColumn',
-                'template' => '{view} {update} {delete}',
-                ]
+            [
+                'value' => function (Catnews $data) {
+                    return Html::a('Редактировать', Url::to(['update', 'id' => $data->id]));
+
+                },
+                'format' => 'raw',
+            ],
+//            ['class' => 'yii\grid\ActionColumn',
+//                'template' => '{view} {update} {delete}',
+//            ]
         ]
     ]);
     ?>

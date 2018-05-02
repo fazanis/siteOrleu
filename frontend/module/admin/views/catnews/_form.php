@@ -20,6 +20,8 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'parent_id')->dropDownList(['0'=>'Нет родителя', ArrayHelper::map(Catnews::find()->where(['parent_id' => 0])->all(), 'id','name_ru')])?>
 
+    <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
+
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
     </div>

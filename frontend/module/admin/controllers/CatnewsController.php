@@ -70,7 +70,7 @@ class CatnewsController extends Controller
         $model = new Catnews();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['/admin/catnews']);
         }
 
         return $this->render('create', [
@@ -101,7 +101,7 @@ class CatnewsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['/admin/catnews']);
         }
 
         return $this->render('update', [

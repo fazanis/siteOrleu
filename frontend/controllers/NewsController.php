@@ -9,20 +9,23 @@
 namespace frontend\controllers;
 
 
+use frontend\models\Catnews;
 use Yii;
 use frontend\models\Content;
 use yii\web\Controller;
-use frontend\models\Comments;
 
 class NewsController extends Controller
 {
 
-    public function actionIndex()
+    public function actionIndex($url)
     {
-        $model = Content::find()->where(['cat' => 1,'status' => 1])->orderBy('id DESC')->all();
+        $cat = Catnews::findOne(['url'=>$url]);
+//        echo $cat->id;
+        $model = Content::find()->where(['cat' => $cat->id,'status' => 1])->orderBy('id DESC')->all();
         return $this->render('index',
         [
-            'model'=>$model
+            'model'=>$model,
+            'cat' => $cat
         ]);
     }
 

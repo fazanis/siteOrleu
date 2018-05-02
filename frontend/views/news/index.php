@@ -1,6 +1,6 @@
 <? use frontend\models\Content;
 use frontend\widgets\WLang;
-$this->title='Новости филиала';
+$this->title=$cat->{name_.WLang::getLang()};
 ?>
 <section class="section bgg">
     <div class="container">

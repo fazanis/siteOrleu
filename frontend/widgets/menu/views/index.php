@@ -21,7 +21,7 @@ use frontend\widgets\WLang;
                     <? if (isset($menu['childs'])): ?>
                         <ul class="dropdown-menu">
                             <? foreach ($menu['childs'] as $submenu): ?>
-                                <li><a href="<?=$submenu['url']?>"><?= $submenu['name_' . WLang::getLang()] ?></a></li>
+                                <li><a href="/<?= WLang::getLang() ?>/<?=$submenu['url']?>"><?= $submenu['name_' . WLang::getLang()] ?></a></li>
                             <? endforeach; ?>
                         </ul>
                     <? endif; ?>

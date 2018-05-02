@@ -2,7 +2,6 @@
 use frontend\widgets\WLang;
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
-use frontend\components\CommentWidgets;
 ?>
 <div class="row">
     <div class="col-md-9 col-sm-9 col-xs-12 m22 single-post">
