@@ -63,12 +63,20 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             'url',
             [
+                    'attribute' => 'type',
+                'value' => function($data){
+                    return $data->type == 0 ? 'Статья' : 'Блог';
+                }
+            ],
+
+            [
                 'value' => function (Catnews $data) {
                     return Html::a('Редактировать', Url::to(['update', 'id' => $data->id]));
 
                 },
                 'format' => 'raw',
             ],
+
 //            ['class' => 'yii\grid\ActionColumn',
 //                'template' => '{view} {update} {delete}',
 //            ]

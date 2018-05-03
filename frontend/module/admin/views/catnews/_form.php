@@ -22,6 +22,8 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'type')->dropDownList(['0'=> 'Статья', '1'=> 'Блог'])?>
+
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
     </div>

@@ -2,6 +2,7 @@
 use frontend\widgets\WLang;
 $this->title=$cat->{name_.WLang::getLang()};
 ?>
+<?if($cat->type==1):?>
 <section class="section bgg">
     <div class="container">
         <div class="title-area">
@@ -15,12 +16,13 @@ $this->title=$cat->{name_.WLang::getLang()};
         </div><!-- /.pull-right -->
     </div><!-- end container -->
 </section>
-
+<?endif;?>
 <div class="container sitecontainer single-wrapper bgw">
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12 m22">
             <div class="widget">
                 <div class="large-widget m30">
+                    <?if($cat->type==1):?>
                     <?foreach ($model as $news):?>
                     <div class="post clearfix">
                        <div class="large-widget-title">
@@ -52,10 +54,46 @@ $this->title=$cat->{name_.WLang::getLang()};
                     </div><!-- end post -->
                         <hr>
                     <?endforeach;?>
+                    <?else:?>
+
+                            <div class="widget">
+                                <div class="large-widget m30">
+                                    <div class="post clearfix">
+
+                                        <div class="title-area">
+
+                                            <h3><?=$post->{name_.WLang::getLang()}?></h3>
+
+                                            <div class="large-post-meta">
+                                                <span><a href="category.html"><i class="fa fa-clock-o"></i> <?=$post->date_create?></a></span>
+
+                                                <small class="hidden-xs">&#124;</small>
+                                                <span class="hidden-xs"><a href="single.html"><i class="fa fa-eye"></i> <?=$post->views?></a></span>
+                                            </div><!-- end meta -->
+
+
+                                        </div><!-- /.pull-right -->
+
+                                        <div class="post-media">
+                                            <a href="single.html">
+                                                <img alt="" src="upload/single.jpg" class="img-responsive">
+                                            </a>
+                                        </div>
+
+                                    </div><!-- end post -->
+
+                                    <div class="post-desc">
+                                        <?=$post->{'content_'.WLang::getLang()}?>
+
+                                    </div><!-- end post-desc -->
+                                </div><!-- end large-widget -->
+                            </div><!-- end widget -->
+
+                    <?endif;?>
 
                 </div><!-- end large-widget -->
             </div><!-- end widget -->
-
+            <?if($cat->type==1):?>
             <div class="pagination-wrapper">
                 <nav>
                     <ul class="pagination">
@@ -77,6 +115,7 @@ $this->title=$cat->{name_.WLang::getLang()};
                     </ul>
                 </nav>
             </div>
+            <?endif;?>
         </div><!-- end col -->
 
     </div><!-- end row -->
