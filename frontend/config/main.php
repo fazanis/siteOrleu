@@ -69,13 +69,15 @@ return [
             'class' => 'frontend\components\LangUrlManager',
             'rules' => [
                 '/' => 'site/index',
-                '<module:admin>/<controller:\w+>' => '<module>/<controller>',
+                '<module:admin|cabinet>/<controller:\w+>' => '<module>/<controller>',
                 '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
-//                '<controller:(news|anons|obyavleniya)>/<url:[-_0-9-a-z]+>' => 'news/full',
-                'content/<url:[-_0-9-a-z]+>/'=>'news/index',
+                '<url:[-_0-9-a-z]+>/'=>'news/index',
                 '<controller:\w+>/<url:[-_0-9-a-z]+>'=>'news/full',
+//                '<controller:(news|anons|obyavleniya)>/<url:[-_0-9-a-z]+>' => 'news/full',
 //                '<controller:(struktura)>/otdeli/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
 //                '<controller:(struktura)>/kafedri/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
+
+
                 '<id:([0-9])+>/images/image-by-item-and-alias' => 'yii2images/images/image-by-item-and-alias',
 
             ],

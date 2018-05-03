@@ -29,4 +29,7 @@ use frontend\widgets\WLang;
             <? endif; ?>
         <? endforeach; ?>
     </ul>
+    <ul class="nav navbar-nav" style="float: right">
+        <li><?= WLang::widget() ?></li>
+    </ul>
 </div><!--/.nav-collapse -->
