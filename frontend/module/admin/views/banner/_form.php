@@ -22,6 +22,8 @@ use mihaildev\elfinder\ElFinder;
 
     <?= $form->field($model, 'activate')->dropDownList(['1'=>'Включен','0'=>'Выключен'])  ?>
 
+    <?= $form->field($model, 'typeurl')->dropDownList(['0'=>'Внутренний','1'=>'Внешний'])  ?>
+
     <?= $form->field($model, 'position')->textInput() ?>
 
     <?= $form->field($model, 'image')->fileInput() ?>

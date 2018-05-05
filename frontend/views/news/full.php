@@ -2,6 +2,7 @@
 use frontend\widgets\WLang;
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
+use frontend\models\Content;
 ?>
 <div class="row">
     <div class="col-md-9 col-sm-9 col-xs-12 m22 single-post">
@@ -12,8 +13,8 @@ use yii\helpers\Html;
                     <div class="title-area">
                         <div class="bread">
                             <ol class="breadcrumb">
-                                <li><a href="#">Главная</a></li>
-                                <li class=""><a href="/news/">Новости</a></li>
+                                <li><a href="/<?=WLang::getLang()?>">Главная</a></li>
+                                <li class=""><a href="/<?=WLang::getLang()?>/<?=Content::getCatUrl($model->cat)?>"><?=Content::getCatName($model->cat)?></a></li>
                                 <li class="active"><?=$model->{name_.WLang::getLang()}?></li>
                             </ol>
                         </div><!-- end bread -->

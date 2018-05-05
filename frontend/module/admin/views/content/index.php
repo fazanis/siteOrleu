@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //            'content_ru:ntext',
             'name_kz',
             //'content_kz:ntext',
-            //'url:url',
+            'url:url',
             //'foto',
             //'status',
             //'date_create',

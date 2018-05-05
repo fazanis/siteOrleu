@@ -16,7 +16,7 @@ use mihaildev\elfinder\ElFinder;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'cat')->dropDownList(ArrayHelper::map(Catnews::find()->all(), 'id','name_ru')) ?>
+    <?= $form->field($model, 'cat')->dropDownList(['0'=>'Без категории',ArrayHelper::map(Catnews::find()->all(), 'id','name_ru')]) ?>
 
     <?= $form->field($model, 'status')->checkbox() ?>
 

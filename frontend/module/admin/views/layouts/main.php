@@ -75,9 +75,9 @@ AdminAsset::register($this);
                             </li>
                             <li><a><i class="fa fa-edit"></i> Работа с материалами <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: none">
-                                    <li><a href="<?=Url::to('/admin/catnews')?>">Катигории</a>
+                                    <li><a href="<?=Url::to('/admin/catnews/index')?>">Катигории</a>
                                     </li>
-                                    <li><a href="<?=Url::to('/admin/content')?>">Материалы</a>
+                                    <li><a href="<?=Url::to('/admin/content/index')?>">Материалы</a>
                                     </li>
                                     <li><a href="<?=Url::to('/admin/catnews/cattree')?>">Меню сайта</a>
                                     </li>
@@ -85,9 +85,9 @@ AdminAsset::register($this);
                             </li>
                             <li><a><i class="fa fa-table"></i> Анкеты коллектива <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu" style="display: none">
-                                    <li><a href="<?=Url::to('/admin/otdel/')?>">Отделы</a>
+                                    <li><a href="<?=Url::to('/admin/otdel/index')?>">Отделы</a>
                                     </li>
-                                    <li><a href="<?=Url::to('/admin/ankety/')?>">Анкеты</a>
+                                    <li><a href="<?=Url::to('/admin/ankety/index')?>">Анкеты</a>
                                     </li>
                                 </ul>
                             </li>

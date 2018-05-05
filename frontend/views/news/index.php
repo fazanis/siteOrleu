@@ -1,5 +1,6 @@
 <? use frontend\models\Content;
 use frontend\widgets\WLang;
+use yii\widgets\LinkPager;
 $this->title=$cat->{name_.WLang::getLang()};
 ?>
 <?if($cat->type==1):?>
@@ -19,41 +20,42 @@ $this->title=$cat->{name_.WLang::getLang()};
 <?endif;?>
 <div class="container sitecontainer single-wrapper bgw">
     <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-12 m22">
+        <div class="col-md-8 col-sm-6 col-xs-12 m22">
             <div class="widget">
                 <div class="large-widget m30">
                     <?if($cat->type==1):?>
-                    <?foreach ($model as $news):?>
-                    <div class="post clearfix">
-                       <div class="large-widget-title">
-                            <a href="<?=\yii\helpers\Url::to([$news->url])?>"> <?=$news->{'name_'.WLang::getLang()}?></a>
-                        </div>
-                        <div class="post-media">
-                            <a href="<?=\yii\helpers\Url::to([$news->url])?>">
-                                <?=Content::shortImgNews($news->content_ru)?>
-                            </a>
-                        </div>
-                        <div class="large-post-meta">
-                            <span class="avatar"><a href="author.html"><img src="upload/avatar_02.png" alt="" class="img-circle"> Mark Twisted</a></span>
-                            <small>&#124;</small>
-                            <span><?=$news->views?></span>
-                            <small>&#124;</small>
-                            <span><a href="single.html#comments">12 Comments</a></span>
-                        </div><!-- end meta -->
-                        <div class="post-share">
-                            <div class="customshare">
-                                         <span class="list">
-                                            <strong><i class="fa fa-share-alt"></i> 980
-                                            <a href="#" class="tw"><i class="fa fa-twitter"></i></a>
-                                            <a href="#" class="fb"><i class="fa fa-facebook"></i></a>
-                                            <a href="#" class="gp"><i class="fa fa-google-plus"></i></a>
-                                            </strong>
-                                        </span>
+                        <?foreach ($model as $news):?>
+                            <div class="large-widget m30">
+                                <div class="post row clearfix">
+                                    <div class="col-md-4">
+                                        <div class="post-media">
+                                            <a href="/<?=WLang::getLang()?>/<?=Content::getCatUrl($news->cat)?>/<?=$news->url?>">
+                                                <?=Content::shortImgNews($news->content_ru)?>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <div class="title-area">
+
+                                            <h3><?=$news->{'name_'.WLang::getLang()}?></h3>
+                                            <?=Content::shortContent($news->content_ru)?>
+                                            <div class="large-post-meta">
+
+                                                <span><a href="category.html"><i class="fa fa-clock-o"></i> <?=Yii::$app->formatter->asDate($news->date_create, 'php:d-m-Y'); ?></a></span>
+                                                <small class="hidden-xs">&#124;</small>
+                                                <span class="hidden-xs"><a href="single.html#comments"><i class="fa fa-comments-o"></i> 92</a></span>
+                                                <small class="hidden-xs">&#124;</small>
+                                                <span class="hidden-xs"><i class="fa fa-eye"></i> <?=$news->views?></span>
+                                            </div>
+                                            <!-- end meta -->
+                                        </div>
+                                        <!-- /.pull-right -->
+                                    </div>
+                                </div>
+                                <!-- end post -->
                             </div>
-                        </div><!-- end share -->
-                    </div><!-- end post -->
-                        <hr>
-                    <?endforeach;?>
+                        <?endforeach;?>
                     <?else:?>
 
                             <div class="widget">
@@ -94,27 +96,9 @@ $this->title=$cat->{name_.WLang::getLang()};
                 </div><!-- end large-widget -->
             </div><!-- end widget -->
             <?if($cat->type==1):?>
-            <div class="pagination-wrapper">
-                <nav>
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+                <?= LinkPager::widget([
+                    'pagination' => $pages,
+                ]); ?>
             <?endif;?>
         </div><!-- end col -->
 

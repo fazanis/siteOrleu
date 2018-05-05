@@ -167,9 +167,9 @@ AppAsset::register($this);
                             <li class="facebook"><a target="_blank"
                                                     href="https://www.facebook.com/orleu.pavlodar/?ref=bookmarks"><i
                                             class="fa fa-facebook"></i></a></li>
-                            <li class="googleplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li class="youtube"><a href="#"><i class="fa fa-youtube"></i></a></li>
-                            <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li class="googleplus"><a href="https://plus.google.com/+Orleu-eduKz"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="youtube"><a href="https://www.youtube.com/channel/UCnJDcOFNDKKSDc9irac0oAg/"><i class="fa fa-youtube"></i></a></li>
+                            <li class="instagram"><a href="https://www.instagram.com/orleupvl/"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                     <!-- end social -->

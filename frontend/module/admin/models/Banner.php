@@ -42,7 +42,7 @@ class Banner extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nameonoff', 'position', 'activate', 'sort'], 'integer'],
+            [['nameonoff', 'position', 'activate', 'sort','typeurl'], 'integer'],
             [['text'], 'string'],
             [['name_ru', 'name_kz', 'url'], 'string', 'max' => 255],
             [['image'], 'file', 'extensions' => 'png, jpg'],
@@ -65,6 +65,7 @@ class Banner extends \yii\db\ActiveRecord
             'url' => 'Url',
             'activate' => 'Активный',
             'sort' => 'Сортировка',
+            'typeurl' => 'Тип ссылки',
         ];
     }
 

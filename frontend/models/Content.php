@@ -66,7 +66,7 @@ class Content extends \yii\db\ActiveRecord
     {
         preg_match('/<img(.*)src(.*)=(.*)"(.*)"/U', $text, $imgresult);
         $firstImgScr = array_pop($imgresult);
-        return '<img src='.$firstImgScr.' width=350px;>';
+        return '<img src='.$firstImgScr.'>';
 
     }
 
@@ -80,6 +80,18 @@ class Content extends \yii\db\ActiveRecord
     {
         $masdate = getdate($date);
         return $masdate['mday'].'.'.$masdate['mon'].'.'.$masdate['year'];
+    }
+
+    public static function getCatUrl($cat)
+    {
+        $url = Catnews::findOne(['id'=>$cat]);
+        return $url['url'];
+    }
+
+    public static function getCatName($cat)
+    {
+        $name = Catnews::findOne(['id'=>$cat]);
+        return $name['name_ru'];
     }
 
 }

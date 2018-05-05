@@ -12,6 +12,7 @@ namespace frontend\controllers;
 use frontend\models\Catnews;
 use Yii;
 use frontend\models\Content;
+use yii\data\Pagination;
 use yii\web\Controller;
 
 class NewsController extends Controller
@@ -22,12 +23,22 @@ class NewsController extends Controller
         $cat = Catnews::findOne(['url'=>$url]);
 //        echo $cat->id;
         $post = Content::findOne(['cat' => $cat->id]);
-        $model = Content::find()->where(['cat' => $cat->id,'status' => 1])->orderBy('id DESC')->all();
+
+        $model = Content::find()->where(['cat' => $cat->id,'status' => 1]);
+        $pages = new Pagination(['totalCount' => $model->count(),'pageSize' => Yii::$app->params['paginationSize']]);
+        $posts = $model->offset($pages->offset)
+            ->where(['cat' => $cat->id,'status' => 1])
+            ->orderBy('id DESC')
+            ->limit($pages->limit)
+            ->all();
+
+//        $model = Content::find()->where(['cat' => $cat->id,'status' => 1])->orderBy('id DESC')->all();
         return $this->render('index',
         [
-            'model'=>$model,
+            'model'=>$posts,
             'cat' => $cat,
-            'post' => $post
+            'post' => $post,
+            'pages' => $pages
         ]);
     }
 
