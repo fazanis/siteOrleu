@@ -69,7 +69,9 @@ return [
             'class' => 'frontend\components\LangUrlManager',
             'rules' => [
                 '/' => 'site/index',
-                '<module:admin|cabinet>/<controller:\w+>' => '<module>/<controller>',
+                'admin' => 'admin/default',
+                'cabinet' => 'cabinet/default',
+//                '<module:admin|cabinet>/<controller:\w+>' => '<module>/<controller>',
                 '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
                 '<url:[-_0-9-a-z]+>/'=>'news/index',
                 '<controller:\w+>/<url:[-_0-9-a-z]+>'=>'news/full',
