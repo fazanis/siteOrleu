@@ -72,7 +72,7 @@ return [
                 'admin' => 'admin/default',
                 'cabinet' => 'cabinet/default',
 //                '<module:admin|cabinet>/<controller:\w+>' => '<module>/<controller>',
-                '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
+//                '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
                 '<url:[-_0-9-a-z]+>/'=>'news/index',
                 '<controller:\w+>/<url:[-_0-9-a-z]+>'=>'news/full',
 //                '<controller:(news|anons|obyavleniya)>/<url:[-_0-9-a-z]+>' => 'news/full',
