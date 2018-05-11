@@ -59,6 +59,8 @@ class AdminAsset extends AssetBundle
         'js/datepicker/daterangepicker.js',
         'js/chartjs/chart.min.js',
         'js/custom.js',
+        'js/bootstrap.min.js',
+        'js/gauge_demo.js',
 
     ];
 
