@@ -44,7 +44,6 @@ class NewsController extends Controller
 
     public function actionFull($url)
     {
-//        echo $cat;
         $model = Content::findOne(['url' => $url]);
         $model->updateCounters(['views' => 1]);
 

@@ -74,7 +74,7 @@ return [
 //                '<module:admin|cabinet>/<controller:\w+>' => '<module>/<controller>',
 //                '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
                 '<url:[-_0-9-a-z]+>/'=>'news/index',
-                '<controller:\w+>/<url:[-_0-9-a-z]+>'=>'news/full',
+                '<controller:\w[-_0-9-a-z]+>/<url:[-_0-9-a-z]+>'=>'news/full',
 //                '<controller:(news|anons|obyavleniya)>/<url:[-_0-9-a-z]+>' => 'news/full',
 //                '<controller:(struktura)>/otdeli/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
 //                '<controller:(struktura)>/kafedri/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
