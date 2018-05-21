@@ -70,7 +70,7 @@ class CatnewsController extends Controller
         $model = new Catnews();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['/admin/catnews']);
+            return $this->redirect(['/admin/catnews/index']);
         }
 
         return $this->render('create', [

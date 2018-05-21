@@ -71,6 +71,7 @@ return [
                 '/' => 'site/index',
                 'admin' => 'admin/default',
                 'cabinet' => 'cabinet/default',
+                'site/<action>'=>'site/<action>',
 //                '<module:admin|cabinet>/<controller:\w+>' => '<module>/<controller>',
 //                '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
                 '<url:[-_0-9-a-z]+>/'=>'news/index',

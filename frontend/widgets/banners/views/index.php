@@ -19,7 +19,7 @@ use frontend\widgets\WLang;
             $img = $item->getImage();
             ?>
             <?if($item['typeurl']==0):?>
-            <a target="_blank" href='/<?=WLang::getLang()?>/banner/<?=$item['url'] ?>'> <?= Html::img($img->getUrl('305x')) ?></a>
+            <a target="_blank" href='/<?=WLang::getLang()?>/<?=$item['url'] ?>'> <?= Html::img($img->getUrl('305x')) ?></a>
                 <?else:?>
                 <a target="_blank" href='<?=$item['url'] ?>'> <?= Html::img($img->getUrl('305x')) ?></a>
                 <?endif;?>

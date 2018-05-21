@@ -31,7 +31,7 @@ class Menu extends Widget
 
     public function menuTree()
     {
-        $this->data = Catnews::find()->indexBy('id')->asArray()->all();
+        $this->data = Catnews::find()->indexBy('id')->asArray()->orderBy('sortmenu ASC')->all();
         $this->tree = $this->getTree();
 
         return $this->tree;

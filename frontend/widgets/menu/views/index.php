@@ -13,7 +13,7 @@ use frontend\widgets\WLang;
                             href="/<?= WLang::getLang() ?>/<?= $menu['url'] ?>"><?= $menu['name_' . WLang::getLang()] ?></a>
                 </li>
             <? else: ?>
-
+            <?if($menu['type']==1):?>
                 <li class="dropdown hasmenu">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
                             href=""><?= $menu['name_' . WLang::getLang()] ?>
@@ -26,6 +26,39 @@ use frontend\widgets\WLang;
                         </ul>
                     <? endif; ?>
                 </li>
+                <?else:?>
+                    <li class="dropdown yamm-fw">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= $menu['name_' . WLang::getLang()]?> <span class="fa fa-angle-down"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                        <?$i=1;?>
+                                        <? foreach ($menu['childs'] as $submenu): ?>
+
+                                        <div class="col-md-3">
+                                            <div class="widget">
+
+                                                <div class="links-widget">
+
+                                                    <ul class="check">
+
+
+                                                        <li><?=$i?> <a href="/<?= WLang::getLang() ?>/<?=$submenu['url']?>"><?= $submenu['name_' . WLang::getLang()] ?></a></li>
+                                                        <?$i++;?>
+
+                                                    </ul>
+
+                                                </div><!-- end links -->
+                                            </div>
+                                        </div>
+                                        <?endforeach;?>
+                                    </div>
+                                </div><!-- end ttmenu-content -->
+                            </li>
+                        </ul>
+                    </li>
+                <?endif;?>
             <? endif; ?>
         <? endforeach; ?>
     </ul>
