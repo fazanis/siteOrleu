@@ -18,18 +18,18 @@ use mihaildev\elfinder\ElFinder;
 
     <?= $form->field($model, 'cat')->dropDownList(['0'=>'Без категории',ArrayHelper::map(Catnews::find()->all(), 'id','name_ru')]) ?>
 
-    <?= $form->field($model, 'status')->checkbox() ?>
+    <?= $form->field($model, 'status')->checkbox(['checked ' => true]) ?>
 
     <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'content_ru')->widget(CKEditor::className(), [
-        'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder',['height' => 600]),
     ]);?>
 
     <?= $form->field($model, 'name_kz')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'content_kz')->widget(CKEditor::className(), [
-        'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder',['height' => 600]),
     ]);?>
 
 

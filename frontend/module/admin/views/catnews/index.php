@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $data->parent_id == 0 ? $data->name_ru : ' -- ' . $data->name_ru;
                 }
             ],
-//            'parent_id',
+            'name_kz',
             [
                 'attribute' => 'parent_id',
                 'value' => function ($data) {
@@ -68,7 +68,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $data->type == 0 ? 'Статья' : 'Блог';
                 }
             ],
-            'sortmenu',
+            [
+                    'attribute' => 'sortmenu',
+                'value' => function($data){
+                    return $data->parent_id ?  $data->sortmenu : '<b style = "color:red;">'.$data->sortmenu.'</b>';
+                },
+                 'format' => 'raw',
+            ],
             [
                 'value' => function (Catnews $data) {
                     return Html::a('Редактировать', Url::to(['update', 'id' => $data->id]));

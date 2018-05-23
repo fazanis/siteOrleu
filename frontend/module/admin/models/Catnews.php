@@ -51,7 +51,7 @@ class Catnews extends \yii\db\ActiveRecord
         return [
             [['name_ru'], 'required'],
             [['name_ru', 'name_kz', 'url'], 'string', 'max' => 255],
-            [['parent_id','type'],'integer'],
+            [['parent_id','type','sortmenu'],'integer'],
         ];
     }
 
@@ -67,6 +67,7 @@ class Catnews extends \yii\db\ActiveRecord
             'url' => 'Url',
             'parent_id' => 'Родительская категория',
             'type' => 'Тип отображения',
+            'sortmenu' => 'Порядок отображения',
         ];
     }
 
@@ -90,5 +91,14 @@ class Catnews extends \yii\db\ActiveRecord
         //return Catnews::findOne(['parent_id'=>$id]);
     }
 
+    public function editSortParam($parent,$sort,$id){
 
+//        $catup = Catnews::find()->where('id !=:id',['id'=>$id]);
+//        $catup->updateCounters(['sortmenu' => $sort]);
+//        Catnews::findOne(['id'=>$id])->updateCounters(['sortmenu' => $sort]);
+//        Catnews::find()->asArray()->where(['parent_id'=>$parent, 'sortmenu'=>$sort])->count();
+        return Catnews::find()->asArray()->where(['parent_id'=>$parent, 'sortmenu'=>$sort])->all();
+
+//        return $parent.'-'.$sort;
+    }
 }

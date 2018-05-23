@@ -24,7 +24,11 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'type')->dropDownList(['0' => 'Статья', '1' => 'Блог']) ?>
 
-    <?= $form->field($model, 'sortmenu')->dropDownList([ArrayHelper::map(Catnews::find()->where('parent_id != :parent_id and parent_id = 6', ['parent_id' => 0])->all(), 'id', 'name_ru')]) ?>
+    <?= $form->field($model, 'sortmenu')->textInput(['maxlength' => true])
+//        ->dropDownList([ArrayHelper::map(Catnews::find()
+//        ->where('parent_id != :parent_id and parent_id = :parent_cat', ['parent_id' => 0, 'parent_cat' => $model->parent_id])
+//        ->all(), 'sortmenu', 'name_ru')])
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>

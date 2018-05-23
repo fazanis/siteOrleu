@@ -69,16 +69,24 @@ return [
             'class' => 'frontend\components\LangUrlManager',
             'rules' => [
                 '/' => 'site/index',
+//                'elfinder/manager' => 'elfinder',
                 'admin' => 'admin/default',
-                'cabinet' => 'cabinet/default',
-                'site/<action>'=>'site/<action>',
-//                '<module:admin|cabinet>/<controller:\w+>' => '<module>/<controller>',
 //                '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
+//                'cabinet' => 'cabinet/default',
+                '<action:(otdely|kafedry|rukovodstvo)>/<url:[-_0-9-a-z]+>' => 'struktura/fullpodrazd',
+                'otdely' => 'struktura/otdeli',
+                'kafedry' => 'struktura/kafedri',
+                'rukovodstvo' => 'struktura/rukovodstvo',
+                '<controller:(struktura)>/otdeli/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
+                '<controller:(struktura)>/kafedri/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
+                'site/<action>'=>'site/<action>',
+////                '<module:admin|cabinet>/<controller:\w+>' => '<module>/<controller>',
+                '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
                 '<url:[-_0-9-a-z]+>/'=>'news/index',
                 '<controller:\w[-_0-9-a-z]+>/<url:[-_0-9-a-z]+>'=>'news/full',
-//                '<controller:(news|anons|obyavleniya)>/<url:[-_0-9-a-z]+>' => 'news/full',
-//                '<controller:(struktura)>/otdeli/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
-//                '<controller:(struktura)>/kafedri/<url:[-_0-9-a-z]+>' => '<controller>/fullpodrazd',
+////                '<controller:(news|anons|obyavleniya)>/<url:[-_0-9-a-z]+>' => 'news/full',
+//
+
 
 
                 '<id:([0-9])+>/images/image-by-item-and-alias' => 'yii2images/images/image-by-item-and-alias',

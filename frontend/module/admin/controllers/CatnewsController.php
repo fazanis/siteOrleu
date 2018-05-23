@@ -101,7 +101,8 @@ class CatnewsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['/admin/catnews']);
+            $model->editSortParam($model->parent_id,$model->sortmenu,$model->id);
+            return $this->redirect(['/admin/catnews/index']);
         }
 
         return $this->render('update', [

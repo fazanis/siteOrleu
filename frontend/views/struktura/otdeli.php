@@ -20,7 +20,7 @@ use frontend\models\Ankety;
                     </a>
                 </div>
                 <div class="author-title desc">
-                    <a href="<?=\yii\helpers\Url::to($item->url)?>"><?=$item->{'name_'.WLang::getLang()}?></a>
+                    <a href="otdely/<?=\yii\helpers\Url::to($item->url)?>"><?=$item->{'name_'.WLang::getLang()}?></a>
 
                     <p><?=Ankety::shortOtdel($item->{'text_'.WLang::getLang()})?></p>
                     <ul class="list-inline authorsocial">
