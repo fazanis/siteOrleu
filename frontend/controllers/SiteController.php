@@ -74,8 +74,8 @@ class SiteController extends Controller
     {
 
         $newslist = Content::find()->where(['cat' => 2,'status' => 1])->orderBy('id DESC')->limit('5')->all();
-        $nakursah = Content::find()->where(['cat' => 13])->orderBy('id DESC')->limit(4)->all();
-        $obavlenia = Content::find()->where(['cat' => 11,'status' => 1])->orderBy('id DESC')->all();
+        $nakursah = Content::find()->where(['cat' => 3])->orderBy('id DESC')->limit(4)->all();
+        $obavlenia = Content::find()->where(['cat' => 4,'status' => 1])->orderBy('id DESC')->all();
 
         return $this->render('index',
             [
