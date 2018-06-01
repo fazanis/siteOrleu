@@ -29,6 +29,7 @@ use yii\helpers\ArrayHelper;
 //        ->where('parent_id != :parent_id and parent_id = :parent_cat', ['parent_id' => 0, 'parent_cat' => $model->parent_id])
 //        ->all(), 'sortmenu', 'name_ru')])
     ?>
+    <?= $form->field($model, 'typemanu')->dropDownList(['1' => 'Список', '0' => 'Большой список']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>

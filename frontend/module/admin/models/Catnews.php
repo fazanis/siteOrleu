@@ -51,7 +51,7 @@ class Catnews extends \yii\db\ActiveRecord
         return [
             [['name_ru'], 'required'],
             [['name_ru', 'name_kz', 'url'], 'string', 'max' => 255],
-            [['parent_id','type','sortmenu'],'integer'],
+            [['parent_id','type','sortmenu','typemanu'],'integer'],
         ];
     }
 
@@ -68,6 +68,7 @@ class Catnews extends \yii\db\ActiveRecord
             'parent_id' => 'Родительская категория',
             'type' => 'Тип отображения',
             'sortmenu' => 'Порядок отображения',
+            'typemanu' => 'Тип меню',
         ];
     }
 
