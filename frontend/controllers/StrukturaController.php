@@ -14,7 +14,7 @@ class StrukturaController extends \yii\web\Controller
 
     public function actionKafedri()
     {
-        $model = Otdel::find()->where(['parent_id'=>'3'])->all();
+        $model = Otdel::find()->where(['parent_id' => '3'])->all();
         return $this->render('kafedri',
             [
                 'model' => $model,
@@ -23,17 +23,17 @@ class StrukturaController extends \yii\web\Controller
 
     public function actionOtdeli()
     {
-        $model = Otdel::find()->where(['parent_id'=>'2'])->all();
+        $model = Otdel::find()->where(['parent_id' => '2'])->all();
         return $this->render('otdeli',
-        [
-            'model' => $model,
-        ]);
+            [
+                'model' => $model,
+            ]);
     }
 
     public function actionRukovodstvo()
     {
 
-        $model = Ankety::find()->where(['otdel_id'=>1])->all();
+        $model = Ankety::find()->where(['otdel_id' => 1])->all();
 
         return $this->render('rukovodstvo',
             [
@@ -45,13 +45,13 @@ class StrukturaController extends \yii\web\Controller
     {
         $url = \Yii::$app->request->get('url');
 
-        $otdelinfo = Otdel::findOne(['url'=>$url]);
+        $otdelinfo = Otdel::findOne(['url' => $url]);
 
-        $ankety = Ankety::find()->where(['otdel_id'=>$otdelinfo->id])->all();
+        $ankety = Ankety::find()->where(['otdel_id' => $otdelinfo->id])->all();
 
         return $this->render('fullpodrazd',
             [
-                'otdelinfo'=>$otdelinfo,
+                'otdelinfo' => $otdelinfo,
                 'ankety' => $ankety,
             ]);
     }
