@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use mihaildev\ckeditor\CKEditor;
 use mihaildev\elfinder\ElFinder;
+use frontend\models\Otdel;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\module\admin\models\Ankety */
@@ -16,11 +18,17 @@ use mihaildev\elfinder\ElFinder;
 
     <?= $form->field($model, 'image')->fileInput() ?>
 
-    <?= $form->field($model, 'otdel_id')->dropDownList([\yii\helpers\ArrayHelper::map(\frontend\module\admin\models\Otdel::find()->all(),'id','name_ru')]) ?>
+    <?= $form->field($model, 'otdel_id')->dropDownList([ArrayHelper::map(Otdel::find()->where('parent_id != :parent_id', ['parent_id'=>0])->orderBy('parent_id')->all(),'id','name_ru')]) ?>
 
     <?= $form->field($model, 'dolzhnost_ru')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'fio_ru')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'stepen_ru')->textInput(['maxlength' => true])?>
+
+    <?= $form->field($model, 'education_ru')->widget(CKEditor::className(), [
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
+    ]);?>
 
     <?= $form->field($model, 'nagradi_ru')->widget(CKEditor::className(), [
         'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
@@ -39,7 +47,13 @@ use mihaildev\elfinder\ElFinder;
     <h2>Казахский язык</h2>
     <?= $form->field($model, 'fio_kz')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'stepen_kz')->textInput(['maxlength' => true])?>
+
     <?= $form->field($model, 'dolzhnost_kz')->textInput(['maxlength' => true])?>
+
+    <?= $form->field($model, 'education_kz')->widget(CKEditor::className(), [
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
+    ]);?>
 
     <?= $form->field($model, 'nagradi_kz')->widget(CKEditor::className(), [
         'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),

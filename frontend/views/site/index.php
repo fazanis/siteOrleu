@@ -102,35 +102,5 @@ use frontend\models\Content;
     <?endforeach;?>
     <!-- end large-widget -->
 
-    <div class="widget searchwidget indexslider">
-        <div class="widget-title">
-            <h4>Объявления</h4>
-            <hr>
-        </div>
-        <?foreach ($obavlenia as $item):?>
-        <div class="large-widget m30" style="margin-top:0px;">
-            <div class="post row clearfix">
-                <div class="col-md-7">
-                    <div class="title-area">
-                        <div class="large-post-meta">
-                            <span><a href="category.html"><i class="fa fa-clock-o"></i><?=Content::dateFomat($item->date_create)?></a></span>
-                        </div>
-                        <h3><a href="/news/<?=$item->url?>"><?=$item->{name_.WLang::getLang()}?></a></h3>
-                        <!-- end meta -->
-                    </div>
-                    <!-- /.pull-right -->
-                </div>
-            </div>
-            <!-- end post -->
-        </div>
-        <?endforeach;?>
-        <!-- end large-widget -->
 
-
-
-
-        <!-- end large-widget -->
-
-
-    </div>
 </div>

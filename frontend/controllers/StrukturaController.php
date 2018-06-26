@@ -43,6 +43,7 @@ class StrukturaController extends \yii\web\Controller
 
     public function actionFullpodrazd($url)
     {
+
         $url = \Yii::$app->request->get('url');
 
         $otdelinfo = Otdel::findOne(['url' => $url]);

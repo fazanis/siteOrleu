@@ -34,7 +34,7 @@ class AdminAsset extends AssetBundle
         'js/metisMenu.min.js',
         'js/raphael.js',
         'js/raphael.min.js',
-        'js/nprogress.js',
+//        'js/nprogress.js',
         'js/maps/jquery-jvectormap-2.0.3.min.js',
         'js/maps/gdp-data.js',
         'js/maps/jquery-jvectormap-world-mill-en.js',
@@ -60,7 +60,7 @@ class AdminAsset extends AssetBundle
         'js/chartjs/chart.min.js',
         'js/custom.js',
         'js/bootstrap.min.js',
-        'js/gauge_demo.js',
+//        'js/gauge_demo.js',
 
     ];
 

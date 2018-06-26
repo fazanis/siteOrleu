@@ -38,10 +38,6 @@ AppAsset::register($this);
     <?php $this->head() ?>
 
 
-    <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
 </head>
 
 <body>
@@ -52,25 +48,25 @@ AppAsset::register($this);
         <a href="/cabinet/" target="_blank" style="color: rebeccapurple; border: 1px solid white; padding: 2px; background: gainsboro;">Кабинет</a>
     </div>
 <?endif;?>
-<div class="left-menu hidden-sm hidden-md hidden-xs">
-    <ul class="dm-social">
-        <li class="facebookbg"><a href="#" class="fa fa-facebook" data-toggle="tooltip" data-placement="right"
-                                  title="Facebook">Facebook</a></li>
-        <li class="googlebg"><a href="#" class="fa fa-google-plus" data-toggle="tooltip" data-placement="right"
-                                title="Google+">Google+</a></li>
-        <li class="twitterbg"><a href="#" class="fa fa-twitter" data-toggle="tooltip" data-placement="right"
-                                 title="Twitter">Twitter</a></li>
-        <li class="pinterestbg"><a href="#" class="fa fa-pinterest" data-toggle="tooltip" data-placement="right"
-                                   title="Pinterest">Pinterest</a></li>
-        <li class="linkedinbg"><a href="#" class="fa fa-linkedin" data-toggle="tooltip" data-placement="right"
-                                  title="Linkedin">Linkedin</a></li>
-        <li class="rssbg"><a href="#" class="fa fa-rss" data-toggle="tooltip" data-placement="right" title="RSS">RSS</a>
-        </li>
-        <li class="share">
-            <a href="#" class="fa fa-share-alt" data-toggle="tooltip" data-placement="right" title="91k Share"></a>
-        </li>
-    </ul>
-</div>
+<!--<div class="left-menu hidden-sm hidden-md hidden-xs">-->
+<!--    <ul class="dm-social">-->
+<!--        <li class="facebookbg"><a href="#" class="fa fa-facebook" data-toggle="tooltip" data-placement="right"-->
+<!--                                  title="Facebook">Facebook</a></li>-->
+<!--        <li class="googlebg"><a href="#" class="fa fa-google-plus" data-toggle="tooltip" data-placement="right"-->
+<!--                                title="Google+">Google+</a></li>-->
+<!--        <li class="twitterbg"><a href="#" class="fa fa-twitter" data-toggle="tooltip" data-placement="right"-->
+<!--                                 title="Twitter">Twitter</a></li>-->
+<!--        <li class="pinterestbg"><a href="#" class="fa fa-pinterest" data-toggle="tooltip" data-placement="right"-->
+<!--                                   title="Pinterest">Pinterest</a></li>-->
+<!--        <li class="linkedinbg"><a href="#" class="fa fa-linkedin" data-toggle="tooltip" data-placement="right"-->
+<!--                                  title="Linkedin">Linkedin</a></li>-->
+<!--        <li class="rssbg"><a href="#" class="fa fa-rss" data-toggle="tooltip" data-placement="right" title="RSS">RSS</a>-->
+<!--        </li>-->
+<!--        <li class="share">-->
+<!--            <a href="#" class="fa fa-share-alt" data-toggle="tooltip" data-placement="right" title="91k Share"></a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</div>-->
 
 <!-- START SITE -->
 <div id="wrapper">

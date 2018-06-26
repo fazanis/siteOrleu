@@ -30,7 +30,7 @@ class Catnews extends \yii\db\ActiveRecord
     {
         return [
             [['url'], 'required'],
-            [['parent_id'], 'integer'],
+            [['parent_id','sortmenu','typemanu'], 'integer'],
             [['name_ru', 'name_kz', 'url'], 'string', 'max' => 255],
             [['url'], 'unique'],
         ];

@@ -22,6 +22,7 @@ use frontend\models\Ankety;
                         </a>
                     </div>
                     <div class="author-title desc">
+
                         <a href="kafedry/<?= \yii\helpers\Url::to($item->url) ?>"><?= $item->{'name_' . WLang::getLang()} ?></a>
 
 

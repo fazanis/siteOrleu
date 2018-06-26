@@ -38,7 +38,7 @@ $this->title=$cat->{name_.WLang::getLang()};
                                     <div class="col-md-7">
                                         <div class="title-area">
 
-                                            <h3><?=$news->{'name_'.WLang::getLang()}?></h3>
+                                            <h4><?=$news->{'name_'.WLang::getLang()}?></h4>
                                             <?=Content::shortContent($news->content_ru)?>
                                             <div class="large-post-meta">
 

@@ -73,7 +73,8 @@ class Content extends \yii\db\ActiveRecord
     public static function shortContent($text)
     {
         $text= preg_replace('/<img[^>]+\>/', '', $text, 1);
-        return substr($text,0,200);
+        $str = mb_substr($text,0,500);
+        return strip_tags($str);
     }
 
     public static function dateFomat($date)

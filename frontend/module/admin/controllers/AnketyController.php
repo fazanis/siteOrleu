@@ -71,8 +71,10 @@ class AnketyController extends AdminController
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->session->setFlash('success', "Анкета работника успешно добавлена");
-            $model->image = UploadedFile::getInstance($model, 'image');
-            $model->upload();
+            if(UploadedFile::getInstance($model, 'image')) {
+                $model->image = UploadedFile::getInstance($model, 'image');
+                $model->upload();
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

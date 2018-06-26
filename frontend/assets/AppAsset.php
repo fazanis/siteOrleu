@@ -29,6 +29,12 @@ class AppAsset extends AssetBundle
         'js/raphael.min.js',
     ];
 
+    public $fonts = [
+        'fonts/fontawesome-webfont.woff2',
+        'fonts/fontawesome-webfont.woff',
+        'fonts/FontAwesome.otf  ',
+    ];
+
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
