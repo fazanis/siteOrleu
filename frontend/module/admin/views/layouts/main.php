@@ -62,7 +62,8 @@ AdminAsset::register($this);
                     </div>
                     <div class="profile_info">
                         <span>Добро пожаловать,</span>
-                        <h2><?=Yii::$app->user->identity->username?></h2>
+                        <h2><?=Yii::$app->user->identity->username?> <a href="/site/logout/" style="color: white;"> Выход </a></h2>
+
                     </div>
                 </div>
                 <!-- /menu prile quick info -->
@@ -206,8 +207,9 @@ AdminAsset::register($this);
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                 <img src="/upload/users/img.jpg" alt=""><?=Yii::$app->user->identity->fio?>
-                                <span class=" fa fa-angle-down"></span>
+<!--                                <span class=" fa fa-angle-down"></span>-->
                             </a>
+
                             <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
                                 <li><a href="javascript:;">  Profile</a>
                                 </li>
@@ -430,10 +432,10 @@ AdminAsset::register($this);
 <!--        }-->
 <!--    });-->
 <!--</script>-->
-
-<!-- worldmap -->
-<!-- pace -->
-
+<!---->
+<!-- worldmap-->
+<!-- pace-->
+<!---->
 <!--<script>-->
 <!--    $(function() {-->
 <!--        $('#world-map-gdp').vectorMap({-->
@@ -453,7 +455,7 @@ AdminAsset::register($this);
 <!--        });-->
 <!--    });-->
 <!--</script>-->
-<!-- skycons -->
+<!-- skycons-->
 <!--<script>-->
 <!--    var icons = new Skycons({-->
 <!--            "color": "#73879C"-->
@@ -470,8 +472,8 @@ AdminAsset::register($this);
 <!---->
 <!--    icons.play();-->
 <!--</script>-->
-
-<!-- dashbord linegraph -->
+<!---->
+<!-- dashbord linegraph-->
 <!--<script>-->
 <!--    Chart.defaults.global.legend = {-->
 <!--        enabled: false-->
@@ -511,8 +513,8 @@ AdminAsset::register($this);
 <!--        data: data-->
 <!--    });-->
 <!--</script>-->
-<!-- /dashbord linegraph -->
-<!-- datepicker -->
+<!-- /dashbord linegraph-->
+<!-- datepicker-->
 <!--<script type="text/javascript">-->
 <!--    $(document).ready(function() {-->
 <!---->

@@ -72,7 +72,7 @@ return [
 //                'elfinder/manager' => 'elfinder',
                 'admin' => 'admin/default',
 //                '<controller:\w+>/<action:\w+>/*' => '<controller>/<action>',
-//                'cabinet' => 'cabinet/default',
+                'cabinet' => 'cabinet/default',
                 '<action:(otdely|kafedry|rukovodstvo)>/<url:[-_0-9-a-z]+>' => 'struktura/fullpodrazd',
                 'otdely' => 'struktura/otdeli',
                 'kafedry' => 'struktura/kafedri',

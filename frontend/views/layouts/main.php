@@ -46,6 +46,7 @@ AppAsset::register($this);
     <div style="background: green; padding: 2px 2px 2px 550px;">
         <a href="/admin/" target="_blank" style="color: rebeccapurple; border: 1px solid white; padding: 2px; background: gainsboro;">Админ панель</a>
         <a href="/cabinet/" target="_blank" style="color: rebeccapurple; border: 1px solid white; padding: 2px; background: gainsboro;">Кабинет</a>
+        <a href="/site/logout/" target="_blank" style="color: rebeccapurple; border: 1px solid white; padding: 2px; background: gainsboro;">Выход</a>
     </div>
 <?endif;?>
 <!--<div class="left-menu hidden-sm hidden-md hidden-xs">-->

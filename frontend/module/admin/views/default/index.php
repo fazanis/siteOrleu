@@ -1,3 +1,5 @@
+<?=Yii::$app->security->generatePasswordHash('orleupvl2018')?>
+
 <div class="row tile_count" style="height: 111px">
     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
         <div class="left"></div>
@@ -401,7 +403,7 @@
                             <div class="block">
                                 <div class="block_content">
                                     <h2 class="title">
-                                        <a href="content/update?id=<?=$new->id?>"><?=$new->name_ru?></a>
+                                        <a href="/admin/content/update?id=<?=$new->id?>"><?=$new->name_ru?></a>
                                     </h2>
                                     <div class="byline">
                                         <span>13 hours ago</span> by <a>Jane Smith</a>
