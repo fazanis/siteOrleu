@@ -118,4 +118,8 @@ class Content extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Catnews::className(), ['id' => 'id']);
     }
+
+    public function getLastContent(){
+        return Content::find()->limit(10)->all();
+    }
 }

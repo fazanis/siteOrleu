@@ -4,6 +4,8 @@ namespace frontend\module\admin\controllers;
 
 use frontend\module\admin\controllers\behaviors\AdminBehavators;
 use common\models\User;
+use frontend\module\admin\models\Content;
+
 /**
  * Default controller for the `admin` module
  */
@@ -24,7 +26,12 @@ class DefaultController extends AdminController
     public function actionIndex()
     {
 
-        return $this->render('index');
+        $content = new Content();
+        $news = $content->getLastContent();
+        return $this->render('index',
+            [
+                'news'=>$news,
+            ]);
     }
 
 }
