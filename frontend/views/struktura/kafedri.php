@@ -14,7 +14,7 @@ use frontend\models\Ankety;
             <div class="col-sm-12 col-md-12">
                 <div class="post clearfix">
                     <div class="avatar-author">
-                        <a href="<?= \yii\helpers\Url::to($item->url) ?>">
+                        <a href="kafedry/<?= \yii\helpers\Url::to($item->url) ?>">
                             <?php
                             $img = $item->getImage();
                             ?>

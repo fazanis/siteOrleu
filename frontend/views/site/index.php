@@ -57,7 +57,7 @@ use frontend\models\Content;
                         <small class="hidden-xs">&#124;</small>
                         <span class="hidden-xs"><i class="fa fa-eye"></i> <?=$news->views?></span>
                     </div>
-                    <?=Content::shortContent($news->{'content_'.WLang::getLang()})?>
+                    <p align="justify"><?=Content::shortContent($news->{'content_'.WLang::getLang()})?></p>
                     <!-- end meta -->
                 </div>
                 <!-- /.pull-right -->
@@ -92,7 +92,7 @@ use frontend\models\Content;
                             <small class="hidden-xs">&#124;</small>
                             <span class="hidden-xs"><i class="fa fa-eye"></i> <?=$news->views?></span>
                         </div>
-                        <?=Content::shortContent($news->{'content_'.WLang::getLang()})?>
+                        <p align="justify"><?=Content::shortContent($news->{'content_'.WLang::getLang()})?></p>
                         <!-- end meta -->
                     </div>
                     <!-- /.pull-right -->

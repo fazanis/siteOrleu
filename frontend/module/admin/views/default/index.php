@@ -1,4 +1,3 @@
-<?=Yii::$app->security->generatePasswordHash('orleupvl2018')?>
 
 <div class="row tile_count" style="height: 111px">
     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
