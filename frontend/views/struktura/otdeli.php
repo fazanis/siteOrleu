@@ -14,7 +14,7 @@ use frontend\models\Ankety;
             <div class="col-sm-12 col-md-12">
                 <div class="post clearfix">
                     <div class="avatar-author">
-                        <a href="/otdely/<?= \yii\helpers\Url::to($item->url) ?>">
+                        <a href="otdely/<?= \yii\helpers\Url::to($item->url) ?>">
                             <?
                             $img = $item->getImage();
                             ?>
@@ -22,7 +22,7 @@ use frontend\models\Ankety;
                         </a>
                     </div>
                     <div class="author-title desc">
-                        <a href="/otdely/<?= \yii\helpers\Url::to($item->url) ?>"><?= $item->{'name_' . WLang::getLang()} ?></a>
+                        <a href="otdely/<?= \yii\helpers\Url::to($item->url) ?>"><?= $item->{'name_' . WLang::getLang()} ?></a>
 
 
                     </div>
