@@ -32,7 +32,7 @@ use frontend\models\Content;
     </div>
     <!-- end flexslider -->
 </div>
-<h2>Новости</h2>
+<h2><?=Yii::t('app', 'Новости')?></h2>
 <div class="widget searchwidget indexslider">
     <?foreach ($newslist as $news):?>
     <div class="large-widget m30">
@@ -66,7 +66,7 @@ use frontend\models\Content;
         <!-- end post -->
     </div>
     <?endforeach;?>
-    <h3>На курсах</h3>
+    <h3><?=Yii::t('app', 'На курсах')?></h3>
     <hr>
     <?foreach ($nakursah as $news):?>
         <div class="large-widget m30">
