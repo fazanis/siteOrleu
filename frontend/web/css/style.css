@@ -2011,7 +2011,7 @@ blockquote cite::before {
 
 .title-area {
     position: relative;
-    padding: 20px 40px;
+    /*padding: 20px 40px;*/
 }
 
 .shadowbg {
@@ -2022,7 +2022,7 @@ blockquote cite::before {
 }
 
 .title-area h3 {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 50px;
     margin-bottom: 7px;
     margin-top: 0;
