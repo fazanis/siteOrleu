@@ -1,0 +1,39 @@
+
+.fontSizeSwitchLarge .header-top-wrapper .size-1 {
+    background-color: #283d54;
+    color: #fff;
+}
+
+.fontSizeSwitchLarge .header-top-wrapper .size-2 {
+    background-color: #fff;
+    color: #283d54;
+}
+
+.fontSizeSwitchNormal .header-top-wrapper .size-2 {
+    background-color: #283d54;
+    color: #fff;
+}
+
+.fontSizeSwitchSmall .header-top-wrapper .size-3 {
+    background-color: #283d54;
+    color: #fff;
+}
+
+.fontSizeSwitchSmall .header-top-wrapper .size-2 {
+    background-color: #fff;
+    color: #283d54;
+}
+
+
+
+
+
+.fontSizeSwitchLarge div,
+.fontSizeSwitchLarge p {
+    font-size: 101%;
+}
+
+.fontSizeSwitchSmall div,
+.fontSizeSwitchLarge p {
+    font-size: 98%;
+}

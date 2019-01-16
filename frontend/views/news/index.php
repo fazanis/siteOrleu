@@ -1,7 +1,7 @@
 <? use frontend\models\Content;
 use frontend\widgets\WLang;
 use yii\widgets\LinkPager;
-$this->title=$cat->{name_.WLang::getLang()};
+$this->title=$cat->{'name_'.WLang::getLang()};
 ?>
 <?if($cat->type==1):?>
 <section class="section bgg">
@@ -30,7 +30,7 @@ $this->title=$cat->{name_.WLang::getLang()};
                                     <div class="col-md-4">
                                         <div class="post-media">
                                             <a href="/<?=WLang::getLang()?>/<?=Content::getCatUrl($news->cat)?>/<?=$news->url?>">
-                                                <?=Content::shortImgNews($news->content_ru)?>
+                                                <img src="<?=$news->shortImgNews()?>">
                                             </a>
                                         </div>
                                     </div>
@@ -39,7 +39,7 @@ $this->title=$cat->{name_.WLang::getLang()};
                                         <div class="title-area">
 
                                             <h4><?=$news->{'name_'.WLang::getLang()}?></h4>
-                                            <?=Content::shortContent($news->content_ru)?>
+                                            <?=$news->shortContent()?>
                                             <div class="large-post-meta">
 
                                                 <span><a href="category.html"><i class="fa fa-clock-o"></i> <?=Yii::$app->formatter->asDate($news->date_create, 'php:d-m-Y'); ?></a></span>

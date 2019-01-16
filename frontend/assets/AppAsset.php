@@ -12,21 +12,37 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/font-awesome.min.css',
-        'css/bootstrap.css',
-        'css/flexslider.css',
+        'css/main.css',
+        'css/core.min.css',
+        'css/font_size_switcher.css',
+        'css/jquery.bxslider.css',
+        'css/jquery.fancybox.css@v=2.1.5.css',
+        'css/jquery.fancybox-buttons.css@v=1.0.5.css',
+        'css/jquery.fancybox-thumbs.css@v=1.0.7.css',
+        'css/jquery.formstyler.css',
+        'css/responsive.css',
         'css/style.css',
-        'css/custom.css',
+        'css/style.min.css',
+        'css/style.min.css@1502450594490.css',
+        'css/template.css',
+        'css/template_styles.css',
+        'css/vision_switcher.css',
     ];
 
     public $js = [
-        'js/jquery.min.js',
-        'js/bootstrap.js',
-        'js/plugins.js',
-        'js/jquery.flexslider.js',
-        'js/metisMenu.min.js',
-        'js/raphael.js',
-        'js/raphael.min.js',
+        'js/responsive-switch.js',
+        'js/jquery.mousewheel-3.0.6.pack.js',
+        'js/jquery.fancybox.pack.js@v=2.1.5',
+        'js/jquery.fancybox-buttons.js@v=1.0.5',
+        'js/jquery.fancybox-media.js@v=1.0.6',
+        'js/jquery.fancybox-thumbs.js@v=1.0.7',
+        'js/jquery.marquee.min.js',
+        'js/init.js',
+        'js/jquery.bxslider.min.js',
+        'js/jquery.formstyler.js',
+
+
+
     ];
 
     public $fonts = [

@@ -1,0 +1,1177 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+    font-family: 'Open Sans', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: url('/images/background.png') repeat-y 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.page-thumb1 {
+    float: left;
+    margin:0 15px;
+}
+
+div .tit-bl {
+    float: left;
+    width: 100%;
+    color: #283d54;
+    font-size: 20px;
+    font-weight: bold;
+    margin:0 0 8px 0;
+}
+
+body::-webkit-scrollbar-track
+{
+    background-color: #fff;
+}
+
+body::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #fff;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background-color: #283d54;
+}
+
+
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.header-in {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.logo-block {
+    float: left;
+    width: 485px;
+    height: 140px;
+    background-color: #5287bd;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.logo {
+    float: left;
+    margin-left: 37px;
+    margin-top: 10px;
+}
+
+.logo-text {
+    float: left;
+    width: 290px;
+    margin-left: 25px;
+    margin-top: 18px;
+}
+
+.logo-text-top {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+
+.logo-text-bot {
+    float: left;
+    margin-top: 8px;
+    display: block;
+}
+
+.logo-text-bot a {
+    position: relative;
+    display: block;
+    float: left;
+    padding-left: 17px;
+    padding-right: 42px;
+    color: #fff;
+    text-decoration: none;
+    height: 30px;
+    font-size: 17px;
+    line-height: 30px;
+    background-color: #12a9eb;
+    cursor: pointer;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -khtml-border-radius: 7px;
+    border-radius: 7px;
+    behavior: url(http://kostanay.gov.kz/local/templates/demo/border-radius.htc);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#12aaeb+0,0c9ae7+100 */
+    background: #12aaeb; /* Old browsers */
+    background: -moz-linear-gradient(top, #12aaeb 0%, #0c9ae7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #12aaeb), color-stop(100%, #0c9ae7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #12aaeb 0%, #0c9ae7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #12aaeb 0%, #0c9ae7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #12aaeb 0%, #0c9ae7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #12aaeb 0%, #0c9ae7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#12aaeb', endColorstr='#0c9ae7', GradientType=0); /* IE6-9 */
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.4);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.4);
+    box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.4);
+}
+
+.logo-text-bot a:before {
+    content: "";
+    display: block;
+    background-image: url(images/str.png);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    right: 18px;
+    top: 13px;
+}
+
+.header-top {
+    height: 35px;
+    float: left;
+    width: 795px;
+    background-color: #346ca7;
+}
+
+.lang {
+    float: left;
+    margin-left: 15px;
+    margin-top: 7px;
+}
+
+.lang a {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    float: left;
+    padding: 2px 5px;
+    margin: 0 1px;
+    color: #FFF;
+    font-size: 12px;
+    text-transform: uppercase;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    behavior: url(http://kostanay.gov.kz/local/templates/demo/border-radius.htc);
+}
+
+.lang a.active, .lang a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.vers, .switcher {
+    float: left;
+    margin-top: 9px;
+    color: #fff;
+    font-size: 12px;
+    margin-left: 18px;
+}
+
+.vers a, .switcher a {
+    float: left;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.vers a:hover, .switcher a:hover {
+    text-decoration: underline;
+}
+
+.vers span {
+    float: left;
+    margin: 0 10px;
+}
+
+.font {
+    float: left;
+    margin-left: 13px;
+    margin-top: 7px;
+}
+
+.font a {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    margin: 0 1px;
+    color: #FFF;
+    font-size: 12px;
+    text-transform: uppercase;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    behavior: url(http://kostanay.gov.kz/local/templates/demo/border-radius.htc);
+}
+
+.font a.active, .font a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.font a.size-1 {
+    font-size: 14px;
+}
+
+.font a.size-2 {
+    font-size: 12px;
+}
+
+.font a.size-3 {
+    font-size: 10px;
+}
+
+.header-top-right {
+    float: right;
+    margin-right: 40px;
+}
+
+.search-bt {
+    float: left;
+}
+
+.search-bt a {
+    width: 50px;
+    height: 35px;
+    display: block;
+    float: left;
+    margin-left: 22px;
+    background-color: #2b5d91;
+    background-image: url(images/search-bt.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header-cat {
+    width: 465px;
+    float: left;
+}
+
+.about-country {
+    float: left;
+    width: 329px;
+}
+
+.banners {
+    float: right;
+    width: 270px;
+    padding-top: 47px;
+}
+
+.one-banner {
+    float: left;
+    width: 268px;
+    margin-bottom: 29px;
+    border: 1px solid #cfd5dc;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    behavior: url(http://kostanay.gov.kz/local/templates/demo/border-radius.htc);
+}
+
+.one-banner img {
+    float: left;
+    vertical-align: top;
+}
+
+.block-down {
+    float: left;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.them {
+    float: left;
+    margin-right: 42px;
+    width: 100%;
+}
+
+.tit-bl {
+    float: left;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.tit-bl a {
+    color: #fabf61;
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    border-bottom: 2px solid #fabf61;
+}
+
+.tit-bl a:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.them-in {
+    padding: 20px 18px;
+    float: left;
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
+.sel-town {
+    float: left;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.sel-town .jq-selectbox__select {
+    width: 230px;
+    background-color: #5287bd;
+    height: 30px;
+    padding: 0px 50px 0px 12px;
+    border-radius: 0;
+}
+
+.jq-selectbox__dropdown {
+    top: 33px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #ааа !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+    font-size: 14px !important;
+}
+
+.sel-town .jq-selectbox__select-text {
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.sel-town .jq-selectbox__trigger-arrow {
+    border-top: 5px solid #fff;
+    opacity: 1;
+}
+
+.sel-town .jq-selectbox__trigger {
+    border-left: none;
+}
+
+.town-tit {
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #12a8e8;
+}
+
+.sp-town {
+    float: left;
+    width: 100%;
+}
+
+.one-sp-town {
+    float: none;
+    width: 100%;
+}
+
+.one-sp-town a {
+    float: left;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    color: #222222;
+}
+
+.one-sp-town a:hover {
+    color: #214f7e;
+}
+
+.slid-stat {
+    width: 424px;
+    float: left;
+    margin-right: 42px;
+}
+
+.slid-stat .bx-wrapper {
+    float: left;
+}
+
+.slid-stat .bx-wrapper .bx-pager, .slid-stat .bx-wrapper .bx-controls-auto {
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+}
+
+.slid-stat .bx-wrapper .bx-pager.bx-default-pager a {
+    margin: 0 5px 0 5px;
+}
+
+.soc {
+    float: right;
+    width: 268px;
+}
+
+.soc-one {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.carus-parad {
+    float: left;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.parad {
+}
+
+.carus-parad .bx-wrapper .bx-controls-direction a {
+    background-image: url(images/carus-hor.png);
+    width: 15px;
+    height: 22px;
+    margin-top: -11px;
+}
+
+.carus-parad .bx-wrapper .bx-prev {
+    background-position: 0 0;
+    left: -25px;
+}
+
+.carus-parad .bx-wrapper .bx-next {
+    background-position: -15px 0px;
+    right: -25px;
+}
+
+.one-logo {
+}
+
+.one-logo-in {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 100px;
+}
+
+#inline {
+    display: none;
+}
+
+.nav.in-nav > ul > li {
+    background-repeat: no-repeat;
+    background-position: right 3px;
+    background-image: url(images/divider.png);
+}
+
+.nav.in-nav > ul > li:last-child, .nav.in-nav > ul > li:first-child {
+    background-image: none;
+}
+
+.pop-tit {
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #fabf61;
+    text-decoration: underline;
+}
+
+.pop-in {
+    float: left;
+    width: 100%;
+}
+
+.pop-in li {
+    float: left;
+    padding-bottom: 8px;
+    margin-bottom: 7px;
+    width: 100%;
+    border-bottom: 1px solid #2b5d91;
+}
+
+.pop-in li:last-child {
+    border-bottom: none;
+}
+
+.pop-in li a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.pop-in li a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #e18f0d;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+
+
+.tem-sp-in ul li a.menu-ico-1:before {
+    background-image: url(images/ico-menu/ico-1.png);
+    background-position: center 9px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-1:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-1.png);*/
+    /*background-position: center -60px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-2:before {
+    background-image: url(images/ico-menu/ico-2.png);
+    background-position: center 9px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-2:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-2.png);*/
+    /*background-position: center -63px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-3:before {
+    background-image: url(images/ico-menu/ico-3.png);
+    background-position: center 9px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-3:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-3.png);*/
+    /*background-position: center -59px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-4:before {
+    background-image: url(images/ico-menu/ico-4.png);
+    background-position: center 9px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-4:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-4.png);*/
+    /*background-position: center -59px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-5:before {
+    background-image: url(images/ico-menu/ico-5.png);
+    background-position: center 11px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-5:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-5.png);*/
+    /*background-position: center -58px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-6:before {
+    background-image: url(images/ico-menu/ico-6.png);
+    background-position: center 15px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-6:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-6.png);*/
+    /*background-position: center -63px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-7:before {
+    background-image: url(images/ico-menu/ico-7.png);
+    background-position: center 10px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-7:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-7.png);*/
+    /*background-position: center -59px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-8:before {
+    background-image: url(images/ico-menu/ico-8.png);
+    background-position: center 10px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-8:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-8.png);*/
+    /*background-position: center -59px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-9:before {
+    background-image: url(images/ico-menu/ico-9.png);
+    background-position: center 10px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-9:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-9.png);*/
+    /*background-position: center -59px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-10:before {
+    background-image: url(images/ico-menu/ico-10.png);
+    background-position: center 9px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-10:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-10.png);*/
+    /*background-position: center -60px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-11:before {
+    background-image: url(images/ico-menu/ico-11.png);
+    background-position: center 13px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-11:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-11.png);*/
+    /*background-position: center -63px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-12:before {
+    background-image: url(images/ico-menu/ico-12.png);
+    background-position: center 13px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-12:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-12.png);*/
+    /*background-position: center -63px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-13:before {
+    background-image: url(images/ico-menu/ico-13.png);
+    background-position: center 9px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-13:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-13.png);*/
+    /*background-position: center -60px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-14:before {
+    background-image: url(http://kostanay.gov.kz/local/templates/demo/images/ico-menu/ico-14.png);
+    background-position: center 9px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-14:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-14.png);*/
+    /*background-position: center -60px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-15:before {
+    background-image: url(http://kostanay.gov.kz/local/templates/demo/images/ico-menu/ico-15.png);
+    background-position: center 14px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-15:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-15.png);*/
+    /*background-position: center -61px;*/
+/*}*/
+
+.tem-sp-in ul li a.menu-ico-16:before {
+    background-image: url(http://kostanay.gov.kz/local/templates/demo/images/ico-menu/ico-16.png);
+    background-position: center 14px;
+}
+
+/*.tem-sp-in ul li a.menu-ico-16:hover:before {*/
+    /*background-image: url(images/ico-menu/ico-16.png);*/
+    /*background-position: center -61px;*/
+/*}*/
+
+.news-left, .news-right {
+    width: 424px;
+    float: left;
+    margin-right: 42px;
+}
+
+.news-right {
+    margin-right: 0;
+}
+
+.news-left .last-news, .news-right .last-news {
+    /*background-image: url(images/doted.png);*/
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.news-left .last-news .last-news-data a, .news-right .last-news .last-news-data a {
+    text-decoration: none;
+}
+
+.news-left .last-news .last-news-data a:hover, .news-right .last-news .last-news-data a:hover {
+    text-decoration: underline;
+}
+
+.news-left .last-news:last-child, .news-right .last-news:last-child {
+    background-image: none;
+}
+
+.last-news.mini-news .last-news-thumb {
+    float: left;
+    width: 113px;
+    margin-bottom: 0;
+}
+
+.news-descr {
+    padding-left: 155px;
+}
+
+.last-news.mini-news .last-news-tit {
+    margin-bottom: 0;
+}
+
+.sidebar {
+    float: right;
+    width: 270px;
+}
+
+.sidebar .about-country {
+    margin-bottom: 29px;
+}
+
+.sidebar .about-country a.c-one {
+    width: 231px;
+    letter-spacing: -1px;
+}
+
+blockquote {
+    float: right;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    background-color: #feefd7;
+    width: 230px;
+    padding: 75px 20px 25px;
+    background-image: url(images/quote.png);
+    background-repeat: no-repeat;
+    background-position: 22px 24px;
+}
+
+.soc-side {
+    float: left;
+    width: 100%;
+}
+
+.soc-side-tit {
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 22px;
+    color: #fabf61;
+    text-decoration: underline;
+}
+
+.soc-side-one {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.detal {
+    float: left;
+    margin-bottom: 10px;
+    width: 100%;
+    padding-bottom: 24px;
+    /*background-image: url(images/doted.png);*/
+    background-repeat: repeat-x;
+    background-position: bottom left;
+}
+
+.news-info {
+    float: left;
+    width: 100%;
+}
+
+.news-data {
+    float: left;
+    font-size: 12px;
+    color: #12aaeb;
+}
+
+.news-auth {
+    float: right;
+    padding-left: 24px;
+    background-image: url(images/auth.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.news-auth a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #2b5d91;
+}
+
+.news-auth a:hover {
+    text-decoration: underline;
+}
+
+.page.single .tree {
+    margin-bottom: 0;
+}
+
+.add-quest {
+    float: right;
+    margin-top: -48px;
+}
+
+.add-quest a {
+    width: 135px;
+    height: 30px;
+    background: #12aaeb; /* Old browsers */
+    background: -moz-linear-gradient(top, #12aaeb 0%, #0c9be7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #12aaeb), color-stop(100%, #0c9be7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #12aaeb 0%, #0c9be7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #12aaeb 0%, #0c9be7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #12aaeb 0%, #0c9be7 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #12aaeb 0%, #0c9be7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#12aaeb', endColorstr='#0c9be7', GradientType=0); /* IE6-9 */
+    font-size: 16px;
+    line-height: 30px;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    behavior: url(http://kostanay.gov.kz/local/templates/demo/border-radius.htc);
+}
+
+.add-quest a:hover {
+    background: #0c9be7; /* Old browsers */
+    background: -moz-linear-gradient(top, #0c9be7 0%, #12aaeb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0c9be7), color-stop(100%, #12aaeb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #0c9be7 0%, #12aaeb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #0c9be7 0%, #12aaeb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #0c9be7 0%, #12aaeb 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #0c9be7 0%, #12aaeb 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0c9be7', endColorstr='#12aaeb', GradientType=0); /* IE6-9 */
+}
+
+.find-ask {
+    float: left;
+    width: 100%;
+}
+
+.find-top {
+    border: 1px solid #5287bd;
+    height: 33px;
+}
+
+.find-text {
+    width: 492px;
+    float: left;
+    padding: 0 18px;
+    height: 33px;
+    line-height: 35px;
+    border: none;
+    color: #222222;
+    font-size: 12px;
+}
+
+.find-bt {
+    float: right;
+    width: 49px;
+    height: 33px;
+    background-color: #2b5d91;
+    background-image: url(images/search-bt.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.find-bt:hover {
+    background-color: #2974C2;
+}
+
+.find-rad {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.find-rad-one {
+    float: left;
+    margin-right: 15px;
+}
+
+.find-rad-one span {
+    float: left;
+    margin-left: 5px;
+}
+
+.find-rad .jq-radio {
+    float: left;
+    margin-top: 4px;
+}
+
+.numb-quest {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    color: #2b5d91;
+    margin-bottom: 10px;
+}
+
+.det-left {
+    float: left;
+}
+
+.det-left span {
+}
+
+.det-left a {
+    font-size: 14px;
+    color: #2b5d91;
+    text-decoration: none;
+}
+
+.det-left a:hover {
+    text-decoration: underline;
+}
+
+.det-right {
+    float: right;
+}
+
+.det-right a {
+    font-size: 14px;
+    color: #2b5d91;
+    text-decoration: none;
+}
+
+.det-right a:hover {
+    text-decoration: underline;
+}
+
+#add-quest {
+    display: none;
+}
+
+.add-quest-tit {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.kapcha {
+    height: 30px;
+    border: 1px solid #5287bd;
+    width: 80px;
+    background-color: #fff4f5;
+    text-align: center;
+    float: right;
+}
+
+.add-quest-inp input.mini-inp {
+    width: 60px;
+}
+
+.add-quest-inp textarea {
+    height: 50px;
+    width: 170px;
+    border: 1px solid #5287bd;
+    padding: 10px 15px;
+}
+
+.add-quest-inp .jq-selectbox__select {
+    height: 30px;
+    border: 1px solid #5287bd;
+    width: 140px;
+    padding: 0 45px 0 15px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -khtml-border-radius: 0px;
+    border-radius: 0px;
+    behavior: url(http://kostanay.gov.kz/local/templates/demo/border-radius.htc);
+}
+
+.add-quest-inp .jq-selectbox__select-text {
+    height: 30px;
+    line-height: 30px;
+}
+
+.add-quest-inp .jq-selectbox__trigger {
+    border-left: none;
+}
+
+.add-quest-inp .jq-selectbox__trigger-arrow {
+    border-top-color: #2b5d91;
+    opacity: 1;
+}
+
+.add-quest-inp .jq-selectbox__dropdown {
+    width: 202px !important;
+}
+
+.tru {
+    float: left;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tru span {
+    margin-left: 8px;
+}
+
+.all-news {
+    float: left;
+    width: 100%;
+}
+
+.all-news .last-news-thumb {
+    width: 423px;
+    margin-bottom: 0;
+}
+
+.news-right-pert {
+    float: right;
+    width: 435px;
+}
+
+.all-news .last-news-tit a {
+    font-weight: bold;
+}
+
+.all-news .last-news {
+    /*background-image: url(images/doted.png);*/
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#tabs2 ul li.ui-tabs-active {
+    background-color: #fff;
+}
+
+#tabs2 ul li {
+    float: left;
+    height: 28px;
+    margin: 7px 20px 0;
+    display: block;
+    padding: 0 10px;
+    margin-bottom: 0;
+}
+
+#tabs2 ul li.ui-tabs-active a {
+    color: #000;
+}
+
+#tabs2 ul li a {
+    outline: none;
+}
+
+#tabs2 ul li a:hover {
+    border-bottom: 4px solid rgba(0, 0, 0, 0)
+}
+
+.page-thumb1 {
+    float: left;
+    margin-bottom: 15px;
+    margin-right: 15px;
+
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.sub-bt2 {
+    width: 215px;
+    padding: 0 10px;
+    margin: 5px 90px;
+    position: relative;
+    float: left;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    background-color: #12a9eb;
+    cursor: pointer;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -khtml-border-radius: 7px;
+    border-radius: 7px;
+    behavior: url(http://kostanay.gov.kz/local/templates/demo/border-radius.htc);
+    background: #12aaeb;
+    background: -moz-linear-gradient(top, #12aaeb 0%, #0c9ae7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #12aaeb), color-stop(100%, #0c9ae7));
+    background: -webkit-linear-gradient(top, #12aaeb 0%, #0c9ae7 100%);
+    background: -o-linear-gradient(top, #12aaeb 0%, #0c9ae7 100%);
+    background: -ms-linear-gradient(top, #12aaeb 0%, #0c9ae7 100%);
+    background: linear-gradient(to bottom, #12aaeb 0%, #0c9ae7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#12aaeb', endColorstr='#0c9ae7', GradientType=0);
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.4);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.4);
+    box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.4);
+
+}
+
+table.transparent, table.transparent th, table.transparent td, table.transparent tr {
+    /*border: none;*/
+}
+
+table.table2 table, table.table2 th, table.table2 td {
+    border-collapse: collapse;
+    border: 1px solid black !important;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/-----------------------------------------------/
+
+
+.analytics a{
+    display:block;
+    border: 2px solid black;
+}
+
+
+/--------------------------------------/
+

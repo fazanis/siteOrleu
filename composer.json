@@ -25,7 +25,8 @@
         "zelenin/yii2-slug-behavior": "*",
         "leandrogehlen/yii2-treegrid": "*",
         "costa-rico/yii2-images": "dev-master",
-        "himiklab/yii2-recaptcha-widget": "*"
+        "himiklab/yii2-recaptcha-widget": "*",
+        "nesbot/carbon": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

@@ -2,6 +2,7 @@
 
 namespace frontend\models;
 
+use Carbon\Carbon;
 use frontend\widgets\WLang;
 use Yii;
 
@@ -62,25 +63,25 @@ class Content extends \yii\db\ActiveRecord
         return $firstImgScr;
 
     }
-    public static function shortImgNews($text)
+    public function shortImgNews()
     {
-        preg_match('/<img(.*)src(.*)=(.*)"(.*)"/U', $text, $imgresult);
+        preg_match('/<img(.*)src(.*)=(.*)"(.*)"/U', $this->content_ru, $imgresult);
         $firstImgScr = array_pop($imgresult);
-        return '<img src='.$firstImgScr.'>';
+        return $firstImgScr;
+//        return '<img src='.$firstImgScr.'>';
 
     }
 
-    public static function shortContent($text)
+    public function shortContent()
     {
-        $text= preg_replace('/<img[^>]+\>/', '', $text, 1);
-        $str = mb_substr($text,0,500);
+        $text= preg_replace('/<img[^>]+\>/', '', $this->{'content_'.WLang::getLang()}, 1);
+        $str = mb_substr($text,0,400);
         return strip_tags($str);
     }
 
-    public static function dateFomat($date)
+    public function dateFomat()
     {
-        $masdate = getdate($date);
-        return $masdate['mday'].'.'.$masdate['mon'].'.'.$masdate['year'];
+        return Carbon::parse($this->date_create)->format('d/m/Y');
     }
 
     public static function getCatUrl($cat)

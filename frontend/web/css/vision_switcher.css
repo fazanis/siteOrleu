@@ -1,0 +1,609 @@
+
+.vision_global_class .main-nav {
+    background-color: #ffffff;
+    border-top: solid 2px #000000;
+    border-bottom: solid 2px #000000;
+}
+
+.vision_global_class .main-nav > ul > li > a {
+    color: #000;
+}
+
+.vision_global_class .hmw-logo-symbol img {
+    height: 80px;
+    width: auto;
+}
+
+.vision_global_class .header-top-wrapper a {
+    color: #000000;
+    font-weight: 600;
+}
+
+.vision_global_class .header-top-wrapper a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.vision_global_class .header-top-wrapper .active {
+    color: #fff;
+    background-color: #000000;
+}
+
+.vision_global_class .hmw-logo-text {
+    font-size: 20px;
+    width: 400px;
+    padding-left: 20px;
+    color: #000000;
+}
+
+.vision_global_class .header-cat-banners {
+    height: auto;
+    width: auto;
+    border-left: 0;
+    margin-top: 10px;
+    margin-left: 30px;
+    padding-left: 0px;
+    color: #000000;
+    font-size: 18px;
+    background: none;
+}
+
+.vision_global_class .sl-left {
+    background-color: #ffffff;
+}
+
+.vision_global_class .sp-link li a.active {
+    border-left: 4px solid rgb(0, 0, 0);
+    color: #000000;
+}
+
+.vision_global_class .slid-data {
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.vision_global_class .sp-link li a {
+    font-weight: 600;
+}
+
+.vision_global_class .sp-link li a {
+    color: #000000;
+}
+
+.vision_global_class .slider-one-text {
+    background-color: #ffffff;
+    border-right: solid 1px #000;
+}
+
+.vision_global_class .slid-one-data {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.vision_global_class .slid-one-tit a {
+    color: #000000;
+    font-weight: 700;
+}
+
+.vision_global_class .slid-one-descr {
+    font-size: 16px;
+    color: #000;
+}
+
+.vision_global_class .slider {
+    border-bottom: solid 1px #000;
+}
+
+.vision_global_class .add-blog a {
+    font-size: 20px;
+    background-color: #000000;
+    border: solid 1px #000000;
+}
+
+.vision_global_class .add-blog a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.vision_global_class .stat-tit {
+    color: #000000;
+}
+
+.vision_global_class .one-stat-tit {
+    color: #000000;
+}
+
+.vision_global_class .one-stat-name {
+    color: #000000;
+}
+
+.vision_global_class .sp-link li a span {
+    background: none;
+}
+
+.vision_global_class a#visionSwitch {
+    background-color: #000;
+    color: #fff;
+}
+
+.vision_global_class .country-gov-banners {
+    font-size: 18px;
+    background-color: #000000;
+    padding: 25px 0px 0px 25px;
+    background-image: none !important;
+}
+
+.vision_global_class .country-gov-banners:hover {
+    padding: 25px 0px 0px 35px;
+}
+
+.vision_global_class .main-page-news-tabs-section .nav {
+    margin-bottom: 20px;
+    border: 0;
+    border-bottom: 3px solid #000;
+}
+
+.vision_global_class .main-page-news-tabs-section .nav li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    background-color: #fff;
+}
+
+.vision_global_class .main-page-news-tabs-section .nav-tabs > li.active > a,
+.vision_global_class .main-page-news-tabs-section .nav-tabs > li.active > a:focus,
+.vision_global_class .main-page-news-tabs-section .nav-tabs > li.active > a:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.vision_global_class .main-nav > ul > li > a.act,
+.vision_global_class .main-nav > ul > li > a:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.vision_global_class .main-nav ul li ul {
+    background-color: #000000;
+}
+
+.main-nav ul li ul li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.vision_global_class .main-nav ul li ul li a:hover {
+    background-color: #ffffff;
+    border-left: 0;
+    color: #000000;
+}
+
+.vision_global_class .mpnis-ni-news-title {
+    font-size: 18px;
+    color: #000;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+.vision_global_class .mpnis-ni-news-data {
+    font-size: 12px;
+    color: #000;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+.vision_global_class .mpnis-ni-news-exerp {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+.vision_global_class .main-page-noimg-news-item,
+.vision_global_class .main-page-noimg-news-item:last-child {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: solid 1px #000;
+}
+
+.vision_global_class .main-page-noimg-news-item:hover {
+    background-color: #000;
+    opacity: 1;
+}
+
+.vision_global_class .main-page-noimg-news-item:hover .mpnis-ni-news-title,
+.vision_global_class .main-page-noimg-news-item:hover .mpnis-ni-news-data,
+.vision_global_class .main-page-noimg-news-item:hover .mpnis-ni-news-exerp {
+    color: #fff;
+}
+
+.vision_global_class .main-page-news-item,
+.vision_global_class .main-page-news-item:last-child {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border: solid 1px #000;
+}
+
+.vision_global_class .mpnis-news-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #000;
+    margin: 0;
+    padding: 20px 20px 10px 20px;
+}
+
+.vision_global_class .mpnis-news-exerp {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    padding: 0px 20px 0px 20px;
+}
+
+.vision_global_class .sidebar-block-akim-image {
+    border: solid 2px #000000;
+}
+
+.vision_global_class .sidebar-block-akim-title {
+    background-color: #000000;
+    border-bottom: solid 1px #000000;
+}
+
+.vision_global_class .sidebar-block-akim-title h2 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.vision_global_class .sidebar-block-akim-title p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.vision_global_class .sidebar-block-akim-menu {
+    background-color: #000000;
+}
+
+.vision_global_class .sidebar-block-akim-menu li {
+    border-bottom: solid 1px #ffffff;
+}
+
+.vision_global_class .sidebar-block-akim-menu li:last-child {
+    border-bottom: 0;
+}
+
+.vision_global_class .sidebar-block-akim-menu li a {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.vision_global_class .sidebar-banners {
+    margin-bottom: 5px;
+}
+
+.vision_global_class .sidebar-banners-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.vision_global_class .sidebar-banners:hover .sidebar-banners-overlay {
+    background-color: rgb(0, 0, 0);
+}
+
+.vision_global_class .sidebar-banners-overlay p {
+    font-size: 16px;
+    padding: 0 0 0 20px;
+}
+
+.vision_global_class .sidebar-banners:hover .sidebar-banners-overlay i {
+    display: none;
+}
+
+.vision_global_class .sidebar-banner-1:hover .sidebar-banners-overlay p {
+    padding: 0 0 0 35px;
+}
+
+.vision_global_class .sidebar-banner-2:hover .sidebar-banners-overlay p {
+    padding: 0 0 0 35px;
+}
+
+.vision_global_class .sidebar-banner-3:hover .sidebar-banners-overlay p {
+    padding: 0 0 0 35px;
+}
+
+.vision_global_class .sidebar-banner-4:hover .sidebar-banners-overlay p {
+    padding: 0 0 0 35px;
+}
+
+.vision_global_class .sidebar-block-photogallery-title {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #000000;
+    height: 46px;
+}
+
+.vision_global_class .sidebar-block-photogallery-title i {
+    display: none;
+}
+
+.vision_global_class .sidebar-block-photogallery-carousel {
+    border: solid 2px #000000;
+}
+
+.vision_global_class .sidebar-block-photogallery-carousel .owl-nav .owl-prev,
+.vision_global_class .sidebar-block-photogallery-carousel .owl-nav .owl-next {
+    margin-top: -40px;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 20px;
+}
+
+.vision_global_class .sidebar-block-photogallery-carousel .owl-nav .owl-prev:hover,
+.vision_global_class .sidebar-block-photogallery-carousel .owl-nav .owl-next:hover {
+    color: #000;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+.vision_global_class .sidebar-panel-weatherbox {
+    border: solid 2px #000000;
+}
+
+.vision_global_class .gsCity,
+.vision_global_class .gsTemp,
+.vision_global_class .gsAddInfo2 {
+    color: #000000 !important;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+.vision_global_class .sidebar-panel-weatherbox:hover {
+    background-color: #000000;
+}
+
+.vision_global_class .sidebar-panel-weatherbox:hover .gsCity,
+.vision_global_class .sidebar-panel-weatherbox:hover .gsTemp,
+.vision_global_class .sidebar-panel-weatherbox:hover .gsAddInfo2 {
+    color: #fff !important;
+}
+
+.vision_global_class .sidebar-block-calendar-title {
+    font-size: 16px;
+    font-weight: 600;
+    height: 64px;
+    padding: 12px 20px 0 15px;
+    background-color: #000000;
+}
+
+.vision_global_class .sidebar-block-calendar-title i {
+    display: none;
+}
+
+.vision_global_class #calendar-header a {
+    background-color: #000000;
+}
+
+.vision_global_class #calendar-header p {
+    color: #000000;
+}
+
+.vision_global_class .weekDay {
+    background-color: #000000;
+}
+
+.vision_global_class .weekEnd {
+    background-color: #767676;
+}
+
+.vision_global_class .NewsCalDefault a {
+    background-color: #000000;
+}
+
+.vision_global_class #planned {
+    background-color: #000000;
+}
+
+.vision_global_class div.news-calendar-compact .NewsCalToday {
+    color: #000000;
+    border: 2px #000000 solid;
+}
+
+.vision_global_class #calendar-legend span {
+    font-size: 14px;
+}
+
+.vision_global_class .full-width-button a {
+    background-color: #000000;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: solid 1px #000;
+}
+
+.vision_global_class .full-width-button a:hover {
+    background-color: #fff;
+    color: #000;
+    border: solid 1px #000;
+}
+
+.vision_global_class .video-block-title {
+    background-color: #000000;
+}
+
+.vision_global_class .video-block-title-right a:hover {
+    color: #000;
+    background-color: #ffffff;
+}
+
+.vision_global_class .video-block-item-title {
+    font-size: 16px;
+    color: #000;
+}
+
+.vision_global_class .footer-logo-slider .owl-nav .owl-prev,
+.vision_global_class .footer-logo-slider .owl-nav .owl-next {
+    border: solid 1px #000000;
+    background: rgb(0, 0, 0);
+}
+
+.vision_global_class .footer-logo-slider .owl-nav .owl-prev:hover,
+.vision_global_class .footer-logo-slider .owl-nav .owl-next:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.vision_global_class .scrollup-button div div {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.vision_global_class .scrollup-button div div:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.vision_global_class .footer-section {
+    background-color: #000000;
+}
+
+.vision_global_class .news-marquee-wrapper a {
+    font-size: 18px;
+}
+
+.vision_global_class .news-marquee {
+    border-right: solid 1px #ffffff;
+}
+
+.vision_global_class .subscribe-form-input {
+    background-color: #000;
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+.vision_global_class .subscribe-form-button {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    border: solid 1px #ffffff;
+}
+
+.vision_global_class .subscribe-form-button:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.vision_global_class .nmsf-rss-button {
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.7);
+    border: solid 1px #ffffff;
+    padding: 10px 17px 0px 0px;
+}
+
+.vision_global_class .nmsf-rss-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.vision_global_class .footer-column h3 {
+    font-size: 18px;
+    color: #fff;
+}
+
+.vision_global_class .footer-menu-links a {
+    line-height: 32px;
+    font-size: 16px;
+}
+
+.vision_global_class .footer-menu-links a:hover {
+    color: #ffffff;
+    border-left: solid 6px #ffffff;
+}
+
+.vision_global_class .social-icon:hover {
+    background-color: #fff;
+    color: #000000;
+}
+
+.vision_global_class .side-menu {
+    background-color: #000000;
+}
+
+.vision_global_class .side-menu ul li {
+    border-bottom: solid 1px #ffffff;
+}
+
+.vision_global_class .side-menu ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px 20px 8px 20px;
+}
+
+.vision_global_class .side-menu ul li a:hover, .side-menu ul li a.active {
+    border-left: 4px solid rgb(255, 255, 255);
+    color: #ffffff;
+}
+
+.vision_global_class .pr-about {
+    background-color: #000;
+}
+
+.vision_global_class .fancybox-close {
+    border-bottom: solid 1px #ffffff;
+    border-left: solid 1px #ffffff;
+    background-color: #000000;
+}
+
+.vision_global_class .fancybox-close:hover {
+    background-color: #333;
+}
+
+.vision_global_class .add-blog1 a {
+    background: #000000;
+    border: solid 1px #ffffff;
+}
+
+.vision_global_class .add-blog1 a:hover {
+    background: #333;
+    border: solid 1px #333;
+}
+
+.vision_global_class .fancybox-opened .fancybox-skin {
+    background: #000000;
+}
+
+.vision_global_class #tabs > ul > li > a {
+    font-size: 18px;
+}
+
+.vision_global_class::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
+
+.vision_global_class::-webkit-scrollbar {
+    width: 16px;
+}
+
+.vision_global_class::-webkit-scrollbar-track {
+    background-color: #b0b0b0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

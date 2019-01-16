@@ -73,7 +73,9 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-        $newslist = Content::find()->where(['cat' => 2,'status' => 1])->orderBy('id DESC')->limit('5')->all();
+        $newslist = Content::find()->where(['cat' => 2,'status' => 1])->orderBy('id DESC')->limit('3')->all();
+        $newsnext = Content::find()->where(['cat' => 2,'status' => 1])->orderBy('id DESC')->limit('9')->all();
+
         $nakursah = Content::find()->where(['cat' => 3])->orderBy('id DESC')->limit(4)->all();
         $obavlenia = Content::find()->where(['cat' => 4,'status' => 1])->orderBy('id DESC')->all();
 
@@ -82,6 +84,7 @@ class SiteController extends Controller
                 'newslist' => $newslist,
                 'nakursah' => $nakursah,
                 'obavlenia' => $obavlenia,
+                'newsnext' => $newsnext
 
             ]);
     }
