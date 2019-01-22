@@ -4,56 +4,64 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use frontend\models\Content;
 ?>
-<div class="row">
-    <div class="col-md-9 col-sm-9 col-xs-12 m22 single-post">
-        <div class="widget">
-            <div class="large-widget m30">
-                <div class="post clearfix">
+<!-- main content section -->
+<div class="container">
+    <div class="wrapper">
+        <div class="news contentText style" id="sizefont">
 
-                    <div class="title-area">
-                        <div class="bread">
-                            <ol class="breadcrumb">
-                                <li><a href="/<?=WLang::getLang()?>">Главная</a></li>
-                                <li class=""><a href="/<?=WLang::getLang()?>/<?=Content::getCatUrl($model->cat)?>"><?=Content::getCatName($model->cat)?></a></li>
-                                <li class="active"><?=$model->{name_.WLang::getLang()}?></li>
-                            </ol>
-                        </div><!-- end bread -->
-                        <h3><?=$model->{name_.WLang::getLang()}?></h3>
+            <div class="page">
+                <!-- Крошки -->
+                <div class="tree">
+                    <div class="tree-left">
+                        <ul>
+                            <li>
+                                <a href="<?=\yii\helpers\Url::to('/')?>" title="Главная" itemprop="url">
+                                    Главная
+                                </a>
+                            </li>
 
-                        <div class="large-post-meta">
-                            <span><a href="category.html"><i class="fa fa-clock-o"></i> <?=$model->date_create?></a></span>
+                            <li>
+                                <a href="/<?=WLang::getLang()?>/<?=Content::getCatUrl($model->cat)?>" title="Новости" itemprop="url">
+                                    <?=Content::getCatName($model->cat)?>
+                                </a>
+                            </li>
 
-                            <small class="hidden-xs">&#124;</small>
-                            <span class="hidden-xs"><a href="single.html"><i class="fa fa-eye"></i> <?=$model->views?></a></span>
-                        </div><!-- end meta -->
-
-
-                    </div><!-- /.pull-right -->
-
-                    <div class="post-media">
-                        <a href="single.html">
-                            <img alt="" src="upload/single.jpg" class="img-responsive">
-                        </a>
+                            <li>
+                                <a href="/news/regionnews/" title="Новости региона" itemprop="url">
+                                    Новости региона
+                                </a>
+                            </li>
+                            <li>
+                                <span>Акимы</span>
+                                </il></ul>
                     </div>
 
-                </div><!-- end post -->
 
-                <div class="post-desc">
-                    <?=$model->{'content_'.WLang::getLang()}?>
+                </div>
 
-                </div><!-- end post-desc -->
+                <!-- Конец Крошки -->
 
 
+                <h1><?=$model->{'name_'.WLang::getLang()}?></h1>
+                <div class="page-in">
 
 
+                    <div class="row">
+                        <!-- col-lg-9 - content section -->
+                        <div class="col-lg-9 main-page-news-tabs-section"><div id="comp_c4f65250385be1573f149f58aa32c8dd">
 
 
+                                <div class="all-news">
+
+                                    <div class="row">
+
+                                    </div>
+
+                                </div>
+
+                                <?=$model->{'content_'.WLang::getLang()}?>
+
+                            </div>
 
 
-
-
-
-            </div><!-- end large-widget -->
-        </div><!-- end widget -->
-    </div><!-- end col -->
-</div><!-- end row -->
+                        </div>

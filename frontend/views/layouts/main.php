@@ -63,7 +63,7 @@ AppAsset::register($this);
 
 </head>
 
-<body >
+<body>
 <?php $this->beginBody() ?>
 <?if (!Yii::$app->user->isGuest):?>
     <div style="background: green; padding: 2px 2px 2px 550px;">

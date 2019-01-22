@@ -21,7 +21,7 @@ class NewsController extends Controller
     public function actionIndex($url)
     {
         $cat = Catnews::findOne(['url' => $url]);
-//        echo $cat->id;
+
         $post = Content::findOne(['cat' => $cat->id]);
 
         $model = Content::find()->where(['cat' => $cat->id, 'status' => 1]);

@@ -17,7 +17,7 @@ time, mark, audio, video, input {
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background: url('/images/background.png') repeat-y 100%;
+    /*background: url('/images/background.png') repeat-y 100%;*/
 }
 
 /* HTML5 display-role reset for older browsers */
