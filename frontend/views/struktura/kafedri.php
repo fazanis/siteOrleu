@@ -73,7 +73,7 @@ use frontend\models\Ankety;
                                         </div>
                                     </a>
                                     <div class="akimat_person_hp_right_button">
-                                        <a href="/kafedry/<?= \yii\helpers\Url::to($item->url) ?>/<?= $item->{'name_' . WLang::getLang()} ?>"> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Подробнее </a>
+                                        <a href="/kafedry/<?= \yii\helpers\Url::to($item->url) ?>"> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Подробнее </a>
                                     </div>
                                 </div>
                                     <br>

@@ -35,21 +35,21 @@ class Content extends \yii\db\ActiveRecord
 
     public function behaviors()
     {
-//        return [
-//
-//            [
-//                'class' => TimestampBehavior::className(),
-//                'attributes' => [
-//                    ActiveRecord::EVENT_BEFORE_INSERT => ['date_create', 'date_update'],
-//                    ActiveRecord::EVENT_BEFORE_UPDATE => ['date_update'],
-//                ],
-//            ],
-//        [
-//            'class' => SluggableBehavior::className(),
-//            'attribute' => 'name_ru',
-//            'slugAttribute' => 'url',
-//        ],
-//        ];
+        return [
+
+            [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['date_create', 'date_update'],
+                    ActiveRecord::EVENT_BEFORE_UPDATE => ['date_update'],
+                ],
+            ],
+        [
+            'class' => SluggableBehavior::className(),
+            'attribute' => 'name_ru',
+            'slugAttribute' => 'url',
+        ],
+        ];
         return [
             [
                 'class' => TimestampBehavior::className(),

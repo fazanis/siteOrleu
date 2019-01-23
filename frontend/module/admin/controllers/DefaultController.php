@@ -16,12 +16,12 @@ class DefaultController extends AdminController
      * @return string
      */
     public $layout = "main";
-    public function behaviors()
-    {
-        return [
-            AdminBehavators::className(),
-        ];
-    }
+//    public function behaviors()
+//    {
+//        return [
+//            AdminBehavators::className(),
+//        ];
+//    }
 
     public function actionIndex()
     {
