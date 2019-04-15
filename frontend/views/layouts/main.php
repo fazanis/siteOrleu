@@ -257,79 +257,7 @@ AppAsset::register($this);
 
 
     <?=Banners::widget()?>
-    <!-- akim block -->
-<!--    <div class="sidebar-panel-blocks">-->
-<!---->
-<!--        <div class="sidebar-block-akim-image"-->
-<!--             style="background-image:url('upload/content/news2018/3.jpg');"></div>-->
-<!---->
-<!--        <div class="sidebar-block-akim-title">-->
-<!--            <h2>Мухамбетов Архимед Бегежанович</h2>-->
-<!---->
-<!--            <p>Аким Костанайской области</p>-->
-<!--        </div>-->
-<!---->
-<!--        <ul class="sidebar-block-akim-menu">-->
-<!--            <li>-->
-<!--                <a href="https://dialog.egov.kz/blogs/294912/welcome">-->
-<!--                    <i class="fa fa-angle-right" aria-hidden="true"></i>-->
-<!--                    Блог акима </a>-->
-<!--            </li>-->
-<!---->
-<!---->
-<!--            <li>-->
-<!--                <a href="http://kostanay.gov.kz/akim-oblasti/biografia.php">-->
-<!--                    <i class="fa fa-angle-right" aria-hidden="true"></i>-->
-<!--                    Биография </a>-->
-<!--            </li>-->
-<!---->
-<!---->
-<!--        </ul>-->
-<!---->
-<!---->
-<!--    </div>-->
-    <!-- end - akim block -->
 
-
-    <!-- side navigation panel -->
-
-
-    <!-- end - side navigation panel -->
-
-
-    <!-- banners block -->
-<!--    <div class="sidebar-panel-blocks">-->
-<!--        <a class="sidebar-banners sidebar-banner-1" href="http://map.investinkostanay.kz/ru">-->
-<!--            <div class="sidebar-banners-overlay">-->
-<!--                <i class="fa fa-compass" aria-hidden="true"></i>-->
-<!--                <p>Инвестиционная <br/> карта</p>-->
-<!--            </div>-->
-<!--        </a>-->
-<!---->
-<!--        <a class="sidebar-banners sidebar-banner-2" href="http://kostanay.gov.kz/eksport/index.php">-->
-<!--            <div class="sidebar-banners-overlay">-->
-<!--                <i class="fa fa-globe" aria-hidden="true"></i>-->
-<!--                <p>Экспорт</p>-->
-<!--            </div>-->
-<!--        </a>-->
-<!---->
-<!--        <a class="sidebar-banners sidebar-banner-3"-->
-<!--           href="http://kostanay.gov.kz/razvitie-msb/index.php">-->
-<!--            <div class="sidebar-banners-overlay">-->
-<!--                <i class="fa fa-handshake-o" aria-hidden="true"></i>-->
-<!--                <p>Развитие <br/> МСБ</p>-->
-<!--            </div>-->
-<!--        </a>-->
-<!---->
-<!--        <a class="sidebar-banners sidebar-banner-4"-->
-<!--           href="http://kostanay.gov.kz/razvitie-turizma/index.php">-->
-<!--            <div class="sidebar-banners-overlay">-->
-<!--                <i class="fa fa-plane" aria-hidden="true"></i>-->
-<!--                <p>Развитие <br/> туризма</p>-->
-<!--            </div>-->
-<!--        </a>-->
-<!--    </div>-->
-    <!-- end - banners block -->
 
 
     <!-- photogallery slider block -->
@@ -344,48 +272,7 @@ AppAsset::register($this);
     </div>
 
 
-<!--    <script>-->
-<!--        $(document).ready(function () {-->
-<!--            $('.sidebar-block-photogallery-carousel').owlCarousel({-->
-<!--                animateOut: 'fadeOut',-->
-<!--                animateIn: 'fadeIn',-->
-<!--                loop: true,-->
-<!--                autoplay: true,-->
-<!--                autoplayHoverPause: true,-->
-<!--                autoplayTimeout: 2000,-->
-<!--                margin: 0,-->
-<!--                nav: true,-->
-<!--                items: 1,-->
-<!--                navText: [-->
-<!--                    "<i class='fa fa-angle-left' aria-hidden='true''></i>",-->
-<!--                    "<i class='fa fa-angle-right' aria-hidden='true''></i>"-->
-<!--                ]-->
-<!--            })-->
-<!---->
-<!--            $('a.gallery').featherlightGallery({-->
-<!--                previousIcon: '«', /* Code that is used as previous icon */-->
-<!--                nextIcon: '»', /* Code that is used as next icon */-->
-<!--                galleryFadeIn: 100, /* fadeIn speed when slide is loaded */-->
-<!--                galleryFadeOut: 300          /* fadeOut speed before slide is loaded */-->
-<!--            })-->
-<!--        });-->
-<!--    </script>-->
-    <!-- end - photogallery slider block -->
 
-
-    <!-- weather block -->
-
-    <!-- end - weather block -->
-
-
-    <!-- calendar block -->
-
-
-
-    <!-- voting block -->
-
-
-    <!-- voting block -->
 </div>
 <!-- end - col-lg-3 - sidebar panel section -->
 </div>
@@ -401,137 +288,12 @@ AppAsset::register($this);
 <!-- footer elements / navigation -->
 <div class="footer-section">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="subscribe-news-section">
-                    <div class="news-marquee-wrapper">
-                        <div class="news-marquee">
 
 
-                            <div class="marquee">
 
-                                <a href="http://kostanay.gov.kz/news/news/it-litsey-otkryli-v-kostanae/">
-                                    IT-лицей открыли в Костанае </a>
-
-
-                                <a href="http://kostanay.gov.kz/news/news/48-zhiteley-prigoroda-kostanaya-otmetyat-den-konstitutsii-v-sobstvennykh-kvartirakh/">
-                                    48 жителей пригорода Костаная отметят День Конституции в собственных квартирах </a>
-
-
-                                <a href="http://kostanay.gov.kz/news/news/prezidentskaya-milya/">
-                                    Президентская миля </a>
-
-
-                                <a href="http://kostanay.gov.kz/news/news/uvazhaemye-kostanaytsy31082018/">
-                                    Уважаемые костанайцы! </a>
-
-
-                                <a href="http://kostanay.gov.kz/news/news/bolee-440-narusheniy-pozharnoy-bezopasnosti-vyyavleno-v-torgovykh-obektakh-kostanayskoy-oblasti/">
-                                    Более 440 нарушений пожарной безопасности выявлено в торговых объектах Костанайской
-                                    области </a>
-
-                            </div>
-                        </div>
-                    </div>
-
-<!--                    <div class="subscribe-form-wrapper">-->
-<!--                        <form enctype="multipart/form-data" action="index.html" method="post">-->
-<!--                            <input class="subscribe-form-input" id="sub_value" type="text"-->
-<!--                                   onfocus="if(this.value == 'Подписаться на рассылку'){this.value = '';}"-->
-<!--                                   onblur="if(this.value == ''){this.value='Подписаться на рассылку';}"-->
-<!--                                   value="Подписаться на рассылку">-->
-<!--                            <input class="subscribe-form-button" type="button" onclick="Subscribe()"-->
-<!--                                   value="Подписаться">-->
-<!--                            <div class="subscribe-form-validation" id="form_sub"></div>-->
-<!--                        </form>-->
-<!---->
-<!--                        <a class="nmsf-rss-button" href="http://kostanay.gov.kz/kostanay.rss" title="rss"-->
-<!--                           target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a>-->
-<!--                    </div>-->
-                </div>
-            </div>
-        </div>
-
-        <div class="row footer-row">
-            <div class="col-lg-4 footer-column footer-menu-links">
-
-
-                <h3>Статистика</h3>
-
-                <ul>
-                    <li>
-                        <a href="http://kostanay.gov.kz/information-use/">
-                            Использовании информации </a>
-                    </li>
-                    <li>
-                        <a href="http://kostanay.gov.kz/akim-oblasti/obratnaya-svyaz/">
-                            Написать в редакцию </a>
-                    </li>
-                    <li>
-                        <a href="http://blog.kostanay.gov.kz/messages/">
-                            Вопрос-ответ </a>
-                    </li>
-                    <li>
-                        <a href="http://kostanay.gov.kz/official-banner/">
-                            Официальный баннер </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-4 footer-column footer-menu-links">
-
-
-                <h3>Рубрикатор</h3>
-
-                <ul>
-                    <li>
-                        <a href="http://kostanay.gov.kz/kostanayskaya-oblast/about/">
-                            Костанайская область </a>
-                    </li>
-                    <li>
-                        <a href="http://kostanay.gov.kz/akim-oblasti/akim-oblasti/">
-                            Аким области </a>
-                    </li>
-                    <li>
-                        <a href="http://kostanay.gov.kz/akim-oblasti/struktura-apparata-akima-oblasti/">
-                            Структура аппарата </a>
-                    </li>
-                    <li>
-                        <a href="http://kostanay.gov.kz/gosudarstvennaya-sluzhba/vakansii-kostanaya/">
-                            Вакансии аппарата </a>
-                    </li>
-                    <li>
-                        <a href="http://kostanay.gov.kz/akim-oblasti/gosudarstvennye-zakupki/">
-                            Государственные закупки </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-4 footer-column footer-menu-links">
-
-
-                <h3>Возможности сайта</h3>
-
-                <ul>
-                    <li>
-                        <a href="http://kostanay.gov.kz/site-map/">
-                            Карта сайта </a>
-                    </li>
-                    <li>
-                        <a href="http://kostanay.gov.kz/kostanay.rss">
-                            Подписка на новостную ленту </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-12 footer-column">
-                <hr>
-            </div>
-        </div>
 
         <div class="row footer-row">
             <div class="col-lg-8 footer-column footer-copyright">
-                Зарегистрирован 12 сентября 2008 года <br/> за № KZ-W-08-0000004<br/><br/>
                 2015 © <?=$this->title?><br/>
                 110000, г. Костанай, пр. Аль-Фараби, 66<br/>
             </div>

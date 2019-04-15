@@ -255,7 +255,7 @@ use frontend\models\Content;
                                 </div>
                             </div>
                             <div class="full-width-button">
-                                <a href="/<?=WLang::getLang()?>/news">
+                                <a href="/<?=WLang::getLang()?>/novosti">
                                     Все новости
                                 </a>
                             </div>
@@ -535,19 +535,6 @@ use frontend\models\Content;
                     <div class="video-gallery-block">
                     </div>
 
-                    <br>
-                    <!--banner block-->
-                    <div class="nurken__wrap clearfix">
-                        <a href="http://kostanay.gov.kz/rukhani-zha-yru/index.php" target="_blank">
-                            <div class="nurken__img-one">
-                            </div>
-                        </a>
-                        <a href="http://kostanay.gov.kz/20-letie-astany/index.php" target="_blank">
-                            <div class="nurken__img-two">
-                            </div>
-                        </a>
-                    </div>
-                    <!--end banner block-->
                     <br>
 
 
