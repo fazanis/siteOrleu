@@ -159,7 +159,7 @@ AppAsset::register($this);
             </a>
 
 
-            <a href="#">
+            <a href="http://bl.orleu-edu.kz/" target="_blank">
                 <div class="header-cat-banners-wrapper">
                     <div class="header-cat-banners header-cat-banner-2">
                         <div>
@@ -170,7 +170,7 @@ AppAsset::register($this);
             </a>
 
 
-            <a href="#">
+            <a href="/site/contacts">
                 <div class="header-cat-banners-wrapper">
                     <div class="header-cat-banners header-cat-banner-3">
                         <div>
@@ -295,7 +295,7 @@ AppAsset::register($this);
         <div class="row footer-row">
             <div class="col-lg-8 footer-column footer-copyright">
                 2015 © <?=$this->title?><br/>
-                110000, г. Костанай, пр. Аль-Фараби, 66<br/>
+                140000, г. Павлодар, ул. Генерала Дюсенова, 22/1<br/>
             </div>
 
             <div class="col-lg-4 footer-column footer-social-icons">
